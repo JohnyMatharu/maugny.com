@@ -1,31 +1,46 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/navbar';
 import landingPage from './pages/landingPage';
 import clubPage from './pages/clubPage';
 import Footer from './components/footer';
-import { HashRouter as Router } from 'react-router-dom'
+import {  useLocation } from 'react-router-dom';
 
 
 
 
 
-function App() {
+
+const App = () => {
+ // const location = useLocation();
+ // console.log(location.pathname) 
+
   return (
     <div className="App">
 <Router>
-<Navbar></Navbar>
-<Route exact path='/' component={landingPage} />
+
+ <Navbar></Navbar> 
+
 <div>
-      <Switch>
-        
-          <Route exact path='/landingPage' component={landingPage} />
+
+      {/* <Routes> */}
+        {/* <Route path="/" element={<Home />} /> */}
+        {/* <Route path="users/*" element={<Users />} /> */}
+      {/* </Routes> */}
     
-          <Route exact path='/clubPage' component={clubPage} />
+
+       <Routes> 
+         
+       <Route path='/' element={<landingPage/>} />
+          <Route path="landingPage" element={<landingPage/>} />
+    
+          <Route path="clubPage" element={<clubPage/>} />
       
-      </Switch>
+      </Routes>
+     
+
       </div>
       </Router>
       <Footer></Footer>      

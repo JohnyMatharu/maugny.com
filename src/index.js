@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import '@fortawesome/fontawesome-free/css/all.min.css'; 
 import 'bootstrap-css-only/css/bootstrap.min.css'; 
 import 'mdbreact/dist/css/mdb.css';
-import '../node_modules/font-awesome/css/font-awesome.min.css'; 
+//import '../node_modules/font-awesome/css/font-awesome.min.css'; 
 
 
 
@@ -20,4 +20,8 @@ ReactDOM.render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// Local:            http://localhost:3000
+// On Your Network:  http://192.168.2.10:3000
+
+
 reportWebVitals();
