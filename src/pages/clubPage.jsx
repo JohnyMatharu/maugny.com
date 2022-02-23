@@ -8,7 +8,7 @@ export default function clubPage() {
         <section>
       <MDBContainer id="size">
          
-   <div id="height1"><h3 style={{fontWeight: "bold", fontSize: 63, fontFamily: 'Cambria', color: '00003a' }}>This is Club Page</h3>
+   <div id="height1"><h3 style={{fontWeight: "bold", fontSize: '63', fontFamily: 'Cambria', color: '00003a' }}>This is Club Page</h3>
     
        
           </div>

@@ -8,17 +8,29 @@ import clubPage from './pages/clubPage';
 import Footer from './components/footer';
 import {  useLocation } from 'react-router-dom';
 
+// to be checked
 
+console.log (window.location.pathname, "this is experiment") 
+//function usePath () 
+//{
+//const location = useLocation();
+// return  
+//}
 
+//const isHome = usePath() === "/";
 
-
-
+//console.log (usePath, "this is experiment")
 const App = () => {
- // const location = useLocation();
- // console.log(location.pathname) 
-
+ 
+   
+ 
+ 
+ 
   return (
+    
     <div className="App">
+
+      
 <Router>
 
  <Navbar></Navbar> 
@@ -34,6 +46,7 @@ const App = () => {
        <Routes> 
          
        <Route path='/' element={<landingPage/>} />
+       
           <Route path="landingPage" element={<landingPage/>} />
     
           <Route path="clubPage" element={<clubPage/>} />

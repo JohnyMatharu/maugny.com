@@ -34,49 +34,27 @@
     flex-direction: row;
 }
 
-.aboutMe 
+.home
 {
     width: 50%;
 }
-.Resume
+.club
 {
     padding-top: 3.6px;
     width: 50%;
-    font-family: 'Tahoma';    
- 
-
+    
 }
-
-
-
-
 
   .topmenu ul li.active a, .topmenu ul li a:hover{
     text-decoration:none;
     color:#fff;
 }
 
-.firstLink 
-{
-color: #4F9CC8;
-}
-
-.secondLink 
-{
-color: #0038a8;
-}
-
-.thirdLink 
-{
-color: #0038a8;
-}
 
 .fourthLink
 
 {
-   /* font-size: 18px; */
    font-weight: bold;
-color: #7d7f81 ;
 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 /* this is to be checked */

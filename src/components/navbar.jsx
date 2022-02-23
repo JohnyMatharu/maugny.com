@@ -2,9 +2,7 @@ import React from 'react'
 import './navbar.css';
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
-
-
-
+import { useLocation } from "react-router-dom"
 //import { withRouter } from "react-router-dom";
 // import the library
 
@@ -21,12 +19,13 @@ export const withRouter = (Component) => {
 };
 
 
-
 class Navbar extends React.Component {
 
   render() {    
-    //const { location } = this.props;
-      //  const isHome = window.location.pathname === "/";
+    //version 6 is used for this, for GoHelpPal version 5 or lower, can keep isHome if ever need location
+//    const isHome = (window.location.pathname === "/landingPage") ? "TRUE": "FALSE";
+  //  console.log(isHome, "this is real experiment");
+
     return (
       <div className="nav">
 
@@ -40,20 +39,37 @@ class Navbar extends React.Component {
           <Link to="/" className="Nav__brand">
           </Link>
              
-              <div className="aboutMe">
-              <NavLink className="firstLink" to="/landingPage" activeStyle={ { color: "#ECEFF8" } }
-                             style={ 
-                                 //isHome ? { color: "#4F9CC8" } : 
-                                 {} }>
-                                
+              <div className="home">
+
+         
+              <NavLink to="/landingPage" style={({ isActive }) =>
+    isActive
+      ? {
+          color: '#ECEFF8'
+        }
+      : { color: '#4F9CC8'}
+  }
+  //style={ isHome ? { color: "#4F9CC8" } : {} }
+  > 
+                                                
       <div className="App">
         <FontAwesomeIcon icon={faHome} style={{ fontSize: '24px' }}/>
     </div>
                                
-                               </NavLink></div>
+      </NavLink></div>
             
-              <div className="Resume">
-                <NavLink className="fourthLink" to="/clubPage" activeStyle={{color: "#ECEFF8"}}>The Maugny's Club</NavLink>
+              <div className="club">
+                <NavLink className="fourthLink" to="/clubPage" 
+                style={({ isActive }) =>
+                isActive
+                  ? {
+                      color: '#ECEFF8'
+                    }
+                    
+                  : { color:  '#7d7f81'}
+              }                
+                
+                >The Maugny's Club</NavLink>
               </div>
       </div>
       
@@ -66,10 +82,3 @@ class Navbar extends React.Component {
 const NavbarWithRouter = withRouter(Navbar);
 
 export default NavbarWithRouter;
-// to be checked 
-
-
-
-      
-      
-//https://github.com/JohnnyMatharu/Workday-Scheduler/blob/main/index.html
