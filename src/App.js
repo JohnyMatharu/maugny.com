@@ -2,61 +2,88 @@ import logo from './logo.svg';
 import './App.css';
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/navbar';
+//import Navbar from './components/navbar';
 import landingPage from './pages/landingPage';
 import clubPage from './pages/clubPage';
 import Footer from './components/footer';
-import {  useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+//import { withRouter } from "react-router-dom";
+// import the library
 
-// to be checked
+import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-console.log (window.location.pathname, "this is experiment") 
-//function usePath () 
-//{
-//const location = useLocation();
-// return  
-//}
 
-//const isHome = usePath() === "/";
-
-//console.log (usePath, "this is experiment")
 const App = () => {
- 
-   
- 
- 
- 
+  
   return (
     
-    <div className="App">
+<div className="App">
 
-      
 <Router>
+<nav>
+<div className="nav">
 
- <Navbar></Navbar> 
+<div id ="sectionOne"><h3 style={{ paddingBottom: '1px', fontSize: '24px', fontFamily: 'Tahoma', fontWeight: 'bold' }}>
+  <span style={{color:'#4F9CC8'}}>Maugny</span></h3></div>
+{/* <div id ="sectionOne"><h3 style={{ paddingBottom: '1px', fontSize: '24px', fontFamily: 'Verdana', fontWeight: 'bold' }}><span style={{color:'#13d34b'}}>Go</span><span style={{color:'#3c6cd2'}}>Help</span><span style={{color:'#b429b0'}}>Pal</span></h3></div>
+*/}
 
-<div>
 
-      {/* <Routes> */}
-        {/* <Route path="/" element={<Home />} /> */}
-        {/* <Route path="users/*" element={<Users />} /> */}
-      {/* </Routes> */}
-    
+<div id ="sectionTwo">  
+    <Link to="/" className="Nav__brand">
+    </Link>
+       
+        <div className="home">
 
+   
+        <NavLink to="/landingPage" style={({ isActive }) =>
+isActive
+? {
+    color: '#ECEFF8'
+  }
+: { color: '#4F9CC8'}
+}
+//style={ isHome ? { color: "#4F9CC8" } : {} }
+> 
+                                          
+<div className="App">
+  <FontAwesomeIcon icon={faHome} style={{ fontSize: '24px' }}/>
+</div>
+                         
+</NavLink></div>
+      
+        <div className="club">
+          <NavLink className="fourthLink" to="/clubPage" 
+          style={({ isActive }) =>
+          isActive
+            ? {
+                color: '#ECEFF8'
+              }
+              
+            : { color:  '#7d7f81'}
+        }                
+          
+          >The Maugny's Club</NavLink>
+        </div>
+</div>
+</div>
+
+</nav>
+      
        <Routes> 
          
-       <Route path='/' element={<landingPage/>} />
+       <Route path='/' element={landingPage} />
        
-          <Route path="landingPage" element={<landingPage/>} />
+          <Route path="landingPage" element={landingPage} />
     
-          <Route path="clubPage" element={<clubPage/>} />
+          <Route path="clubPage" element={clubPage} />
       
       </Routes>
-     
-
-      </div>
+      <Footer></Footer>   
       </Router>
-      <Footer></Footer>      
+          
     </div>
   );
 }
