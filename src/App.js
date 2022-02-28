@@ -12,6 +12,7 @@ import { NavLink } from 'react-router-dom';
 // import the library
 
 import { faHome } from '@fortawesome/free-solid-svg-icons';
+import {faCartPlus} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
@@ -65,7 +66,16 @@ isActive
             : { color:  '#7d7f81'}
         }                
           
-          >The Maugny's Club</NavLink>
+          >
+            
+            <div className="App">
+  <FontAwesomeIcon icon={faCartPlus} style={{ fontSize: '24px' }}/>
+</div>
+            
+          {/* https://github.com/FortAwesome/Font-Awesome/tree/master/js-packages/%40fortawesome/free-solid-svg-icons */}
+          
+          
+          </NavLink>
         </div>
 </div>
 </div>
