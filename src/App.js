@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 //import Navbar from './components/navbar';
 import landingPage from './pages/landingPage';
 import clubPage from './pages/clubPage';
+import loginPage from './pages/loginPage';
+import checkoutPage from './pages/checkoutPage';
 import Footer from './components/footer';
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
@@ -25,6 +27,7 @@ const App = () => {
 <Router>
 <nav>
 <div className="nav">
+{/* this is beginning nav div 100% */}
 
 <div id ="sectionOne"><h3 style={{ paddingBottom: '1px', fontSize: '24px', fontFamily: 'Tahoma', fontWeight: 'bold' }}>
   <span style={{color:'#4F9CC8'}}>Maugny</span></h3></div>
@@ -32,14 +35,17 @@ const App = () => {
 */}
 
 
-<div id ="sectionTwo">  
+{/* this part needs to be fixed as section 2 is 66% and home and cart will share width 50 % each, and then fix center padding etc.*/}
+
+
+<div className="home" id ="sectionTwo">  
     <Link to="/" className="Nav__brand">
     </Link>
        
-        <div className="home">
+<div className="navCenter">
 
-   
-        <NavLink to="/landingPage" style={({ isActive }) =>
+  <div>
+  <NavLink to="/landingPage" style={({ isActive }) =>
 isActive
 ? {
     color: '#ECEFF8'
@@ -48,15 +54,50 @@ isActive
 }
 //style={ isHome ? { color: "#4F9CC8" } : {} }
 > 
-                                          
-<div className="App">
-  <FontAwesomeIcon icon={faHome} style={{ fontSize: '24px' }}/>
-</div>
-                         
-</NavLink></div>
+    
+    <FontAwesomeIcon icon={faHome} style={{ fontSize: '24px' }}/>
+    </NavLink>
+    </div>
+  
+  
+  <div>
+  <NavLink to="/clubPage" style={({ isActive }) =>
+isActive
+? {
+    color: '#ECEFF8'
+  }
+: { color: '#4F9CC8'}
+}>
       
-        <div className="club">
-          <NavLink className="fourthLink" to="/clubPage" 
+    Club
+    </NavLink>  
+    </div>
+  
+  
+  <div>
+  <NavLink to="/loginPage" style={({ isActive }) =>
+isActive
+? {
+    color: '#ECEFF8'
+  }
+: { color: '#4F9CC8'}
+}>
+    Login
+    </NavLink>  
+    </div>
+
+  {/* this is end of navCenter div */}
+</div>
+
+{/* this is end of one above it */}
+  </div>                       
+
+      {/*this is beginning of cart main div */}
+        <div className="cart">
+          
+            
+            <div className="App">
+            <NavLink className="fourthLink" to="/checkoutPage" 
           style={({ isActive }) =>
           isActive
             ? {
@@ -67,17 +108,17 @@ isActive
         }                
           
           >
-            
-            <div className="App">
   <FontAwesomeIcon icon={faCartPlus} style={{ fontSize: '24px' }}/>
+  </NavLink>
 </div>
             
           {/* https://github.com/FortAwesome/Font-Awesome/tree/master/js-packages/%40fortawesome/free-solid-svg-icons */}
-          
-          
-          </NavLink>
+         
         </div>
-</div>
+{/* this is end of cart main div */}
+
+
+{/* this is end of nav 100% div */}
 </div>
 
 </nav>
@@ -89,6 +130,10 @@ isActive
           <Route path="landingPage" element={landingPage} />
     
           <Route path="clubPage" element={clubPage} />
+
+          <Route path="loginPage" element={loginPage} />
+
+          <Route path="checkoutPage" element={checkoutPage} />
       
       </Routes>
       <Footer></Footer>   
