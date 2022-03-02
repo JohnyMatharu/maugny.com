@@ -29,6 +29,8 @@ const App = () => {
 <div className="nav">
 {/* this is beginning nav div 100% */}
 
+
+{/* this is section 1 which is 33% width */}
 <div id ="sectionOne"><h3 style={{ paddingBottom: '1px', fontSize: '24px', fontFamily: 'Tahoma', fontWeight: 'bold' }}>
   <span style={{color:'#4F9CC8'}}>Maugny</span></h3></div>
 {/* <div id ="sectionOne"><h3 style={{ paddingBottom: '1px', fontSize: '24px', fontFamily: 'Verdana', fontWeight: 'bold' }}><span style={{color:'#13d34b'}}>Go</span><span style={{color:'#3c6cd2'}}>Help</span><span style={{color:'#b429b0'}}>Pal</span></h3></div>
@@ -38,13 +40,19 @@ const App = () => {
 {/* this part needs to be fixed as section 2 is 66% and home and cart will share width 50 % each, and then fix center padding etc.*/}
 
 
-<div className="home" id ="sectionTwo">  
+{/* this is beginning of section 2 which is 66% consisting of home and cart 50% each */}
+<div id ="sectionTwo">  
+
+{/* this is beginning of Home 50% */}
+<div className="home">
     <Link to="/" className="Nav__brand">
     </Link>
        
+       {/* this is beginning of NavCenter internal div of Home */}
 <div className="navCenter">
 
   <div>
+    {/* this is beginnig of Home icon */}
   <NavLink to="/landingPage" style={({ isActive }) =>
 isActive
 ? {
@@ -58,8 +66,8 @@ isActive
     <FontAwesomeIcon icon={faHome} style={{ fontSize: '24px' }}/>
     </NavLink>
     </div>
-  
-  
+  {/* this is end of Home icon */}
+  {/* this is beginning of club link */}
   <div>
   <NavLink to="/clubPage" style={({ isActive }) =>
 isActive
@@ -72,8 +80,8 @@ isActive
     Club
     </NavLink>  
     </div>
-  
-  
+  {/* this is end of club link */}
+  {/* this is beginning of login link */}
   <div>
   <NavLink to="/loginPage" style={({ isActive }) =>
 isActive
@@ -85,17 +93,18 @@ isActive
     Login
     </NavLink>  
     </div>
+    {/* this is end of login link */}
 
   {/* this is end of navCenter div */}
 </div>
 
-{/* this is end of one above it */}
+{/* this is end of home */}
   </div>                       
 
-      {/*this is beginning of cart main div */}
+      {/*this is beginning of cart div */}
         <div className="cart">
           
-            
+           {/*this is beginning of cart link */} 
             <div className="App">
             <NavLink className="fourthLink" to="/checkoutPage" 
           style={({ isActive }) =>
@@ -111,6 +120,8 @@ isActive
   <FontAwesomeIcon icon={faCartPlus} style={{ fontSize: '24px' }}/>
   </NavLink>
 </div>
+{/*this is end of cart link */}
+
             
           {/* https://github.com/FortAwesome/Font-Awesome/tree/master/js-packages/%40fortawesome/free-solid-svg-icons */}
          
@@ -118,8 +129,11 @@ isActive
 {/* this is end of cart main div */}
 
 
-{/* this is end of nav 100% div */}
+{/* this is end of sectionTwo div */}
 </div>
+
+</div>
+{/* this is end of total nav 100% main div */}
 
 </nav>
       

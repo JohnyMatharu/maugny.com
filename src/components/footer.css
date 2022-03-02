@@ -1,22 +1,46 @@
 
 #footer
 {
-    white-space: nowrap;
+   
     display: flex; 
     align-items: center; 
-    flex-direction: row;
+    flex-direction: column;
     text-align: center;
     height: 45px;
 /* padding-left: 10%;   */
 /* padding-right: 10%;  */
 }
 
+#firstLevel
+{
+  width: 100%;
+    display: flex; 
+    align-items: center; 
+    flex-direction: row;
+    text-align: center;
+}
+/* Anything in the first div you will have to divide the width in % to make it 100% of this div */
+/* Please add padding here from left and right to condense little as design */
+
+
+#secondLevel
+{
+ width: 100%;
+    display: flex; 
+    align-items: center; 
+    flex-direction: row;
+    text-align: center;
+}
+
+
 .space
 {
-   width: 16.66%;
+   width: 33.33%;
   
 }
-@media only screen and (max-width: 850px){
+
+/* all this to be revised */
+/* @media only screen and (max-width: 850px){
     .space
       {
            width: 25%;
@@ -24,13 +48,14 @@
       }
     }
 
-@media only screen and (max-width: 850px){
+ @media only screen and (max-width: 850px){ 
     #Mail 
       {
            display: none;
         
       }
     }
+    
 
     @media only screen and (max-width: 850px){
         #Phone
@@ -39,7 +64,7 @@
             
           }
         }
-
+*/
         .fa-envelope
         {
           color: #4F9CC8;

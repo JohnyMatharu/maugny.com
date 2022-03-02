@@ -4,17 +4,41 @@ export default function Footer() {
     return (
         <div id = "footer">
        
-       
+       {/* this is div above 1st level start */}
+       <div id = "firstLevel">
+
        <div class= "space" id = "Mail">
        <a href='mailto: jaani.matharu@gmail.com'><i class="fas fa-envelope" style={{ fontSize: '18px' }}></i></a>  
        </div>
+
+
+<div class= "space" id = "Mail">
+<a href='mailto: jaani.matharu@gmail.com'><i class="fas fa-envelope" style={{ fontSize: '18px' }}></i></a>  
+</div>
+
+
+
+
+       <div class= "space" id = "Mail">
+       <a href='mailto: jaani.matharu@gmail.com'><i class="fas fa-envelope" style={{ fontSize: '18px' }}></i></a>  
+       </div>
+
+
+
+       </div>
+{/* this is div above 1st level end */}
+
+{/* this is div below second level beginning*/}
+<div id = "secondLevel">
+       
        <div class= "space" id = "Facebook">
       
-       <br>
-       </br>
-       <br>
-       </br>
-       <a href='https://www.facebook.com/GoHelpPal/'><i class="fab fa-facebook" style={{ fontSize: '42px' }}></i></a>
+  
+     {/* <br> */}
+       {/* </br> */}
+       {/* <br> */}
+       {/* </br> */}
+       <a href='https://www.facebook.com/GoHelpPal/'>Terms of Use</a>
      
 
 
@@ -23,36 +47,27 @@ export default function Footer() {
        </div>
        <div class= "space" id ="Linkedin">
        
-       <br>
-       </br>
-       <br>
-       </br>
-       <a href='https://www.linkedin.com/in/johny-matharu-0b0973115/'><i class="fab fa-linkedin" style={{ fontSize: '42px' }}></i></a>
+       {/* <br> */}
+       {/* </br> */}
+       {/* <br> */}
+       {/* </br> */}
+       <a href='https://www.linkedin.com/in/johny-matharu-0b0973115/'>Privacy Policy</a>
      
        </div>
        <div class= "space" id ="Github">
       
-       <br>
-       </br>
-       <br>
-       </br>
-       <a href='https://github.com/JohnyMatharu'><i class="fab fa-github" style={{ fontSize: '42px' }}></i></a>
-
+       {/* <br> */}
+       {/* </br> */}
+       {/* <br> */}
+       {/* </br> */}
+       Copyright 2022
        </div>
-       <div class= "space" id ="Stack-OverFlow">
        
-       <br>
-       </br>
-       <br>
-       </br>
-       <a href='https://stackexchange.com/users/20383702/johny-matharu'><i class="fab fa-stack-overflow" style={{ fontSize: '42px' }}></i></a>
-     
        
        </div>
-       <div class= "space" id ="Phone">
+{/* this is end of div below second level */}
 
-     <h6 style={{color: 'black', fontSize: '18px', fontFamily: 'Verdana'}}>© 2021</h6>
-       </div>
+{/* this is end of main footer div */}
         </div>
     )
 }
