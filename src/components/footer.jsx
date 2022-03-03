@@ -1,57 +1,69 @@
 import './footer.css';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+//import { withRouter } from "react-router-dom";
+// import the library
+
+import { faClub } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 export default function Footer() {
     return (
+       
+     
         <div id = "footer">
        
        {/* this is div above 1st level start */}
        <div id = "firstLevel">
 
-       <div class= "space" id = "Mail">
-       <a href='mailto: jaani.matharu@gmail.com'><i class="fas fa-envelope" style={{ fontSize: '18px' }}></i></a>  
-       </div>
-
-
+       
+       
+         
+         {/* <FontAwesomeIcon icon={faHome} style={{ fontSize: '24px' }}/> */}
+         
 <div class= "space" id = "Mail">
-<a href='mailto: jaani.matharu@gmail.com'><i class="fas fa-envelope" style={{ fontSize: '18px' }}></i></a>  
+<Link to="/customerPage">Customer Service</Link>
 </div>
 
 
+       <div class= "space" id = "Mail">
+       <Link to="/careerPage">Careers</Link>
+       </div>
 
 
        <div class= "space" id = "Mail">
        <a href='mailto: jaani.matharu@gmail.com'><i class="fas fa-envelope" style={{ fontSize: '18px' }}></i></a>  
        </div>
-
 
 
        </div>
 {/* this is div above 1st level end */}
 
+
 {/* this is div below second level beginning*/}
 <div id = "secondLevel">
        
-       <div class= "space" id = "Facebook">
-      
+       <div class= "space" id = "Term"> 
   
      {/* <br> */}
        {/* </br> */}
        {/* <br> */}
        {/* </br> */}
-       <a href='https://www.facebook.com/GoHelpPal/'>Terms of Use</a>
-     
-
-
-
+       <Link to="">Terms of Use</Link>
            
        </div>
-       <div class= "space" id ="Linkedin">
+     
+       <div class= "space" id ="Privacy">
        
        {/* <br> */}
        {/* </br> */}
        {/* <br> */}
        {/* </br> */}
-       <a href='https://www.linkedin.com/in/johny-matharu-0b0973115/'>Privacy Policy</a>
+       
+       <Link to="">Privacy Policy</Link>
      
        </div>
        <div class= "space" id ="Github">
@@ -69,6 +81,7 @@ export default function Footer() {
 
 {/* this is end of main footer div */}
         </div>
+        
     )
 }
 

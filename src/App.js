@@ -7,6 +7,8 @@ import landingPage from './pages/landingPage';
 import clubPage from './pages/clubPage';
 import loginPage from './pages/loginPage';
 import checkoutPage from './pages/checkoutPage';
+import careerPage from './pages/careerPage';
+import customerPage from './pages/customerPage';
 import Footer from './components/footer';
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
@@ -148,6 +150,10 @@ isActive
           <Route path="loginPage" element={loginPage} />
 
           <Route path="checkoutPage" element={checkoutPage} />
+
+          <Route path="careerPage" element={careerPage} />
+
+          <Route path="customerPage" element={customerPage} />
       
       </Routes>
       <Footer></Footer>   
