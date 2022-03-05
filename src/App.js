@@ -33,8 +33,12 @@ const App = () => {
 
 
 {/* this is section 1 which is 33% width */}
-<div id ="sectionOne"><h3 style={{ paddingBottom: '1px', fontSize: '24px', fontFamily: 'Tahoma', fontWeight: 'bold' }}>
-  <span style={{color:'#4F9CC8'}}>Maugny</span></h3></div>
+<div id ="sectionOne"><h3 style={{ paddingBottom: '1px', fontSize: '24px', fontFamily: 'Didact Gothic', fontWeight: 'bold' }}>
+  <span style={{color:'#4F9CC8'}}>abcdefghijklmnopqrstuvwxyz</span></h3></div>
+
+   {/* to be tried Poppins, Quicksand, Questrial, Outfit, Manjari */}
+
+
 {/* <div id ="sectionOne"><h3 style={{ paddingBottom: '1px', fontSize: '24px', fontFamily: 'Verdana', fontWeight: 'bold' }}><span style={{color:'#13d34b'}}>Go</span><span style={{color:'#3c6cd2'}}>Help</span><span style={{color:'#b429b0'}}>Pal</span></h3></div>
 */}
 

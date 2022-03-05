@@ -19,10 +19,6 @@ export default function Footer() {
        {/* this is div above 1st level start */}
        <div id = "firstLevel">
 
-       
-       
-         
-         {/* <FontAwesomeIcon icon={faHome} style={{ fontSize: '24px' }}/> */}
          
 <div class= "space" id = "Mail">
 <Link to="/customerPage">Customer Service</Link>
@@ -48,8 +44,8 @@ export default function Footer() {
        
        <div class= "space" id = "Term"> 
   
-     {/* <br> */}
-       {/* </br> */}
+     <br>
+       </br>
        {/* <br> */}
        {/* </br> */}
        <Link to="">Terms of Use</Link>
@@ -58,21 +54,20 @@ export default function Footer() {
      
        <div class= "space" id ="Privacy">
        
-       {/* <br> */}
-       {/* </br> */}
+       <br>
+       </br>
        {/* <br> */}
        {/* </br> */}
        
        <Link to="">Privacy Policy</Link>
      
        </div>
-       <div class= "space" id ="Github">
-      
+       <div class= "space" id ="Github" style = {{fontWeight: 'bold' }}>
+       <br>
+       </br>
        {/* <br> */}
        {/* </br> */}
-       {/* <br> */}
-       {/* </br> */}
-       Copyright 2022
+     Maugny © 2022
        </div>
        
        
