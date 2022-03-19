@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 //import { withRouter } from "react-router-dom";
 // import the library
 
-import { faClub } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
@@ -20,18 +20,18 @@ export default function Footer() {
        <div id = "firstLevel">
 
          
-<div class= "space" id = "Mail">
-<Link to="/customerPage">Customer Service</Link>
+<div class= "space">
+<Link to="/customerPage" style = {{color:'#8A2be2', fontFamily: 'Poppins' }}>Customer</Link>
 </div>
 
 
-       <div class= "space" id = "Mail">
-       <Link to="/careerPage">Careers</Link>
+       <div class= "space" id = "Careers">
+       <Link to="/careerPage" style = {{color:'#8A2be2', fontFamily: 'Poppins' }}>Careers</Link>
        </div>
 
 
        <div class= "space" id = "Mail">
-       <a href='mailto: jaani.matharu@gmail.com'><i class="fas fa-envelope" style={{ fontSize: '18px' }}></i></a>  
+    <a href='mailto: jaani.matharu@gmail.com'><FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '24px', color:'#fde050' }}/></a>
        </div>
 
 
@@ -48,7 +48,7 @@ export default function Footer() {
        </br>
        {/* <br> */}
        {/* </br> */}
-       <Link to="">Terms of Use</Link>
+       <Link to="" style = {{color:'#8A2be2', fontFamily: 'Poppins' }}>Terms of Use</Link>
            
        </div>
      
@@ -59,10 +59,10 @@ export default function Footer() {
        {/* <br> */}
        {/* </br> */}
        
-       <Link to="">Privacy Policy</Link>
+       <Link to="" style = {{color:'#8A2be2', fontFamily: 'Poppins' }}>Privacy Policy</Link>
      
        </div>
-       <div class= "space" id ="Github" style = {{fontWeight: 'bold' }}>
+       <div class= "space" id ="Copyright" style = {{color:'black', fontFamily: 'Outfit' }}>
        <br>
        </br>
        {/* <br> */}

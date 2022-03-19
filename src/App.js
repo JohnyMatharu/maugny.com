@@ -1,3 +1,5 @@
+// For media queries, somethings disappeared, two became one and distance in between objects became smaller
+//logo will stay there, unessential stuff will go away and they all become like a one line
 import logo from './logo.svg';
 import './App.css';
 import React, { Component } from 'react';
@@ -33,11 +35,11 @@ const App = () => {
 
 
 {/* this is section 1 which is 33% width */}
-<div id ="sectionOne"><h3 style={{ paddingBottom: '1px', fontSize: '24px', fontFamily: 'Didact Gothic', fontWeight: 'bold' }}>
-  <span style={{color:'#4F9CC8'}}>abcdefghijklmnopqrstuvwxyz</span></h3></div>
+<div id ="sectionOne"><h3 style={{ paddingBottom: '1px', fontSize: '24px', fontFamily: 'Poppins', fontWeight: 'bold' }}>
+  <span style={{color:'#fde050'}}>M</span></h3></div>
+{/* Here logo is preferred to be singular in Nav Bar*/}
 
-   {/* to be tried Poppins, Quicksand, Questrial, Outfit, Manjari */}
-
+  
 
 {/* <div id ="sectionOne"><h3 style={{ paddingBottom: '1px', fontSize: '24px', fontFamily: 'Verdana', fontWeight: 'bold' }}><span style={{color:'#13d34b'}}>Go</span><span style={{color:'#3c6cd2'}}>Help</span><span style={{color:'#b429b0'}}>Pal</span></h3></div>
 */}
@@ -64,7 +66,8 @@ isActive
 ? {
     color: '#ECEFF8'
   }
-: { color: '#4F9CC8'}
+: { color: '#fde050'
+}
 }
 //style={ isHome ? { color: "#4F9CC8" } : {} }
 > 
@@ -78,9 +81,13 @@ isActive
   <NavLink to="/clubPage" style={({ isActive }) =>
 isActive
 ? {
-    color: '#ECEFF8'
+    color: '#ECEFF8',
+    fontFamily: 'Poppins' 
+    
   }
-: { color: '#4F9CC8'}
+: { color: '#8A2be2',
+fontFamily: 'Poppins'  
+}
 }>
       
     Club
@@ -92,9 +99,12 @@ isActive
   <NavLink to="/loginPage" style={({ isActive }) =>
 isActive
 ? {
-    color: '#ECEFF8'
+    color: '#ECEFF8',
+    fontFamily: 'Poppins' 
   }
-: { color: '#4F9CC8'}
+: { color: '#8A2be2',
+fontFamily: 'Poppins' 
+}
 }>
     Login
     </NavLink>  
@@ -119,7 +129,7 @@ isActive
                 color: '#ECEFF8'
               }
               
-            : { color:  '#7d7f81'}
+            : { color:  '#fde050'}
         }                
           
           >

@@ -26,8 +26,6 @@
   padding-bottom: 1%;
 }
 
-
-
 .navCenter
 {
   justify-content: space-between;
@@ -41,6 +39,16 @@
 #sectionOne{
   width:33.3%; 
 }
+
+@media only screen and (max-width: 850px){
+  #sectionOne
+    {
+       width: 7%;  
+      
+    }
+  }
+
+
 #sectionTwo
 {
   width: 66.6%;    
@@ -49,17 +57,50 @@
   flex-wrap: wrap;
   flex-direction: row;
 }
+@media only screen and (max-width: 850px){
+  #sectionTwo
+    {  
+       width: 93%;   
+       justify-content: space-between;
+       display: flex;
+       flex-wrap: wrap;
+       flex-direction: row;
+    }
+  }
+
+
+
 
 .home
 {
   width: 50%;
 }
+
+@media only screen and (max-width: 850px){
+  .home
+    {  
+       width: 90%;   
+       
+    }
+  }
+
+
 .cart
 {
   padding-top: 3.6px;
   width: 50%;
   
 }
+
+@media only screen and (max-width: 850px){
+  .cart
+    {  
+      padding-top: 3.6px;
+  width: 10%;
+    }
+  }
+
+
 
 .topmenu ul li.active a, .topmenu ul li a:hover{
   text-decoration:none;

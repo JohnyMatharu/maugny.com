@@ -21,6 +21,22 @@
     padding-left: 120px;
     padding-right: 120px;
 }
+
+@media only screen and (max-width: 850px){
+  #firstLevel
+    {  
+      width: 100%;
+    display: flex; 
+    align-items: center; 
+    flex-direction: row;
+    text-align: center;
+    padding-left: 37px;
+    padding-right: 37px;
+      
+    }
+  }
+
+
 /* Anything in the first div you will have to divide the width in % to make it 100% of this div */
 /* Please add padding here from left and right to condense little as design */
 
@@ -67,23 +83,4 @@
           }
         }
 */
-        .fa-envelope
-        {
-          color: #4F9CC8;
-        }
-        .fa-facebook
-        {
-          color: #4F9CC8;
-        }
-        .fa-linkedin
-        {
-          color: #4F9CC8;
-        }
-        .fa-github
-        {
-          color: #4F9CC8;
-        }
-        .fa-stack-overflow
-        {
-          color: #4F9CC8;
-        }
+        
