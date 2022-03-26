@@ -116,3 +116,63 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 /* this is to be checked */
 
+/* the following if or footer */
+
+#footer
+{
+   
+    display: flex; 
+    align-items: center; 
+    flex-direction: column;
+    text-align: center;
+    height: 45px;
+/* padding-left: 10%;   */
+/* padding-right: 10%;  */
+}
+
+#firstLevel
+{
+  width: 100%;
+    display: flex; 
+    align-items: center; 
+    flex-direction: row;
+    text-align: center;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+@media only screen and (max-width: 850px){
+  #firstLevel
+    {  
+      width: 100%;
+    display: flex; 
+    align-items: center; 
+    flex-direction: row;
+    text-align: center;
+    padding-left: 37px;
+    padding-right: 37px;
+      
+    }
+  }
+
+
+/* Anything in the first div you will have to divide the width in % to make it 100% of this div */
+/* Please add padding here from left and right to condense little as design */
+
+
+#secondLevel
+{
+ width: 100%;
+    display: flex; 
+    align-items: center; 
+    flex-direction: row;
+    text-align: center;
+}
+
+
+.space
+{
+   width: 33.33%;
+  
+}
+/* all CSS for footer ends here  */

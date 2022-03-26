@@ -8,7 +8,7 @@ function loginPage() {
         <section>
       <MDBContainer id="size">
          
-   <div id="height1"><h3 style={{fontWeight: "bold", fontSize: '63px', fontFamily: 'Outfit', color: '00003a' }}>This is Login Page</h3>
+   <div id="height1"><h3 style={{fontWeight: "bold", fontSize: '21px', fontFamily: 'Outfit', color: '00003a' }}>This is Login Page</h3>
 
        
           </div>
