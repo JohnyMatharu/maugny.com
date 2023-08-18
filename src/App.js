@@ -33,13 +33,18 @@ const App = () => {
 
 <Router>
 <nav>
+
+
+
 <div className="nav">
 {/* this is beginning nav div 100% */}
 
 
 {/* this is section 1 which is 33% width */}
+
+{/* 
 <div id ="sectionOne"><h3 style={{ paddingBottom: '1px', fontSize: '28px', fontFamily: 'Poppins', fontWeight: 'bold' }}>
-  <span style={{color:'#fde050'}}>M</span></h3></div>
+  <span style={{color:'#fde050'}}>M</span></h3></div>  */}
 {/* Here logo is preferred to be singular in Nav Bar*/}
 
   
@@ -74,8 +79,8 @@ isActive
 }
 //style={ isHome ? { color: "#4F9CC8" } : {} }
 > 
-    
-    <FontAwesomeIcon icon={faHome} style={{ fontSize: '28px' }}/>
+    {/* 
+    <FontAwesomeIcon icon={faHome} style={{ fontSize: '28px' }}/>  */}
     </NavLink>
     </div>
   {/* this is end of Home icon */}
@@ -94,8 +99,11 @@ fontFamily: 'Poppins',
 fontSize: '14px'   
 }
 }>
+  {/*  
       
     Club
+*/}
+
     </NavLink>  
     </div>
   {/* this is end of club link */}
@@ -114,7 +122,10 @@ fontFamily: 'Poppins',
 fontSize: '14px' 
 }
 }>
+  {/* 
     Login
+     */}
+    
     </NavLink>  
     </div>
     {/* this is end of login link */}
@@ -141,7 +152,9 @@ fontSize: '14px'
         }                
           
           >
+            {/*  
   <FontAwesomeIcon icon={faCartPlus} style={{ fontSize: '28px' }}/>
+  */}
   </NavLink>
 </div>
 {/*this is end of cart link */}
@@ -196,17 +209,17 @@ fontSize: '14px'
 
          
 <div className= "space">
-<Link to="/customerPage" style = {{color:'#8A2be2', fontFamily: 'Poppins', fontSize: '14px' }}>Customer</Link>
+{/* <Link to="/customerPage" style = {{color:'#8A2be2', fontFamily: 'Poppins', fontSize: '14px' }}>Customer</Link> */}
 </div>
 
 
        <div className= "space" id = "Careers">
-       <Link to="/careerPage" style = {{color:'#8A2be2', fontFamily: 'Poppins', fontSize: '14px' }}>Careers</Link>
+       {/* <Link to="/careerPage" style = {{color:'#8A2be2', fontFamily: 'Poppins', fontSize: '14px' }}>Careers</Link> */}
        </div>
 
 
        <div className= "space" id = "Mail">
-    <a href='mailto: jaani.matharu@gmail.com'><FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '28px', color:'#fde050' }}/></a>
+    {/* <a href='mailto: jaani.matharu@gmail.com'><FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '28px', color:'#fde050' }}/></a> */}
        </div>
 
 
@@ -223,7 +236,7 @@ fontSize: '14px'
        </br>
        {/* <br> */}
        {/* </br> */}
-       <Link to="/termPage" style = {{color:'#8A2be2', fontFamily: 'Poppins', fontSize: '14px' }}>Terms of Use</Link>
+       {/* <Link to="/termPage" style = {{color:'#8A2be2', fontFamily: 'Poppins', fontSize: '14px' }}>Terms of Use</Link> */}
            
        </div>
      
@@ -234,7 +247,7 @@ fontSize: '14px'
        {/* <br> */}
        {/* </br> */}
        
-       <Link to="/privacyPage" style = {{color:'#8A2be2', fontFamily: 'Poppins', fontSize: '14px' }}>Privacy Policy</Link>
+       {/* <Link to="/privacyPage" style = {{color:'#8A2be2', fontFamily: 'Poppins', fontSize: '14px' }}>Privacy Policy</Link> */}
      
        </div>
        <div className= "space" id ="Copyright" style = {{color:'black', fontFamily: 'Outfit', fontSize: '14px' }}>
@@ -242,7 +255,7 @@ fontSize: '14px'
        </br>
        {/* <br> */}
        {/* </br> */}
-     Maugny © 2022
+     {/* Maugny © 2022 */}
        </div>
        
        
