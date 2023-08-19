@@ -31,7 +31,7 @@ const App = () => {
     
 <div className="App">
 
-<Router>
+<Router basename="/maugny.com">
 <nav>
 
 
