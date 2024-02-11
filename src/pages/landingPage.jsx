@@ -1,98 +1,297 @@
-import React from 'react';
-import pic5 from '../pictures/comingSoon.gif';
+//NEXT STEP -  make divs for last sections, color backround rainbow and text colors, icons
+import './landingPage.scss';
+import App from '../App'
+import React, { Component, useState, useEffect } from 'react';
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import $ from 'jquery';
-import './landingPage.css';
+import pic1 from '../pictures/1.jpeg';
+import pic2 from '../pictures/2.jpeg';
+import pic3 from '../pictures/3.jpeg';
+import pic4 from '../pictures/4.jpeg';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import scrollDivExtension1 from './scrollDivExtension1';
+import scrollDivExtension2 from './scrollDivExtension2';
 
 
 
-
-function landingPage() {
-    return (
+$(function() {
+    'use strict';
   
-<section>
-
-<MDBContainer id="size">
-          <div className="backroundProfile">
-{/* this is main parent div heading back at beginning and then button is sub div after heading which has 3 equal sections
-called height 1, 2 and 3 */ }
-
-
-<div id= "buttonProfile">
-  {/* add this to increase the icon size, style={{ fontSize: '24px' }} */}
-  <div id="profileSpace"></div>
-{/* insert height1 div to give some measurement to div not to collapse on no info */}
-{/* <div id="profileName"><h3 style = {{fontFamily: "Cursive", color: "#808080", fontSize: "18px"}}>Johny Matharu</h3></div> */}
-
-<div id = "profilePic">
-<img id = "imgProfile" src={pic5}></img>
-</div>
-
-
-{/* <div id = "afterPicSpace"></div> */}
-
-
-{/* <div id = "profileContent"> */}
-{/* <h6 style = {{fontFamily: "Futura", fontSize: "15px"}}>CONTENT CREATOR</h6> */}
-
-{/* <h6 style = {{fontFamily: "Futura", fontSize: "15px"}}>gohelppal@gmail.com</h6> */}
-{/* <h5 style = {{fontFamily: "Futura", fontWeight: "bold", fontSize: "18px"}}><i class="fas fa-phone"></i></h5> */}
-{/* <h6 style = {{fontFamily: "Futura", fontSize: "15px"}}>1-(416) 998 0934</h6> */}
-{/* <h6 style = {{fontFamily: "Futura", fontSize: "15px"}}>-------------------------------</h6> */}
-{/* <h6 style = {{fontFamily: "Futura", fontSize: "15px"}}>Downtown Barrie</h6> */}
-{/* <h6 style = {{fontFamily: "Futura", fontSize: "15px"}}>www.gohelppal.com</h6> */}
-{/* <h6 style = {{fontFamily: "Futura", fontSize: "15px"}}>-------------------------------</h6> */}
-
-{/* </div> */}
-
-<div id="profileSpace"></div>
-
-{/* thi is end of button */} 
-   </div>
-
-   {/* this is end of backround */}
-          </div>
+    var scrollingValue = 150;
+    var scrollbarPosition = 10;
   
-    </MDBContainer >  
+    function getMaxChildWidth( elm ) {
+      var childrenWidth = $.map($('>*', elm), function(el) { return $(el).width() });
+      var max = 0;
+      for (var i = 0; i < childrenWidth.length; i++) {
+        max = childrenWidth[i] > max ? childrenWidth[i] : max;
+      }
+      return max;
+    }
+  
+    function getScrollingValue(toLeft, ctx) {
+  
+      if (toLeft) {
+        return scrollbarPosition < 1 ? 0 : scrollingValue;
+      }
+      return scrollbarPosition >= getMaxChildWidth(ctx) ? 0 : scrollingValue;
+    }
+  
+    $('.scroll-btn.scroll-to-left').on('click', function() {
+      $(this).parent().scrollLeft(
+        scrollbarPosition -= getScrollingValue(true, $(this).parent())
+      );
+    });
+  
+    $('.scroll-btn.scroll-to-right').on('click', function() {
+      $(this).parent().scrollLeft(
+        scrollbarPosition += getScrollingValue(false, $(this).parent())
+      );
+    });
+  });
+ // experiment render
 
 
 
 
+//Following is perfect example, please adjust in existing code, make name changes as necessary, tested as working
 
-<div id ="space">
-</div>
-<div id ="space"></div>
-<div id ="space"></div>
-
-
-
-<div id ="space">
-</div>
-<div id ="space"></div>
-<div id ="space"></div>
-
-
-<div id ="space">
-</div>
-<div id ="space"></div>
-<div id ="space"></div>
-
+class OnlyEvens extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  shouldComponentUpdate(nextProps, nextState) {
  
+    // Change code below this line
+    return true;
+    // Change code above this line
+
+  }
+  componentDidUpdate() {
+    console.log ('updated yes');
+  }
+
+  render() {
+let newValue = this.props.value
+console.log (newValue);
 
 
 
+ const multipleRender = [
+ 
+<div id= "divSpaceScroll">
+    <div id="heightDiv"> 
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
+   <div id="heightDiv"> 
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    </div>,
+
+<div><h1>render2</h1></div>,
+<div><h1>render3</h1></div>,
+<div><h1>render3</h1></div>,
+<div><h1>render4</h1></div>,
+<div><h1>render5</h1></div>,
+<div><h1>render6</h1></div>
+];
 
 
 
-
-
-
-
-
-    </section>    
-    )
+  
+if (newValue < 0)
+{
+  const newValue = 0; 
+  return multipleRender [newValue]; 
 }
-export default landingPage() 
+
+else if (newValue > 6)  {
+  const newValue = 6; 
+  return multipleRender [newValue]; 
+}
+
+else {
+  return multipleRender [newValue]; 
+}
+
+}
+
+}
+
+
+class OnlyEvens1 extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  shouldComponentUpdate(nextProps, nextState) {
+ 
+    // Change code below this line
+    return true;
+    // Change code above this line
+
+  }
+  componentDidUpdate() {
+    console.log ('updated yes');
+  }
+
+  render() {
+let newValue1 = this.props.value1
+console.log (newValue1);
+
+
+
+ const multipleRender = [
+ 
+<div id= "divSpaceScroll">
+    <div id="heightDiv"> 
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
+   <div id="heightDiv"> 
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    </div>,
+
+<div><h1>render2</h1></div>,
+<div><h1>render3</h1></div>,
+<div><h1>render4</h1></div>,
+<div><h1>render5</h1></div>,
+<div><h1>render6</h1></div>,
+<div><h1>render7</h1></div>
+];
+
+
+
+  
+if (newValue1 < 0)
+{
+  const newValue1 = 0; 
+  return multipleRender [newValue1]; 
+}
+
+else if (newValue1 > 6)  {
+  const newValue1 = 6; 
+  return multipleRender [newValue1]; 
+}
+
+else {
+  return multipleRender [newValue1]; 
+}
+
+}
+
+}
+
+
+
+
+
+class OnlyEvens2 extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  shouldComponentUpdate(nextProps, nextState) {
+ 
+    // Change code below this line
+    return true;
+    // Change code above this line
+
+  }
+  componentDidUpdate() {
+    console.log ('updated yes');
+  }
+
+  render() {
+let newValue2 = this.props.value2
+console.log (newValue2);
+
+
+
+ const multipleRender = [
+ 
+<div id = "offer1">
+<h3 id ="textStyle" style={{fontFamily: 'Outfit', textAlign: 'center', color: 'white'}}><a>Membership</a></h3>
+    </div>,
+<div id = "offer2">
+<h3 id ="textStyle" style={{fontFamily: 'Outfit', textAlign: 'center', color: 'white'}}><a>Samples</a></h3>
+    </div>,
+<div><h1>render3</h1></div>,
+<div><h1>render4</h1></div>,
+<div><h1>render5</h1></div>,
+<div><h1>render6</h1></div>,
+<div><h1>render7</h1></div>
+
+
+//  
+  
+  
+
+// {/* example */}
+
+// {/* <button id= "button3"><div id = "division"> <h3 id ="textStyle" style={{fontFamily: 'Outfit', textAlign: 'center'}}><a>Passes</a></h3></div></button> */}
+
+// {/* <button id= "button4"><div id = "division"> <h3 id ="textStyle" style={{fontFamily: 'Outfit', textAlign: 'center', color: 'white'}}><a>Newsletter</a></h3></div></button> */}
+   
+  
+// {/* <button id= "button5"><div id = "division"> <h3 id ="textStyle" style={{fontFamily: 'Outfit', textAlign: 'center', color: 'white'}}><a>Prebook</a></h3></div></button> */}
+
+   
+// {/* <button id= "button6"><div id = "division"> <h3 id ="textStyle" style={{fontFamily: 'Outfit', textAlign: 'center', color: 'white'}}><a>Share</a></h3></div></button> */}
+
+// {/* <button id= "button7"><div id = "division"> <h3 id ="textStyle" style={{fontFamily: 'Outfit', textAlign: 'center'}}><a>Customize</a></h3></div></button> */}
+
+
+
+
+
+];
+
+
+
+  
+if (newValue2 < 0)
+{
+  const newValue2 = 0; 
+  return multipleRender [newValue2]; 
+}
+
+else if (newValue2 > 7)  {
+  const newValue2 = 7; 
+  return multipleRender [newValue2]; 
+}
+
+else {
+  return multipleRender [newValue2]; 
+}
+
+}
+
+}
 
 
 
@@ -102,27 +301,966 @@ export default landingPage()
 
 
 
+class LandingPage extends React.Component
+{ 
+  
+  constructor(props) {
+    super(props);
+    //this.state = {showWarning: true};
+   // this.handleToggleClick = this.handleToggleClick.bind(this);
+   // this.handleToggleClick2 = this.handleToggleClick2.bind(this);
+ 
+   this.state = {
+    value: 0,
+    value1: 0,
+    value2: 0  
+  };
+  this.addValue = this.addValue.bind(this);
+  this.addValue2 = this.addValue2.bind(this);
+  this.addValue3 = this.addValue3.bind(this);
+  this.addValue4 = this.addValue4.bind(this);
+  this.addValue5 = this.addValue5.bind(this);
+  this.addValue6 = this.addValue6.bind(this);
+}
+addValue() {
+  this.setState(state => ({
+//    value: state.value + 1
+value: (Math.min(6, state.value + 1))
+  }));
+}
+addValue2() {
+  this.setState(state => ({
+    value: (Math.max(0, state.value - 1)) 
+    
+  }));
+} 
 
-/*
-import './landingPage.css';
-import React from 'react';
-import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
-import $ from 'jquery';
+//the following is for second section
+addValue3() {
+  this.setState(state => ({
+//    value: state.value + 1
+value1: (Math.min(6, state.value1 + 1))
+  }));
+}
+addValue4() {
+  this.setState(state => ({
+    value1: (Math.max(0, state.value1 - 1)) 
+    
+  }));
+} 
 
-function landingPage() {
+
+//the following is for final section
+addValue5() {
+  this.setState(state => ({
+//    value: state.value + 1
+value2: (Math.min(6, state.value2 + 1))
+  }));
+}
+addValue6() {
+  this.setState(state => ({
+    value2: (Math.max(0, state.value2 - 1)) 
+    
+  }));
+} 
+
+
+
+
+
+  render() {
+   
     return (
         <section>
-      <MDBContainer id="size">
+      {/* <MDBContainer id="size"> */}
          
-   <div id="height1"><h3 style={{fontWeight: "bold", fontSize: '21px', fontFamily: 'Outfit', color: '00003a' }}>This is Landing Page</h3>
+   {/* <div id="height1"><h3 style={{fontWeight: "bold", fontSize: '21px', fontFamily: 'Outfit', color: '00003a' }}>This is Landing Page</h3> */}
     
-       
+          {/* </div> */}
+
+        
+
+          <section id = "club">
+  <div id = "displayGallery" className = "hide">
+    
+    <div id = "flex">
+  
+    {/*  flex box start */}
+  
+      <div id = "flex1">
+  
+  </div>
+  
+  <div id = "flex2">
+  
+  </div>
+  
+ {/* flex box end */}
+  
+  
+    </div>
+  {/* add all the divs here */}
+    
+    <div id = "flex">
+  
+      {/* flex box start  */}
+      
+          <div id = "flex3">
+            {/* <br></br> */}
+         
+          {/* <iframe src="https://giphy.com/embed/3oEduTFaW1r47UWhTq" width="162" height="162" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/nba-dunk-nba-finals-cleveland-cavaliers-3oEduTFaW1r47UWhTq">via GIPHY</a></p> */}
+
+      </div>
+      
+      <div id = "flex4">
+      
+      </div>
+      
+      {/* flex box end  */}
+      
+        </div>
+        {/* add all the divs here  */}
+        <div id = "flex">
+  
+          {/* flex box start */}
+          
+              <div id = "flex5">
+          
           </div>
-    </MDBContainer >  
-    </section>    
+          
+          <div id = "flex6">
+          
+          </div>
+          
+         {/* flex box end  */}
+          
+            </div>
+           {/* add all the divs here */}
+            <div id = "flex">
+  
+              {/* flex box start */}
+              
+                  <div id = "flex7">
+              
+              </div>
+              
+              <div id = "flex8">
+              
+              </div>
+              
+             {/* flex box end */}
+              
+                </div>
+                {/* add all the divs here  */}
+                <div id = "flex">
+  
+                {/* flex box start  */}
+                  
+                      <div id = "flex9">
+                  
+                  </div>
+                  
+                  <div id = "flex10">
+                  
+                  </div>
+                  
+                  {/* flex box end  */}
+                  
+                    </div>
+                     {/* add all the divs here  */}
+                    <div id = "flex">
+  
+                      {/* flex box start  */}
+                      
+                          <div id = "flex11">
+                      
+                      </div>
+                      
+                      <div id = "flex12">
+                      
+                      </div>
+                      
+                       {/* flex box end  */}
+                      
+                        </div>
+                    {/* add all the divs here  */}
+  
+    
+  
+  
+  </div>
+  </section>
+{/* NEXT start Landing page -Good Luck! */}
+
+{/* this is start of next page */}
+  <section>
+    {/* Following can be adjused for bold as needed */}
+    <br></br>
+    <br></br>
+   
+    <br></br>
+
+{/* this is beginning of child div in this parent section */}
+  <div id="height2">
+
+
+{/* NEXT: All this has to be fixed by commenting the scroll dive and writing things, exact names and percentages, then uncomment scroll div and start */}
+
+{/* this heading div */}
+<div id = "whiteSpace">
+
+ 
+    
+<h3 id ="textHeadingStyle" style={{fontWeight: "bold", fontFamily: 'Outfit'}}>Hottest Gear</h3></div>
+
+
+
+
+{/* this is scroll div which is be another flex for pic divs */}
+<div id= "scrollDiv">
+
+
+{/* left empty div */}
+<div id ="whiteSpaceScroll">
+  </div>
+
+{/* middle div with scroll bar*/}
+<div id= "divSpaceScroll">
+
+   
+
+
+<button  onClick={this.addValue2} class="scroll-btn scroll-to-left btn btn-light btn-arrow-left" type="button"><i class="fas fa-chevron-left"></i></button>
+<button onClick={this.addValue} class="scroll-btn scroll-to-right btn btn-light btn-arrodw-right" type="button"><i class="fas fa-chevron-right"></i></button>
+<OnlyEvens value={this.state.value}/>
+
+    </div>
+      
+    {/* right empty div */}
+    <div id ="whiteSpaceScroll">
+      </div>
+
+
+
+
+{/* this is end of scrollDiv */}
+</div>
+
+
+
+
+
+
+{/* this is white space */}
+<div  id="whiteSpace"></div>
+{/* this is second scrollable display div */}
+
+{/* this is scroll div which is be another flex for pic divs */}
+<div id= "scrollDiv">
+
+
+
+
+{/* left empty div */}
+<div id ="whiteSpaceScroll">
+  </div>
+
+{/* middle div with scroll bar*/}
+<div id= "divSpaceScroll">
+{/* these are picture divs */}
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
+<div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+
+<button class="scroll-btn scroll-to-left btn btn-light btn-arrow-left" type="button"><i class="fas fa-chevron-left"></i></button>
+<button class="scroll-btn scroll-to-right btn btn-light btn-arrodw-right" type="button"><i class="fas fa-chevron-right"></i></button>
+  
+    </div>
+      
+    {/* right empty div */}
+    <div id ="whiteSpaceScroll">
+      </div>
+
+
+
+{/* this is end of scrollDiv */}
+</div>
+
+{/* this is white space */}
+<div  id="whiteSpace"></div>
+{/* this is third scrollable display div */}
+
+
+
+
+{/* this is scroll div which is be another flex for pic divs */}
+
+<div id= "scrollDiv">
+
+{/* left empty div */}
+<div id ="whiteSpaceScroll">
+  </div>
+
+{/* middle div with scroll bar*/}
+<div id= "divSpaceScroll">
+{/* these are picture divs */}
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
+<div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+
+<button class="scroll-btn scroll-to-left btn btn-light btn-arrow-left" type="button"><i class="fas fa-chevron-left"></i></button>
+<button class="scroll-btn scroll-to-right btn btn-light btn-arrodw-right" type="button"><i class="fas fa-chevron-right"></i></button>
+  
+    </div>
+      
+    {/* right empty div */}
+    <div id ="whiteSpaceScroll">
+      </div>
+
+{/* this is end of scrollDiv */}
+</div>
+
+
+
+
+{/* this is white space */}
+<div  id="whiteSpace"></div>
+
+{/* this is end of child div in parent section */}
+</div>
+
+  </section>
+
+{/* this is next section */}
+<section>
+
+  
+    {/* Following can be adjused for bold as needed */}
+    <br></br>
+    <br></br>
+   
+    <br></br>
+
+{/* this is beginning of child div in this parent section */}
+  <div id="height2">
+
+
+{/* NEXT: All this has to be fixed by commenting the scroll dive and writing things, exact names and percentages, then uncomment scroll div and start */}
+
+{/* this heading div */}
+<div id = "whiteSpace">
+
+ 
+    
+<h3 id ="textHeadingStyle" style={{fontWeight: "bold", fontFamily: 'Outfit'}}>Best Seller Jewellery</h3></div>
+
+
+{/* this is scroll div which is be another flex for pic divs */}
+<div id= "scrollDiv">
+
+
+{/* left empty div */}
+<div id ="whiteSpaceScroll">
+  </div>
+
+{/* middle div with scroll bar*/}
+<div id= "divSpaceScroll">
+
+   
+
+
+<button  onClick={this.addValue4} class="scroll-btn scroll-to-left btn btn-light btn-arrow-left" type="button"><i class="fas fa-chevron-left"></i></button>
+<button onClick={this.addValue3} class="scroll-btn scroll-to-right btn btn-light btn-arrodw-right" type="button"><i class="fas fa-chevron-right"></i></button>
+<OnlyEvens1 value1={this.state.value1}/>
+
+    </div>
+      
+    {/* right empty div */}
+    <div id ="whiteSpaceScroll">
+      </div>
+
+
+
+
+{/* this is end of scrollDiv */}
+</div>
+
+
+
+
+
+
+{/* this is white space */}
+<div  id="whiteSpace"></div>
+{/* this is second scrollable display div */}
+
+{/* this is scroll div which is be another flex for pic divs */}
+<div id= "scrollDiv">
+
+
+
+
+{/* left empty div */}
+<div id ="whiteSpaceScroll">
+  </div>
+
+{/* middle div with scroll bar*/}
+<div id= "divSpaceScroll">
+{/* these are picture divs */}
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
+<div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+
+<button class="scroll-btn scroll-to-left btn btn-light btn-arrow-left" type="button"><i class="fas fa-chevron-left"></i></button>
+<button class="scroll-btn scroll-to-right btn btn-light btn-arrodw-right" type="button"><i class="fas fa-chevron-right"></i></button>
+  
+    </div>
+      
+    {/* right empty div */}
+    <div id ="whiteSpaceScroll">
+      </div>
+
+
+
+{/* this is end of scrollDiv */}
+</div>
+
+{/* this is white space */}
+<div  id="whiteSpace"></div>
+{/* this is third scrollable display div */}
+
+
+
+
+{/* this is scroll div which is be another flex for pic divs */}
+
+<div id= "scrollDiv">
+
+{/* left empty div */}
+<div id ="whiteSpaceScroll">
+  </div>
+
+{/* middle div with scroll bar*/}
+<div id= "divSpaceScroll">
+{/* these are picture divs */}
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
+<div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+
+<button class="scroll-btn scroll-to-left btn btn-light btn-arrow-left" type="button"><i class="fas fa-chevron-left"></i></button>
+<button class="scroll-btn scroll-to-right btn btn-light btn-arrodw-right" type="button"><i class="fas fa-chevron-right"></i></button>
+  
+    </div>
+      
+    {/* right empty div */}
+    <div id ="whiteSpaceScroll">
+      </div>
+
+{/* this is end of scrollDiv */}
+</div>
+
+
+
+
+{/* this is white space */}
+<div  id="whiteSpace"></div>
+
+{/* this is end of child div in parent section */}
+</div>
+
+
+
+   
+  </section>
+
+
+  {/* this is next section */}
+<section>
+
+ {/* Following can be adjused for bold as needed */}
+ <br></br>
+    <br></br>
+   
+    <br></br>
+
+{/* this is beginning of child div in this parent section */}
+  <div id="height2">
+
+
+{/* NEXT: All this has to be fixed by commenting the scroll dive and writing things, exact names and percentages, then uncomment scroll div and start */}
+
+{/* this heading div */}
+<div id = "whiteSpace2">
+
+ 
+<br></br>
+
+   
+   
+<h3 id ="textHeadingStyle" style={{fontWeight: "bold", fontFamily: 'Outfit'}}>Today's Special Deal</h3></div>
+
+
+
+{/* this is scroll div which is be another flex for pic divs */}
+<div id= "scrollDiv2">
+
+{/* left empty div */}
+<div id ="whiteSpaceScroll">
+  </div>
+
+{/* middle div with scroll bar*/}
+<div id= "divSpaceScroll2">
+
+
+<div id= "squareDiv"></div>
+  
+<div id= "squareDiv"></div>
+
+   
+<div id= "squareDiv"></div>
+
+
+
+
+
+  </div>
+         
+      
+    {/* right empty div */}
+    <div id ="whiteSpaceScroll">
+      </div>
+
+{/* this is end of scrollDiv */}
+</div>
+
+
+
+
+
+
+{/* this is white space */}
+<div  id="whiteSpace2"></div>
+{/* this is second scrollable display div */}
+
+{/* this is scroll div which is be another flex for pic divs */}
+<div id= "scrollDiv2">
+
+{/* left empty div */}
+<div id ="whiteSpaceScroll">
+  </div>
+
+{/* middle div with scroll bar*/}
+<div id= "divSpaceScroll2">
+
+
+<div id= "squareDiv"></div>
+<br></br>
+    <br></br>
+   
+    <br></br>
+<div id= "squareDiv"></div>
+<br></br>
+    <br></br>
+   
+    <br></br>
+<div id= "squareDiv"></div>
+
+
+   </div>
+      
+    {/* right empty div */}
+    <div id ="whiteSpaceScroll">
+      </div>
+
+{/* this is end of scrollDiv */}
+</div>
+
+{/* this is white space */}
+<div  id="whiteSpace2"></div>
+{/* this is third scrollable display div */}
+
+
+
+
+{/* this is scroll div which is be another flex for pic divs */}
+
+<div id= "scrollDiv2">
+
+{/* left empty div */}
+<div id ="whiteSpaceScroll">
+  </div>
+
+{/* middle div with scroll bar*/}
+<div id= "divSpaceScroll2">
+
+
+<div id= "squareDiv"></div>
+<br></br>
+    <br></br>
+   
+    <br></br>
+<div id= "squareDiv"></div>
+<br></br>
+    <br></br>
+   
+    <br></br>
+<div id= "squareDiv"></div>
+
+    </div>
+      
+    {/* right empty div */}
+    <div id ="whiteSpaceScroll">
+      </div>
+
+{/* this is end of scrollDiv */}
+</div>
+
+
+
+
+{/* this is white space */}
+<div  id="whiteSpace2"></div>
+
+{/* this is end of child div in parent section */}
+</div>
+
+
+  </section>
+
+{/* this is next section */}
+<section>
+{/* Following can be adjused for bold as needed */}
+<br></br>
+    <br></br>
+   
+    <br></br>
+
+{/* this is beginning of child div in this parent section */}
+  <div id="height2">
+
+
+{/* NEXT: All this has to be fixed by commenting the scroll dive and writing things, exact names and percentages, then uncomment scroll div and start */}
+
+{/* this heading div */}
+<div id = "whiteSpace3">
+
+
+    
+<h3 id ="textHeadingStyle" style={{fontWeight: "bold", fontFamily: 'Outfit'}}>Just Arrived</h3></div>
+
+
+
+{/* this is scroll div which is be another flex for pic divs */}
+<div id= "scrollDiv3">
+
+{/* left empty div */}
+<div id ="whiteSpaceScroll">
+  </div>
+
+{/* middle div with scroll bar*/}
+<div id= "divSpaceScroll2">
+
+
+<div id= "squareDiv2"></div>
+
+   
+  
+<div id= "squareDiv2"></div>
+
+   
+   
+<div id= "squareDiv2"></div>
+
+
+
+
+
+  </div>
+         
+      
+    {/* right empty div */}
+    <div id ="whiteSpaceScroll">
+      </div>
+
+{/* this is end of scrollDiv */}
+</div>
+
+
+
+
+
+
+{/* this is white space */}
+<div  id="whiteSpace3"></div>
+{/* this is second scrollable display div */}
+
+{/* this is scroll div which is be another flex for pic divs */}
+<div id= "scrollDiv3">
+
+{/* left empty div */}
+<div id ="whiteSpaceScroll">
+  </div>
+
+{/* middle div with scroll bar*/}
+<div id= "divSpaceScroll2">
+
+<div id= "squareDiv2"></div>
+
+   
+  
+<div id= "squareDiv2"></div>
+
+   
+   
+<div id= "squareDiv2"></div>
+   </div>
+      
+    {/* right empty div */}
+    <div id ="whiteSpaceScroll">
+      </div>
+
+{/* this is end of scrollDiv */}
+</div>
+
+{/* this is white space */}
+<div  id="whiteSpace3"></div>
+{/* this is third scrollable display div */}
+
+
+
+{/* this is end of child div in parent section */}
+</div>
+
+  </section>
+
+
+
+
+
+{/* this is next section */}
+<section>
+{/* Following can be adjused for bold as needed */}
+<br></br>
+    <br></br>
+   
+    <br></br>
+
+{/* this is beginning of child div in this parent section */}
+  <div id="height2">
+
+
+{/* NEXT: All this has to be fixed by commenting the scroll dive and writing things, exact names and percentages, then uncomment scroll div and start */}
+
+{/* this heading div */}
+<div id = "whiteSpace3">
+
+
+    
+<h1 id ="textHeadingStyle" style={{fontWeight: "bold", fontFamily: 'Outfit'}}>The Maugny's Club</h1></div>
+
+
+
+
+{/* this is scroll div which is be another flex for pic divs */}
+<div id= "scrollDiv3">
+
+{/* left empty div */}
+<div id ="whiteSpaceScroll">
+  </div>
+
+{/* middle div with scroll bar*/}
+<div id= "divSpaceScroll3">
+
+
+
+
+<div id = "offerDiv2">
+
+<div id = "division" ></div>
+  <div id = "division"></div>
+  <div id = "division"></div>
+
+  <button onClick={this.addValue6} class="btn btn-light btn-arrow-left" type="button"><i class="fas fa-chevron-left"></i></button>
+  
+
+
+<div id = "division"></div>
+<div id = "division"></div>
+<div id = "division"></div>
+
+</div>
+
+<div id="offerDiv1"></div>
+
+
+
+<div id= "offerDiv3">
+  
+
+  
+<OnlyEvens2 value2={this.state.value2}/>
+ 
+  
+
+</div>
+
+
+<div id="offerDiv5"></div>
+
+<div id="offerDiv4">
+<div id = "division" ></div>
+  <div id = "division"></div>
+  <div id = "division"></div>
+<button onClick={this.addValue5} class="btn btn-light btn-arrodw-right" type="button"><i class="fas fa-chevron-right"></i></button>
+<div id = "division" ></div>
+  <div id = "division"></div>
+  <div id = "division"></div>
+</div>
+
+
+
+{/* end of "divSpaceScroll3" div */}
+  </div>
+         
+      
+    {/* right empty div */}
+    <div id ="whiteSpaceScroll">
+      </div>
+
+{/* this is end of scrollDiv */}
+</div>
+
+
+
+
+
+
+{/* this is white space */}
+<div  id="whiteSpace3"></div>
+{/* this is second scrollable display div */}
+
+{/* this is scroll div which is be another flex for pic divs */}
+<div id= "scrollDiv3">
+
+{/* left empty div */}
+<div id ="whiteSpaceScroll">
+  </div>
+
+{/* middle div with scroll bar*/}
+<div id= "divSpaceScroll2">
+
+<div id= "squareDiv3"></div>
+  
+<div id= "squareDiv4">
+
+  <div id = "division" ></div>
+  <div id = "division"></div>
+  <div id = "division"></div>
+
+<div id = "division">  <h3 id ="textStyle" style={{fontFamily: 'Outfit', textAlign: 'center'}}>Not a member yet<br></br>Click<a id ="blue"> here</a></h3></div>
+
+<div id = "division"></div>
+<div id = "division"></div>
+<div id = "division"></div>
+
+{/* end of squareDiv4 */}
+</div>
+   
+
+   </div>
+      
+    {/* right empty div */}
+    <div id ="whiteSpaceScroll">
+      </div>
+
+{/* this is end of scrollDiv */}
+</div>
+
+{/* this is white space */}
+<div  id="whiteSpace3"></div>
+{/* this is third scrollable display div */}
+
+
+
+{/* this is end of child div in parent section */}
+</div>
+   
+  </section>
+
+
+
+
+
+
+
+
+
+    {/* </MDBContainer >   */}
+    </section> 
+    
     )
-}
-export default landingPage() 
+};
 
 
-*/
+};
+export default LandingPage

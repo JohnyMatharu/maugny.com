@@ -1,0 +1,464 @@
+//Do same for textHeadingColor and textHeadingSize as needed 
+
+@import "../App";
+
+
+
+#height1
+{
+    height: 706px;
+    
+}
+
+#height2
+{
+  height: 706px;
+  @include common-flex-column; 
+}
+
+#flex {
+    width: 100%;
+  height: 217px;
+  @include common-flex; 
+      position: sticky;
+      top: 0;
+  }
+  
+  #flex1 
+  {
+    width: 50%;
+    background-color: #4b4836;
+    opacity: 0.5;
+  }
+  
+  #flex2
+  {
+    width: 50%;
+    background-color: #4f9cc8; 
+    opacity: 0.5;
+  }
+  #flex3
+  {
+ 
+    //padding-top: 2%;
+    width: 50%;
+   background-color: royalblue;
+    opacity: 0.5;
+  }
+  #flex4
+  {
+    width: 50%;
+    background-color: blueviolet;
+    opacity: 0.5;
+  }
+  #flex5
+  {
+    width: 50%;
+    background-color: orchid;
+    opacity: 0.5;
+  }
+  #flex6
+  {
+    width: 50%;
+    background-color: coral;
+    opacity: 0.5;
+  }
+  #flex7
+  {
+    width: 50%;
+    background-color: azure;
+    opacity: 0.5;
+  }
+  #flex8
+  {
+    width: 50%;
+    background-color: paleturquoise;
+    opacity: 0.5;
+  }
+  #flex9
+  {
+    width: 50%;
+    background-color: turquoise;
+    opacity: 0.5;
+  }
+  #flex10
+  {
+    width: 50%;
+    background-color: blue;
+    opacity: 0.5;
+  }
+  #flex11
+  {
+    width: 50%;
+    background-color: beige;
+    opacity: 0.5;
+  }
+  #flex12
+  {
+    width: 50%;
+    background-color: grey;
+    opacity: 0.5;
+  }
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    }
+    
+    ::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #ccc;  
+    }
+  
+    #club 
+    {
+      height: 663px;
+    }
+  
+    #displayGallery
+    {
+        height: 648px;
+        /* background-image: url("../images/formulae-one.jpeg");  */
+        margin-left: 25.5%;
+        margin-right: 24.5%;
+        width: 50%;
+        height: 100%;
+        background-size: cover;
+        border: none;
+        overflow: scroll;
+    }
+  
+
+
+// here is the code from Go Help Pal
+//NEXT copy all CSS from GoHElpPal and paste here, take off stuff not needed, import pic file from GoHElpPal ad go with errors
+
+
+
+
+
+
+
+#self
+{
+    width: 9%;
+}
+
+#space
+{
+    height: 6px;
+}
+
+
+
+
+
+
+div.scrollmenu {
+   
+    overflow: auto;
+    white-space: nowrap;
+    display: flex; 
+    align-items: center; 
+  }
+  
+
+  
+  div.scrollmenu a:hover {
+    background-color: #777;
+  }
+
+/* scroll bar arrow botton follows */
+
+//HERE, 70.6 px multply by 10, 6 for scroll bars (i.e. 141.20 px for 1 times 3) and 4 times 70.6 px for halfs
+
+#whiteSpace
+{
+  height: 3.6%;
+//height: 70.6 px;
+}
+
+
+#scrollDiv
+{
+@include common-flex; 
+height: 28.53%
+}
+
+
+#whiteSpace2
+{
+  height: 7%;
+//height: 70.6 px;
+}
+
+
+#scrollDiv2
+{
+@include common-flex; 
+height: 23%
+}
+
+
+#whiteSpace3
+{
+  height: 4%;
+//height: 70.6 px;
+}
+
+
+#scrollDiv3
+{
+@include common-flex; 
+height: 44%;
+}
+
+
+
+
+
+
+
+
+
+#divSpaceScroll
+{
+width: 80%;
+@include scrollBarFlex;
+
+}
+
+#divSpaceScroll2
+{
+width: 80%;
+white-space: nowrap;
+display: flex; 
+align-items: center;
+background-color: white;
+justify-content: space-between;
+
+}
+
+#divSpaceScroll3
+{
+width: 80%;
+
+background-color: white;
+@include common-flex-column; 
+
+}
+
+
+
+
+#squareDiv
+
+{
+height: 100%;
+width: 30%;
+padding-left: 15px;
+padding-right: 15px;
+background-color: #ECEFF8;
+}
+
+#squareDiv2
+
+{
+height: 100%;
+width: 24.5%;
+padding-left: 7px;
+padding-right: 7ppx;
+background-color: #ECEFF8;
+
+}
+
+#squareDiv3
+
+{
+height: 100%;
+width: 60%;
+padding-left: 7px;
+padding-right: 7ppx;
+background-color: orange;
+
+}
+
+#squareDiv4
+
+{
+height: 100%;
+width: 40%;
+padding-left: 7px;
+padding-right: 7ppx;
+background-color: #ECEFF8;
+white-space: nowrap;
+display: flex; 
+align-items: center;
+justify-content: space-between;
+flex-direction: column;
+}
+
+
+// #divison
+// {
+
+// }
+
+
+#blue
+{
+// this color has to be rethought and developed
+  color: #4f9cc8;
+}
+
+
+#offerDiv1
+{
+height: 100%;
+width: 17.50%;
+}
+
+#offerDiv2
+{
+height: 100%;
+width: 7.5%;
+@include flex-align-center;
+}
+
+
+#offerDiv3
+{
+  height: 100%;
+  width: 50%;
+  
+}
+#offerDiv4
+{
+  height: 100%;
+  width: 7.5%;
+  @include flex-align-center;
+}
+#offerDiv5
+{
+height: 100%;
+width: 17.50%;
+}
+
+#offer1
+{
+  height: 100%;
+  width: 100%;
+  background-color: green;
+
+}
+
+#offer2
+{
+  height: 100%;
+  width: 100%;
+  background-color: red;
+
+}
+
+
+
+
+
+#whiteSpaceScroll
+{
+width: 10%;
+}
+  
+
+#heightDiv
+{
+height: 100%;
+width: 141px;
+}
+
+
+img{
+padding-top: 6%;
+height: 95%;
+width: 141px;
+}
+
+
+#space2
+{
+  height: 31.5px;
+}
+
+  
+
+
+// @media only screen and (max-width: 850px){
+  // img
+  //  {
+      // padding-left: 15%;
+      // padding-top: 22.2%;
+      // padding-right: 15%;
+      // padding-bottom: 30%;
+      // width: 318px;
+      /* border-top-left-radius: 28%; */
+      /* border-top-right-radius: 28%; */
+      /* border-bottom-left-radius: 28%; */
+      /* border-bottom-right-radius: 28%; */
+       
+      
+    // }
+  // }
+
+
+  .fa-github
+{
+  color: #4F9CC8;
+}
+
+
+
+ 
+#pic3
+{
+   filter: sepia(50%); 
+  filter: hue-rotate(180deg);
+
+}
+
+
+  div > p {
+    margin: 0;
+    width: 1500px;
+  }
+  
+  .scroll-btn {
+    background: #ECEFF8;
+    color:#4F9CC8;
+    border: none;
+    padding: 2px 10px;
+    font-size: xxx-large;
+    position:absolute;
+    top: 16;
+  }
+  
+  @media only screen and (max-width: 850px){
+    .scroll-btn
+      {
+           display: none;
+        
+      }
+    }
+
+    
+  
+  .scroll-btn.scroll-to-left { left: 0; }
+  .scroll-btn.scroll-to-right { right: 0; }
+
+
+
+
+

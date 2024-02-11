@@ -1,0 +1,24 @@
+//Do same for textHeadingColor and textHeadingSize as needed 
+
+@import "../App";
+$textColor: 0003a;
+$textSize: 21px;
+
+
+
+#height1
+{
+    height: 706px;
+    
+}
+
+
+#text{
+color: $textColor;
+font-size: $textSize;
+}
+
+#whiteSpaceScroll
+{
+width: 10%;
+}

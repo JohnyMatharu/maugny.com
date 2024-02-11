@@ -1,12 +1,12 @@
 // For media queries, somethings disappeared, two became one and distance in between objects became smaller
 //logo will stay there, unessential stuff will go away and they all become like a one line
 import logo from './logo.svg';
-import './App.css';
-import React, { Component } from 'react';
+import './App.scss';
+import React, { Component, useState, useContext } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 //import Navbar from './components/navbar';
-import landingPage from './pages/landingPage';
-import clubPage from './pages/clubPage';
+import LandingPage from './pages/landingPage';
+import ClubPage from './pages/clubPage';
 import loginPage from './pages/loginPage';
 import checkoutPage from './pages/checkoutPage';
 import careerPage from './pages/careerPage';
@@ -26,28 +26,30 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 const App = () => {
-  
+ // const [isShown, setIsShown] = useContext(false);
+
   return (
     
-<div className="App">
+<div className="App"> 
+<Router>
 
-<Router basename="/maugny.com">
+{/* experiment start */}
+
 <nav>
-
-
-
 <div className="nav">
 {/* this is beginning nav div 100% */}
 
 
 {/* this is section 1 which is 33% width */}
-
-{/* 
-<div id ="sectionOne"><h3 style={{ paddingBottom: '1px', fontSize: '28px', fontFamily: 'Poppins', fontWeight: 'bold' }}>
-  <span style={{color:'#fde050'}}>M</span></h3></div>  */}
+<div id ="sectionOne"><div><h3 style={{fontSize: '42px', fontFamily: 'Poppins', fontWeight: 'bold'}}>
+  <span style={{color:'#fde050'}}>M</span></h3></div></div>
 {/* Here logo is preferred to be singular in Nav Bar*/}
 
   
+
+{/* NEXT step, use branding to make sure your look is fine for text and headings */}
+
+
 
 {/* <div id ="sectionOne"><h3 style={{ paddingBottom: '1px', fontSize: '24px', fontFamily: 'Verdana', fontWeight: 'bold' }}><span style={{color:'#13d34b'}}>Go</span><span style={{color:'#3c6cd2'}}>Help</span><span style={{color:'#b429b0'}}>Pal</span></h3></div>
 */}
@@ -64,74 +66,71 @@ const App = () => {
     <Link to="/" className="Nav__brand">
     </Link>
        
-       {/* this is beginning of NavCenter internal div of Home */}
-<div className="navCenter">
 
-  <div>
-    {/* this is beginnig of Home icon */}
+  <div className="homeCenter">
+    {/* this is beginnig of Home icon 33%*/}
   <NavLink to="/landingPage" style={({ isActive }) =>
 isActive
 ? {
     color: '#ECEFF8'
   }
-: { color: '#fde050'
+: { color: '#da70d6'
 }
 }
 //style={ isHome ? { color: "#4F9CC8" } : {} }
+
 > 
-    {/* 
-    <FontAwesomeIcon icon={faHome} style={{ fontSize: '28px' }}/>  */}
+    
+    <FontAwesomeIcon icon={faHome} style={{ fontSize: '16px' }}/>
     </NavLink>
     </div>
   {/* this is end of Home icon */}
-  {/* this is beginning of club link */}
-  <div>
+  {/* this is beginning of club link 33% */}
+  <div className="homeCenter">
   <NavLink to="/clubPage" style={({ isActive }) =>
 isActive
 ? {
     color: '#ECEFF8',
     fontFamily: 'Poppins',
-    fontSize: '14px'  
-    
+    fontSize: '16px',
+ //   fontWeight: "bold"
   }
-: { color: '#8A2be2',
+: { color: '#002366',
 fontFamily: 'Poppins',
-fontSize: '14px'   
+fontSize: '16px',
+//fontWeight: "bold"   
 }
 }>
-  {/*  
       
     Club
-*/}
-
     </NavLink>  
     </div>
   {/* this is end of club link */}
-  {/* this is beginning of login link */}
+  {/* this is beginning of login link 33% */}
   {/* 14 px is 10.5 point font and 16 px is 12 point font */}
-  <div>
+  <div className="homeCenter">
   <NavLink to="/loginPage" style={({ isActive }) =>
 isActive
 ? {
     color: '#ECEFF8',
     fontFamily: 'Poppins',
-    fontSize: '14px' 
+    fontSize: '16px',
+    // bold can be adjusted, mostly be replaced by Icons
+  //  fontWeight: "bold" 
   }
-: { color: '#8A2be2',
+: { color: '#002366',
 fontFamily: 'Poppins',
-fontSize: '14px' 
+fontSize: '16px', 
+//fontWeight: "bold"
 }
 }>
-  {/* 
     Login
-     */}
-    
     </NavLink>  
     </div>
     {/* this is end of login link */}
 
-  {/* this is end of navCenter div */}
-</div>
+ 
+{/* </div> */}
 
 {/* this is end of home */}
   </div>                       
@@ -148,13 +147,11 @@ fontSize: '14px'
                 color: '#ECEFF8'
               }
               
-            : { color:  '#fde050'}
+            : { color:  '#da70d6'}
         }                
           
           >
-            {/*  
-  <FontAwesomeIcon icon={faCartPlus} style={{ fontSize: '28px' }}/>
-  */}
+  <FontAwesomeIcon icon={faCartPlus} style={{ fontSize: '16px' }}/>
   </NavLink>
 </div>
 {/*this is end of cart link */}
@@ -178,11 +175,11 @@ fontSize: '14px'
 {/* this is main pages rendering */}
 <Routes> 
          
-       <Route path='/' element={landingPage} />
+       <Route path='/' element={<LandingPage/>}  />
        
-          <Route path="landingPage" element={landingPage} />
+          <Route path="landingPage" element={<LandingPage/>} />
     
-          <Route path="clubPage" element={clubPage} />
+          <Route path="clubPage" element={<ClubPage />} />
 
           <Route path="loginPage" element={loginPage} />
 
@@ -209,17 +206,17 @@ fontSize: '14px'
 
          
 <div className= "space">
-{/* <Link to="/customerPage" style = {{color:'#8A2be2', fontFamily: 'Poppins', fontSize: '14px' }}>Customer</Link> */}
+<Link to="/customerPage" id = "headingStyle" style = {{fontFamily: 'Poppins'}}>Customer</Link>
 </div>
 
 
        <div className= "space" id = "Careers">
-       {/* <Link to="/careerPage" style = {{color:'#8A2be2', fontFamily: 'Poppins', fontSize: '14px' }}>Careers</Link> */}
+       <Link to="/careerPage" id = "headingStyle" style = {{fontFamily: 'Poppins'}}>Careers</Link>
        </div>
 
 
        <div className= "space" id = "Mail">
-    {/* <a href='mailto: jaani.matharu@gmail.com'><FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '28px', color:'#fde050' }}/></a> */}
+    <a href='mailto: gohelppal@gmail.com'><FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '16px', color:'#da70d6' }}/></a>
        </div>
 
 
@@ -236,7 +233,7 @@ fontSize: '14px'
        </br>
        {/* <br> */}
        {/* </br> */}
-       {/* <Link to="/termPage" style = {{color:'#8A2be2', fontFamily: 'Poppins', fontSize: '14px' }}>Terms of Use</Link> */}
+       <Link to="/termPage" id = "headingStyle" style = {{fontFamily: 'Poppins'}}>Terms of Use</Link>
            
        </div>
      
@@ -247,15 +244,15 @@ fontSize: '14px'
        {/* <br> */}
        {/* </br> */}
        
-       {/* <Link to="/privacyPage" style = {{color:'#8A2be2', fontFamily: 'Poppins', fontSize: '14px' }}>Privacy Policy</Link> */}
+       <Link to="/privacyPage" id = "headingStyle" style = {{fontFamily: 'Poppins'}}>Privacy Policy</Link>
      
        </div>
-       <div className= "space" id ="Copyright" style = {{color:'black', fontFamily: 'Outfit', fontSize: '14px' }}>
+       <div className= "space" id ="textStyle">
        <br>
        </br>
        {/* <br> */}
        {/* </br> */}
-     {/* Maugny © 2022 */}
+     Maugny © 2022
        </div>
        
        

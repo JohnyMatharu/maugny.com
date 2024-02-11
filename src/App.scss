@@ -1,0 +1,246 @@
+.App {
+  text-align: center;
+  padding-top: 1.2px;
+  
+  /* insert here flex and mobile view*/
+}
+
+/*
+
+Underneath we will use the variables for footer only as header fonts are not available in SASS file, so try only color and size etc.
+Some fonts are not availablein scss file, leave it on jsx
+*/
+
+//Following is for headings in header (nav bar) and footer only 
+$headingColor: #002366;
+$headingSize: 16px; 
+
+#headingStyle {
+  color: $headingColor;
+  font-size: $headingSize;
+}
+
+//following to be filled
+$textHeadingColor: #002366;
+$textHeadingSize: 21px;
+
+//we will be using following id 
+
+#textHeadingStyle {
+ color: $textHeadingColor;
+  font-size: $textHeadingSize;
+}
+
+$textColor: 0003a;
+$textSize: 14px;
+
+#textStyle {
+ color: $textColor;
+  font-size: $textSize;
+}
+
+
+
+$subBackgroundColor: #eceff8; 
+
+//we will be using following id, remember sub backround color is always white
+#subBackgroundStyle {
+ background-color: $subBackgroundColor;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*  nav bar code is here follows */
+
+* { 
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+@mixin common-flex {
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+
+
+@mixin common-flex-column {
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+@mixin flex-align-center
+{
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center; 
+  justify-content: center;
+}
+@mixin footer-flex-column{
+  display: flex; 
+  align-items: center; 
+  flex-direction: column;
+  text-align: center;
+}
+
+@mixin footer-flex-row{
+display: flex; 
+    align-items: center; 
+    flex-direction: row;
+    text-align: center;
+}
+
+@mixin scrollBarFlex{
+background-color: #ECEFF8;
+overflow-x: scroll;
+white-space: nowrap;
+display: flex; 
+align-items: center;
+}
+
+.nav {
+  width: 100%;    
+  @include  flex-align-center;
+  padding-top: 1.2%;
+  padding-bottom: 1%;
+}
+
+.homeCenter
+{
+width: 33.33%;
+}
+
+#sectionOne{
+  width:33.3%; 
+  @include  flex-align-center;
+}
+
+
+/* this is media query which can be adjusted for width for cell phone view, 
+*/
+@media only screen and (max-width: 850px){
+  #sectionOne
+    {
+       width: 7%;  
+      
+    }
+  }
+
+/* same as above for media queries */
+#sectionTwo
+{
+  width: 66.6%;    
+  @include  common-flex;
+}
+
+@media only screen and (max-width: 850px){
+  #sectionTwo
+    {  
+       width: 93%;   
+       @include  common-flex;
+    }
+  }
+
+
+
+/* same as above for media queries */
+.home
+{
+  width: 50%;
+  @include  flex-align-center;
+}
+
+@media only screen and (max-width: 850px){
+  .home
+    {  
+       width: 90%;   
+       
+    }
+  }
+
+
+
+/* same as above for media queries */
+.cart
+{
+ 
+  width: 50%;
+
+  
+}
+
+@media only screen and (max-width: 850px){
+  .cart
+    {  
+    
+  width: 10%;
+    }
+  }
+
+
+
+  
+
+.topmenu ul li.active a, .topmenu ul li a:hover{
+  text-decoration:none;
+  color:#fff;
+}
+
+
+/* HERE */
+/* the following if or footer */
+
+#footer
+{
+  @include footer-flex-column;    
+   // height: 45px;
+
+}
+
+#firstLevel
+{
+  width: 100%;
+  @include footer-flex-row;  
+}
+
+@media only screen and (max-width: 850px){
+  #firstLevel
+    {  
+      width: 100%;
+      @include footer-flex-row; 
+
+    }
+  }
+
+
+/* Anything in the first div you will have to divide the width in % to make it 100% of this div */
+
+#secondLevel
+{
+ width: 100%;
+ @include footer-flex-row; 
+ height: 33px;
+}
+
+.space
+{
+   width: 33.33%;
+  
+}
+/* all CSS for footer ends here  */

@@ -1,0 +1,71 @@
+
+@import "../App";
+
+
+
+
+#height
+{
+  height: 706px;
+  @include common-flex-column; 
+}
+
+//this is counted as 3 times with 12 
+#whiteSpaceClub
+{
+  height: 17%;
+//height: 70.6 px;
+}
+
+
+#filterClub
+{
+  height: 17%;
+@include common-flex; 
+padding-bottom: 15px;
+}
+
+
+//this is counted as twice 88 %
+#scrollDivClub
+{
+@include common-flex; 
+height: 83%;
+}
+
+
+
+// this is middle part with 2 10% divs on the side as white space scroll club
+#divSpaceScrollClub
+{
+width: 80%;
+white-space: nowrap;
+display: flex; 
+align-items: center;
+background-color: white;
+justify-content: space-between;
+
+}
+
+
+
+#squareDivClub
+
+{
+height: 100%;
+width: 100%;
+//padding-left: 7px;
+//padding-right: 7ppx;
+background-color: #ECEFF8;
+
+}
+
+#whiteSpaceScrollClub
+{
+width: 10%;
+}
+
+
+
+
+

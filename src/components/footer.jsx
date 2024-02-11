@@ -21,17 +21,17 @@ export default function Footer() {
 
          
 <div class= "space">
-{/* <Link to="/customerPage" style = {{color:'#8A2be2', fontFamily: 'Poppins', fontSize: '14px' }}>Customer</Link> */}
+<Link to="/customerPage" style = {{color:'#8A2be2', fontFamily: 'Poppins', fontSize: '14px' }}>Customer</Link>
 </div>
 
 
        <div class= "space" id = "Careers">
-       {/* <Link to="/careerPage" style = {{color:'#8A2be2', fontFamily: 'Poppins', fontSize: '14px' }}>Careers</Link> */}
+       <Link to="/careerPage" style = {{color:'#8A2be2', fontFamily: 'Poppins', fontSize: '14px' }}>Careers</Link>
        </div>
 
 
        <div class= "space" id = "Mail">
-    {/* <a href='mailto: jaani.matharu@gmail.com'><FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '28px', color:'#fde050' }}/></a> */}
+    <a href='mailto: jaani.matharu@gmail.com'><FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '28px', color:'#fde050' }}/></a>
        </div>
 
 
@@ -48,7 +48,7 @@ export default function Footer() {
        </br>
        {/* <br> */}
        {/* </br> */}
-       {/* <Link to="/termPage" style = {{color:'#8A2be2', fontFamily: 'Poppins', fontSize: '14px' }}>Terms of Use</Link> */}
+       <Link to="/termPage" style = {{color:'#8A2be2', fontFamily: 'Poppins', fontSize: '14px' }}>Terms of Use</Link>
            
        </div>
      
@@ -59,7 +59,7 @@ export default function Footer() {
        {/* <br> */}
        {/* </br> */}
        
-       {/* <Link to="/privacyPage" style = {{color:'#8A2be2', fontFamily: 'Poppins', fontSize: '14px' }}>Privacy Policy</Link> */}
+       <Link to="/privacyPage" style = {{color:'#8A2be2', fontFamily: 'Poppins', fontSize: '14px' }}>Privacy Policy</Link>
      
        </div>
        <div class= "space" id ="Copyright" style = {{color:'black', fontFamily: 'Outfit', fontSize: '14px' }}>
@@ -67,7 +67,7 @@ export default function Footer() {
        </br>
        {/* <br> */}
        {/* </br> */}
-     {/* Maugny © 2022 */}
+     Maugny © 2022
        </div>
        
        
