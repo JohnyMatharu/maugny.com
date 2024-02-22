@@ -6,9 +6,10 @@
     align-items: center; 
     flex-direction: column;
     text-align: center;
-    height: 45px;
-/* padding-left: 10%;   */
-/* padding-right: 10%;  */
+    height: 48px;
+/* padding-left: 10%;   */ 
+padding-top: 4.2%;
+padding-bottom: 4.2; 
 }
 
 #firstLevel

@@ -16,47 +16,52 @@ import scrollDivExtension2 from './scrollDivExtension2';
 
 
 
-$(function() {
-    'use strict';
-  
-    var scrollingValue = 150;
-    var scrollbarPosition = 10;
-  
-    function getMaxChildWidth( elm ) {
-      var childrenWidth = $.map($('>*', elm), function(el) { return $(el).width() });
-      var max = 0;
-      for (var i = 0; i < childrenWidth.length; i++) {
-        max = childrenWidth[i] > max ? childrenWidth[i] : max;
-      }
-      return max;
-    }
-  
-    function getScrollingValue(toLeft, ctx) {
-  
-      if (toLeft) {
-        return scrollbarPosition < 1 ? 0 : scrollingValue;
-      }
-      return scrollbarPosition >= getMaxChildWidth(ctx) ? 0 : scrollingValue;
-    }
-  
-    $('.scroll-btn.scroll-to-left').on('click', function() {
-      $(this).parent().scrollLeft(
-        scrollbarPosition -= getScrollingValue(true, $(this).parent())
-      );
-    });
-  
-    $('.scroll-btn.scroll-to-right').on('click', function() {
-      $(this).parent().scrollLeft(
-        scrollbarPosition += getScrollingValue(false, $(this).parent())
-      );
-    });
-  });
- // experiment render
+/*
+
+Inventory: (later try get separate page for this, and even later this will be linked with central
+  database which will be shared with PDP page and then checkout)
+
+Section 1. Jewelery
+
+
+1.1 Signet rings
+1.2 Y2K rings
+1.3 Butterfly rings
+1.4 initial rings
+1.5 Plastic bead rings 
+1.6 Butterfly rings 
+1.7 Sparkly Hoops and statement rings, snake earings
+
+
+2.1 Crawler Earings 
+2.2 Climber earrings
+2.3 Butterfly earrings
+2.4 Hearts Earrings 
+2.5 Cuffing Season
+2.6 Supersized Hoop Earrings
+2.7 Butterfly Necklace/Pendants, Hot Collars Chokers, Chain necklaces, snake necklaces
+
+
+3.1 “Charms bracelet”. 
+3.2 Gold charm bracelet” 
+3.3 Silver charm bracelet”  months.
+3.4 Y2K Bracelets and Necklace
+3.5 Beads Bracelets
+3.6 Butterfly Bracelets
+3.7 Mettalic Bengles/ Bone or Bark Cuffs/ Big Bangles, Chain Bracelets, snake bracelets
+
+ 
+
+
+
+*/
 
 
 
 
-//Following is perfect example, please adjust in existing code, make name changes as necessary, tested as working
+
+
+
 
 class OnlyEvens extends React.Component {
   constructor(props) {
@@ -96,18 +101,14 @@ console.log (newValue);
     <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
     <div id="heightDiv">
     <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
     </div>,
 
 <div><h1>render2</h1></div>,
 <div><h1>render3</h1></div>,
-<div><h1>render3</h1></div>,
 <div><h1>render4</h1></div>,
 <div><h1>render5</h1></div>,
-<div><h1>render6</h1></div>
+<div><h1>render6</h1></div>,
+<div><h1>render7</h1></div>
 ];
 
 
@@ -171,10 +172,6 @@ console.log (newValue1);
     <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
     <div id="heightDiv">
     <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
     </div>,
 
 <div><h1>render2</h1></div>,
@@ -211,6 +208,7 @@ else {
 
 
 
+
 class OnlyEvens2 extends React.Component {
   constructor(props) {
     super(props);
@@ -229,6 +227,307 @@ class OnlyEvens2 extends React.Component {
   render() {
 let newValue2 = this.props.value2
 console.log (newValue2);
+
+
+
+ const multipleRender = [
+ 
+<div id= "divSpaceScroll">
+    <div id="heightDiv"> 
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
+   <div id="heightDiv"> 
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    </div>,
+
+<div><h1>render2</h1></div>,
+<div><h1>render3</h1></div>,
+<div><h1>render4</h1></div>,
+<div><h1>render5</h1></div>,
+<div><h1>render6</h1></div>,
+<div><h1>render7</h1></div>
+];
+
+
+
+  
+if (newValue2 < 0)
+{
+  const newValue2 = 0; 
+  return multipleRender [newValue2]; 
+}
+
+else if (newValue2 > 6)  {
+  const newValue2 = 6; 
+  return multipleRender [newValue2]; 
+}
+
+else {
+  return multipleRender [newValue2]; 
+}
+
+}
+
+}
+
+
+
+class OnlyEvens3 extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  shouldComponentUpdate(nextProps, nextState) {
+ 
+    // Change code below this line
+    return true;
+    // Change code above this line
+
+  }
+  componentDidUpdate() {
+    console.log ('updated yes');
+  }
+
+  render() {
+let newValue3 = this.props.value3
+console.log (newValue3);
+
+
+
+ const multipleRender = [
+ 
+<div id= "divSpaceScroll">
+    <div id="heightDiv"> 
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
+   <div id="heightDiv"> 
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    </div>,
+
+<div><h1>render2</h1></div>,
+<div><h1>render3</h1></div>,
+<div><h1>render4</h1></div>,
+<div><h1>render5</h1></div>,
+<div><h1>render6</h1></div>,
+<div><h1>render7</h1></div>
+];
+
+
+
+  
+if (newValue3 < 0)
+{
+  const newValue3 = 0; 
+  return multipleRender [newValue3]; 
+}
+
+else if (newValue3 > 6)  {
+  const newValue3 = 6; 
+  return multipleRender [newValue3]; 
+}
+
+else {
+  return multipleRender [newValue3]; 
+}
+
+}
+
+}
+
+
+class OnlyEvens4 extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  shouldComponentUpdate(nextProps, nextState) {
+ 
+    // Change code below this line
+    return true;
+    // Change code above this line
+
+  }
+  componentDidUpdate() {
+    console.log ('updated yes');
+  }
+
+  render() {
+let newValue4 = this.props.value4
+console.log (newValue4);
+
+
+
+ const multipleRender = [
+ 
+<div id= "divSpaceScroll">
+    <div id="heightDiv"> 
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
+   <div id="heightDiv"> 
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    </div>,
+
+<div><h1>render2</h1></div>,
+<div><h1>render3</h1></div>,
+<div><h1>render4</h1></div>,
+<div><h1>render5</h1></div>,
+<div><h1>render6</h1></div>,
+<div><h1>render7</h1></div>
+];
+
+
+
+  
+if (newValue4 < 0)
+{
+  const newValue4 = 0; 
+  return multipleRender [newValue4]; 
+}
+
+else if (newValue4 > 6)  {
+  const newValue4 = 6; 
+  return multipleRender [newValue4]; 
+}
+
+else {
+  return multipleRender [newValue4]; 
+}
+
+}
+
+}
+
+
+
+class OnlyEvens5 extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  shouldComponentUpdate(nextProps, nextState) {
+ 
+    // Change code below this line
+    return true;
+    // Change code above this line
+
+  }
+  componentDidUpdate() {
+    console.log ('updated yes');
+  }
+
+  render() {
+let newValue5 = this.props.value5
+console.log (newValue5);
+
+
+
+ const multipleRender = [
+ 
+<div id= "divSpaceScroll">
+    <div id="heightDiv"> 
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
+   <div id="heightDiv"> 
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
+    <div id="heightDiv">
+    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
+    </div>,
+
+<div><h1>render2</h1></div>,
+<div><h1>render3</h1></div>,
+<div><h1>render4</h1></div>,
+<div><h1>render5</h1></div>,
+<div><h1>render6</h1></div>,
+<div><h1>render7</h1></div>
+];
+
+
+
+  
+if (newValue5 < 0)
+{
+  const newValue5 = 0; 
+  return multipleRender [newValue5]; 
+}
+
+else if (newValue5 > 6)  {
+  const newValue5 = 6; 
+  return multipleRender [newValue5]; 
+}
+
+else {
+  return multipleRender [newValue5]; 
+}
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class OnlyEvens6 extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  shouldComponentUpdate(nextProps, nextState) {
+ 
+    // Change code below this line
+    return true;
+    // Change code above this line
+
+  }
+  componentDidUpdate() {
+    console.log ('updated yes');
+  }
+
+  render() {
+let newValue6 = this.props.value6
+console.log (newValue6);
 
 
 
@@ -274,19 +573,19 @@ console.log (newValue2);
 
 
   
-if (newValue2 < 0)
+if (newValue6 < 0)
 {
-  const newValue2 = 0; 
-  return multipleRender [newValue2]; 
+  const newValue6 = 0; 
+  return multipleRender [newValue6]; 
 }
 
-else if (newValue2 > 7)  {
-  const newValue2 = 7; 
-  return multipleRender [newValue2]; 
+else if (newValue6 > 7)  {
+  const newValue6 = 7; 
+  return multipleRender [newValue6]; 
 }
 
 else {
-  return multipleRender [newValue2]; 
+  return multipleRender [newValue6]; 
 }
 
 }
@@ -313,16 +612,28 @@ class LandingPage extends React.Component
    this.state = {
     value: 0,
     value1: 0,
-    value2: 0  
+    value2: 0, 
+    value3: 0,
+    value4: 0,
+    value5: 0,
+    value6: 0   
   };
-  this.addValue = this.addValue.bind(this);
+  this.addValue1 = this.addValue1.bind(this);
   this.addValue2 = this.addValue2.bind(this);
   this.addValue3 = this.addValue3.bind(this);
   this.addValue4 = this.addValue4.bind(this);
   this.addValue5 = this.addValue5.bind(this);
   this.addValue6 = this.addValue6.bind(this);
+  this.addValue7 = this.addValue7.bind(this);
+  this.addValue8 = this.addValue8.bind(this);
+  this.addValue9 = this.addValue9.bind(this);
+  this.addValue10 = this.addValue10.bind(this);
+  this.addValue11 = this.addValue11.bind(this);
+  this.addValue12 = this.addValue12.bind(this);
+  this.addValue13 = this.addValue13.bind(this);
+  this.addValue14 = this.addValue14.bind(this);
 }
-addValue() {
+addValue1() {
   this.setState(state => ({
 //    value: state.value + 1
 value: (Math.min(6, state.value + 1))
@@ -365,6 +676,79 @@ addValue6() {
 } 
 
 
+//the following is for final section
+addValue7() {
+  this.setState(state => ({
+//    value: state.value + 1
+value3: (Math.min(6, state.value3 + 1))
+  }));
+}
+addValue8() {
+  this.setState(state => ({
+    value3: (Math.max(0, state.value3 - 1)) 
+    
+  }));
+} 
+
+
+
+
+//the following is for final section
+addValue9() {
+  this.setState(state => ({
+//    value: state.value + 1
+value4: (Math.min(6, state.value4 + 1))
+  }));
+}
+addValue10() {
+  this.setState(state => ({
+    value4: (Math.max(0, state.value4 - 1)) 
+    
+  }));
+} 
+
+
+//the following is for final section
+addValue11() {
+  this.setState(state => ({
+//    value: state.value + 1
+value5: (Math.min(6, state.value5 + 1))
+  }));
+}
+addValue12() {
+  this.setState(state => ({
+    value5: (Math.max(0, state.value5 - 1)) 
+    
+  }));
+} 
+
+
+
+//the following is for final section
+addValue13() {
+  this.setState(state => ({
+//    value: state.value + 1
+value6: (Math.min(6, state.value6 + 1))
+  }));
+}
+addValue14() {
+  this.setState(state => ({
+    value6: (Math.max(0, state.value6 - 1)) 
+    
+  }));
+} 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -374,7 +758,7 @@ addValue6() {
         <section>
       {/* <MDBContainer id="size"> */}
          
-   {/* <div id="height1"><h3 style={{fontWeight: "bold", fontSize: '21px', fontFamily: 'Outfit', color: '00003a' }}>This is Landing Page</h3> */}
+   {/* <div id="height1"><h3 style={{fontWeight: "bold", fontSize: '21px', fontFamily: 'Outfit', color: '0#002366' }}>This is Landing Page</h3> */}
     
           {/* </div> */}
 
@@ -388,11 +772,15 @@ addValue6() {
     {/*  flex box start */}
   
       <div id = "flex1">
-  
+        
+
+
+  <h3>Bikers - Spring</h3>
+
   </div>
   
   <div id = "flex2">
-  
+  <h3>Athletic wear - Spring</h3>
   </div>
   
  {/* flex box end */}
@@ -408,12 +796,12 @@ addValue6() {
           <div id = "flex3">
             {/* <br></br> */}
          
-          {/* <iframe src="https://giphy.com/embed/3oEduTFaW1r47UWhTq" width="162" height="162" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/nba-dunk-nba-finals-cleveland-cavaliers-3oEduTFaW1r47UWhTq">via GIPHY</a></p> */}
-
+          {/* <iframe src="https://giphy.com/embed/3oEduTFaW1r47UWhTq" width="172" height="172" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/nba-dunk-nba-finals-cleveland-cavaliers-3oEduTFaW1r47UWhTq">via GIPHY</a></p> */}
+         <h3>Gym wear - Summer</h3>
       </div>
       
       <div id = "flex4">
-      
+      <h3>Yoga/Aerobics - Summer </h3>
       </div>
       
       {/* flex box end  */}
@@ -425,11 +813,12 @@ addValue6() {
           {/* flex box start */}
           
               <div id = "flex5">
-          
+              <h3>  Swimwear - September to early October and ends in February </h3>
           </div>
           
           <div id = "flex6">
-          
+         
+          <h3> Basketball - Oct to April </h3>
           </div>
           
          {/* flex box end  */}
@@ -441,11 +830,13 @@ addValue6() {
               {/* flex box start */}
               
                   <div id = "flex7">
-              
+                          
+                  <h3>    Soccer - End of Feb till December </h3>
               </div>
               
               <div id = "flex8">
-              
+            
+              <h3> Baseball - April to October </h3>
               </div>
               
              {/* flex box end */}
@@ -457,11 +848,13 @@ addValue6() {
                 {/* flex box start  */}
                   
                       <div id = "flex9">
-                  
+                      
+                      <h3>    Cricket - April to Sept </h3>
                   </div>
                   
                   <div id = "flex10">
-                  
+                 
+                  <h3>Field Hockey - Late summer/early fall till late fall </h3>
                   </div>
                   
                   {/* flex box end  */}
@@ -473,11 +866,11 @@ addValue6() {
                       {/* flex box start  */}
                       
                           <div id = "flex11">
-                      
+                          <h3>    Ice Hockey - Sept to April </h3>
                       </div>
                       
                       <div id = "flex12">
-                      
+                      <h3> Tennis - Sept to May </h3>
                       </div>
                       
                        {/* flex box end  */}
@@ -511,7 +904,7 @@ addValue6() {
 
  
     
-<h3 id ="textHeadingStyle" style={{fontWeight: "bold", fontFamily: 'Outfit'}}>Hottest Gear</h3></div>
+<h3 id ="textHeadingStyle" style={{fontWeight: "bold", fontFamily: 'Outfit'}}>Best Seller Jewellery</h3></div>
 
 
 
@@ -530,8 +923,8 @@ addValue6() {
    
 
 
-<button  onClick={this.addValue2} class="scroll-btn scroll-to-left btn btn-light btn-arrow-left" type="button"><i class="fas fa-chevron-left"></i></button>
-<button onClick={this.addValue} class="scroll-btn scroll-to-right btn btn-light btn-arrodw-right" type="button"><i class="fas fa-chevron-right"></i></button>
+<button  onClick={this.addValue2} class="scroll-btn scroll-to-left btn btn-arrow-left" type="button"><i class="fas fa-chevron-left"></i></button>
+<button onClick={this.addValue1} class="scroll-btn scroll-to-right btn btn-arrow-right" type="button"><i class="fas fa-chevron-right"></i></button>
 <OnlyEvens value={this.state.value}/>
 
     </div>
@@ -555,10 +948,7 @@ addValue6() {
 <div  id="whiteSpace"></div>
 {/* this is second scrollable display div */}
 
-{/* this is scroll div which is be another flex for pic divs */}
 <div id= "scrollDiv">
-
-
 
 
 {/* left empty div */}
@@ -567,29 +957,14 @@ addValue6() {
 
 {/* middle div with scroll bar*/}
 <div id= "divSpaceScroll">
-{/* these are picture divs */}
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
-<div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
 
-<button class="scroll-btn scroll-to-left btn btn-light btn-arrow-left" type="button"><i class="fas fa-chevron-left"></i></button>
-<button class="scroll-btn scroll-to-right btn btn-light btn-arrodw-right" type="button"><i class="fas fa-chevron-right"></i></button>
-  
+   
+
+
+<button  onClick={this.addValue4} class="scroll-btn scroll-to-left btn btn-arrow-left" type="button"><i class="fas fa-chevron-left"></i></button>
+<button onClick={this.addValue3} class="scroll-btn scroll-to-right btn btn-arrow-right" type="button"><i class="fas fa-chevron-right"></i></button>
+<OnlyEvens1 value1={this.state.value1}/>
+
     </div>
       
     {/* right empty div */}
@@ -598,8 +973,10 @@ addValue6() {
 
 
 
+
 {/* this is end of scrollDiv */}
 </div>
+
 
 {/* this is white space */}
 <div  id="whiteSpace"></div>
@@ -612,43 +989,33 @@ addValue6() {
 
 <div id= "scrollDiv">
 
+
 {/* left empty div */}
 <div id ="whiteSpaceScroll">
   </div>
 
 {/* middle div with scroll bar*/}
 <div id= "divSpaceScroll">
-{/* these are picture divs */}
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
-<div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
 
-<button class="scroll-btn scroll-to-left btn btn-light btn-arrow-left" type="button"><i class="fas fa-chevron-left"></i></button>
-<button class="scroll-btn scroll-to-right btn btn-light btn-arrodw-right" type="button"><i class="fas fa-chevron-right"></i></button>
-  
+   
+
+
+<button  onClick={this.addValue6} class="scroll-btn scroll-to-left btn btn-arrow-left" type="button"><i class="fas fa-chevron-left"></i></button>
+<button onClick={this.addValue5} class="scroll-btn scroll-to-right btn btn-arrow-right" type="button"><i class="fas fa-chevron-right"></i></button>
+<OnlyEvens2 value2={this.state.value2}/>
+
     </div>
       
     {/* right empty div */}
     <div id ="whiteSpaceScroll">
       </div>
 
+
+
+
 {/* this is end of scrollDiv */}
 </div>
+
 
 
 
@@ -682,7 +1049,7 @@ addValue6() {
 
  
     
-<h3 id ="textHeadingStyle" style={{fontWeight: "bold", fontFamily: 'Outfit'}}>Best Seller Jewellery</h3></div>
+<h3 id ="textHeadingStyle" style={{fontWeight: "bold", fontFamily: 'Outfit'}}>Hottest Gear</h3></div>
 
 
 {/* this is scroll div which is be another flex for pic divs */}
@@ -699,9 +1066,9 @@ addValue6() {
    
 
 
-<button  onClick={this.addValue4} class="scroll-btn scroll-to-left btn btn-light btn-arrow-left" type="button"><i class="fas fa-chevron-left"></i></button>
-<button onClick={this.addValue3} class="scroll-btn scroll-to-right btn btn-light btn-arrodw-right" type="button"><i class="fas fa-chevron-right"></i></button>
-<OnlyEvens1 value1={this.state.value1}/>
+<button  onClick={this.addValue8} class="scroll-btn scroll-to-left btn btn-arrow-left" type="button"><i class="fas fa-chevron-left"></i></button>
+<button onClick={this.addValue7} class="scroll-btn scroll-to-right btn btn-arrow-right" type="button"><i class="fas fa-chevron-right"></i></button>
+<OnlyEvens3 value3={this.state.value3}/>
 
     </div>
       
@@ -724,10 +1091,7 @@ addValue6() {
 <div  id="whiteSpace"></div>
 {/* this is second scrollable display div */}
 
-{/* this is scroll div which is be another flex for pic divs */}
 <div id= "scrollDiv">
-
-
 
 
 {/* left empty div */}
@@ -736,29 +1100,14 @@ addValue6() {
 
 {/* middle div with scroll bar*/}
 <div id= "divSpaceScroll">
-{/* these are picture divs */}
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
-<div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
 
-<button class="scroll-btn scroll-to-left btn btn-light btn-arrow-left" type="button"><i class="fas fa-chevron-left"></i></button>
-<button class="scroll-btn scroll-to-right btn btn-light btn-arrodw-right" type="button"><i class="fas fa-chevron-right"></i></button>
-  
+   
+
+
+<button  onClick={this.addValue10} class="scroll-btn scroll-to-left btn btn-arrow-left" type="button"><i class="fas fa-chevron-left"></i></button>
+<button onClick={this.addValue9} class="scroll-btn scroll-to-right btn btn-arrow-right" type="button"><i class="fas fa-chevron-right"></i></button>
+<OnlyEvens4 value4={this.state.value4}/>
+
     </div>
       
     {/* right empty div */}
@@ -767,8 +1116,10 @@ addValue6() {
 
 
 
+
 {/* this is end of scrollDiv */}
 </div>
+
 
 {/* this is white space */}
 <div  id="whiteSpace"></div>
@@ -781,43 +1132,33 @@ addValue6() {
 
 <div id= "scrollDiv">
 
+
 {/* left empty div */}
 <div id ="whiteSpaceScroll">
   </div>
 
 {/* middle div with scroll bar*/}
 <div id= "divSpaceScroll">
-{/* these are picture divs */}
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
-<div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
 
-<button class="scroll-btn scroll-to-left btn btn-light btn-arrow-left" type="button"><i class="fas fa-chevron-left"></i></button>
-<button class="scroll-btn scroll-to-right btn btn-light btn-arrodw-right" type="button"><i class="fas fa-chevron-right"></i></button>
-  
+   
+
+
+<button  onClick={this.addValue12} class="scroll-btn scroll-to-left btn btn-arrow-left" type="button"><i class="fas fa-chevron-left"></i></button>
+<button onClick={this.addValue11} class="scroll-btn scroll-to-right btn btn-arrow-right" type="button"><i class="fas fa-chevron-right"></i></button>
+<OnlyEvens5 value5={this.state.value5}/>
+
     </div>
       
     {/* right empty div */}
     <div id ="whiteSpaceScroll">
       </div>
 
+
+
+
 {/* this is end of scrollDiv */}
 </div>
+
 
 
 
@@ -1106,7 +1447,7 @@ addValue6() {
     <br></br>
 
 {/* this is beginning of child div in this parent section */}
-  <div id="height2">
+<div id="height2">
 
 
 {/* NEXT: All this has to be fixed by commenting the scroll dive and writing things, exact names and percentages, then uncomment scroll div and start */}
@@ -1140,7 +1481,8 @@ addValue6() {
   <div id = "division"></div>
   <div id = "division"></div>
 
-  <button onClick={this.addValue6} class="btn btn-light btn-arrow-left" type="button"><i class="fas fa-chevron-left"></i></button>
+  <button onClick={this.addValue14} class="btn btn-arrow-left" type="button"><i 
+  class="fas fa-chevron-left"></i></button>
   
 
 
@@ -1158,7 +1500,7 @@ addValue6() {
   
 
   
-<OnlyEvens2 value2={this.state.value2}/>
+<OnlyEvens6 value6={this.state.value6}/>
  
   
 
@@ -1171,7 +1513,7 @@ addValue6() {
 <div id = "division" ></div>
   <div id = "division"></div>
   <div id = "division"></div>
-<button onClick={this.addValue5} class="btn btn-light btn-arrodw-right" type="button"><i class="fas fa-chevron-right"></i></button>
+<button onClick={this.addValue13} class="btn btn-arrow-right" type="button"><i class="fas fa-chevron-right"></i></button>
 <div id = "division" ></div>
   <div id = "division"></div>
   <div id = "division"></div>

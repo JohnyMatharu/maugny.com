@@ -18,259 +18,259 @@ import { render } from '@testing-library/react';
 
 
 Men Jewl 
-Men Hats Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $10 to $30
+Men Hats Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $10 to $30
 Women Jewelry 
-Women Hats Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $10 to $30
+Women Hats Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $10 to $30
 
 
-Men Jackets CK S Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Men Jackets CK M Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Men Jackets CK L  Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Men Jackets CK XL Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Men Jackets CK XXL Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Men Jackets CK XXXL Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
+Men Jackets CK S Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Men Jackets CK M Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Men Jackets CK L  Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Men Jackets CK XL Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Men Jackets CK XXL Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Men Jackets CK XXXL Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
 
-Women Jackets CK S Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Women Jackets CK M Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Women Jackets CK L Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
+Women Jackets CK S Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Women Jackets CK M Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Women Jackets CK L Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
 
-Men Jackets Guess S Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Men Jackets Guess M Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Men Jackets Guess L Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Men Jackets Guess XL Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Men Jackets Guess XXL Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Men Jackets Guess XXXL Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
+Men Jackets Guess S Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Men Jackets Guess M Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Men Jackets Guess L Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Men Jackets Guess XL Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Men Jackets Guess XXL Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Men Jackets Guess XXXL Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
 
-Women Jackets Guess S Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Women Jackets Guess M Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Women Jackets Guess L Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
+Women Jackets Guess S Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Women Jackets Guess M Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Women Jackets Guess L Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
 
-Men Jackets Tommy S Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Men Jackets Tommy M Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Men Jackets Tommy L Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Men Jackets Tommy XL Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Men Jackets Tommy XXL Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Men Jackets Tommy XXXL Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
+Men Jackets Tommy S Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Men Jackets Tommy M Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Men Jackets Tommy L Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Men Jackets Tommy XL Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Men Jackets Tommy XXL Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Men Jackets Tommy XXXL Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
 
-Women Jackets Tommy S Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Women Jackets Tommy M Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Women Jackets Tommy L Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
+Women Jackets Tommy S Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Women Jackets Tommy M Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Women Jackets Tommy L Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
 
-Men Jackets American Eagle S Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Men Jackets American Eagle M Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Men Jackets American Eagle L Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki  $70 to $90
-Men Jackets American Eagle XL Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Men Jackets American Eagle XXL Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Men Jackets American Eagle XXXL Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
+Men Jackets American Eagle S Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Men Jackets American Eagle M Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Men Jackets American Eagle L Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki  $70 to $90
+Men Jackets American Eagle XL Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Men Jackets American Eagle XXL Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Men Jackets American Eagle XXXL Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
 
-Women Jackets American Eagle S Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Women Jackets American Eagle M Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Women Jackets American Eagle L Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
+Women Jackets American Eagle S Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Women Jackets American Eagle M Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Women Jackets American Eagle L Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
 
-Men Jackets Gap S Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Men Jackets Gap M Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Men Jackets Gap L Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Men Jackets Gap XL Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Men Jackets Gap XXL Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Men Jackets Gap XXXL Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
+Men Jackets Gap S Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Men Jackets Gap M Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Men Jackets Gap L Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Men Jackets Gap XL Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Men Jackets Gap XXL Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Men Jackets Gap XXXL Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
 
-Women Jackets Old Navy S Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Women Jackets Old Navy M Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Women Jackets Old Navy L Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
+Women Jackets Old Navy S Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Women Jackets Old Navy M Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Women Jackets Old Navy L Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
  
-Men Jackets Old Navy S Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Men Jackets Old Navy M Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Men Jackets Old Navy L Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Men Jackets Old Navy XL Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Men Jackets Old Navy XXL Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Men Jackets Old Navy XXXL Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
+Men Jackets Old Navy S Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Men Jackets Old Navy M Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Men Jackets Old Navy L Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Men Jackets Old Navy XL Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Men Jackets Old Navy XXL Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Men Jackets Old Navy XXXL Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
  
-Women Jackets Old Navy S Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Women Jackets Old Navy M Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
-Women Jackets Old Navy L Green Yellow Orange Red Pink Purple Brown Blue Black Grey Khaki $70 to $90
+Women Jackets Old Navy S Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Women Jackets Old Navy M Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
+Women Jackets Old Navy L Green Yellow Orange Red Pink Purple Brown Blue #002366 Grey Khaki $70 to $90
 
 
-Men Pants CK 34 by 64 Straights & Baggy Denim Patches Blue Black Grey Khaki $40 to $60
-Men Pants CK 34 by 64 Straights & Baggy Denim Faded & Plains Blue Black Grey Khaki $40 to $60
+Men Pants CK 34 by 64 Straights & Baggy Denim Patches Blue #002366 Grey Khaki $40 to $60
+Men Pants CK 34 by 64 Straights & Baggy Denim Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Men Pants CK 34 by 64 Slims & Bootcuts Mix Patches Blue Black Grey Khaki $40 to $60
-Men Pants CK 34 by 64 Slims & Bootcuts Mix Faded & Plains Blue Black Grey Khaki $40 to $60
+Men Pants CK 34 by 64 Slims & Bootcuts Mix Patches Blue #002366 Grey Khaki $40 to $60
+Men Pants CK 34 by 64 Slims & Bootcuts Mix Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Men Pants CK 54 by 84 Straights & Baggy Denim Patches Blue Black Grey Khaki $40 to $60
-Men Pants CK 54 by 84 Straights & Baggy Denim Faded & Plains Blue Black Grey Khaki $40 to $60
+Men Pants CK 54 by 84 Straights & Baggy Denim Patches Blue #002366 Grey Khaki $40 to $60
+Men Pants CK 54 by 84 Straights & Baggy Denim Faded & Plains Blue #002366 Grey Khaki $40 to $60
  
-Men Pants CK 54 by 84 Slims & Bootcuts Mix Patches Blue Black Grey Khaki $40 to $60
-Men Pants CK 54 by 84 Slims & Bootcuts Mix Faded & Plains Blue Black Grey Khaki $40 to $60
+Men Pants CK 54 by 84 Slims & Bootcuts Mix Patches Blue #002366 Grey Khaki $40 to $60
+Men Pants CK 54 by 84 Slims & Bootcuts Mix Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Men Pants Guess 34 by 64 Straights & Baggy Denim Patches Blue Black Grey Khaki $40 to $60
-Men Pants Guess 34 by 64 Straights & Baggy Denim Faded & Plains Blue Black Grey Khaki $40 to $60
+Men Pants Guess 34 by 64 Straights & Baggy Denim Patches Blue #002366 Grey Khaki $40 to $60
+Men Pants Guess 34 by 64 Straights & Baggy Denim Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Men Pants Guess 34 by 64 Slims & Bootcuts Mix Patches Blue Black Grey Khaki $40 to $60
-Men Pants Guess 34 by 64 Slims & Bootcuts Mix Faded & Plains Blue Black Grey Khaki $40 to $60
+Men Pants Guess 34 by 64 Slims & Bootcuts Mix Patches Blue #002366 Grey Khaki $40 to $60
+Men Pants Guess 34 by 64 Slims & Bootcuts Mix Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Men Pants Guess 54 by 84 Straights & Baggy Denim Patches Blue Black Grey Khaki $40 to $60
-Men Pants Guess 54 by 84 Straights & Baggy Denim Faded & Plains Blue Black Grey Khaki $40 to $60
+Men Pants Guess 54 by 84 Straights & Baggy Denim Patches Blue #002366 Grey Khaki $40 to $60
+Men Pants Guess 54 by 84 Straights & Baggy Denim Faded & Plains Blue #002366 Grey Khaki $40 to $60
  
-Men Pants Guess 54 by 84 Slims & Bootcuts Mix Patches Blue Black Grey Khaki $40 to $60
-Men Pants Guess 54 by 84 Slims & Bootcuts Mix Faded & Plains Blue Black Grey Khaki $40 to $60
+Men Pants Guess 54 by 84 Slims & Bootcuts Mix Patches Blue #002366 Grey Khaki $40 to $60
+Men Pants Guess 54 by 84 Slims & Bootcuts Mix Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Men Pants Tommy 34 by 64 Straights & Baggy Denim Patches Blue Black Grey Khaki $40 to $60
-Men Pants Tommy 34 by 64 Straights & Baggy Denim Faded & Plains Blue Black Grey Khaki $40 to $60
+Men Pants Tommy 34 by 64 Straights & Baggy Denim Patches Blue #002366 Grey Khaki $40 to $60
+Men Pants Tommy 34 by 64 Straights & Baggy Denim Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Men Pants Tommy 34 by 64 Slims & Bootcuts Mix Patches Blue Black Grey Khaki $40 to $60
-Men Pants Tommy 34 by 64 Slims & Bootcuts Mix Faded & Plains Blue Black Grey Khaki $40 to $60
+Men Pants Tommy 34 by 64 Slims & Bootcuts Mix Patches Blue #002366 Grey Khaki $40 to $60
+Men Pants Tommy 34 by 64 Slims & Bootcuts Mix Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Men Pants Tommy 54 by 84 Straights & Baggy Denim Patches Blue Black Grey Khaki $40 to $60
-Men Pants Tommy 54 by 84 Straights & Baggy Denim Faded & Plains Blue Black Grey Khaki $40 to $60
+Men Pants Tommy 54 by 84 Straights & Baggy Denim Patches Blue #002366 Grey Khaki $40 to $60
+Men Pants Tommy 54 by 84 Straights & Baggy Denim Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Men Pants Tommy 54 by 84 Slims & Bootcuts Denim Mix Patches Blue Black Grey Khaki $40 to $60
-Men Pants Tommy 54 by 84 Slims & Bootcuts Denim Mix Faded & Plains Blue Black Grey Khaki $40 to $60
+Men Pants Tommy 54 by 84 Slims & Bootcuts Denim Mix Patches Blue #002366 Grey Khaki $40 to $60
+Men Pants Tommy 54 by 84 Slims & Bootcuts Denim Mix Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Men Pants American Eagle 34 by 64 Straights & Baggy Denim Patches Blue Black Grey Khaki $40 to $60
-Men Pants American Eagle 34 by 64 Straights & Baggy Denim Faded & Plains Blue Black Grey Khaki $40 to $60
+Men Pants American Eagle 34 by 64 Straights & Baggy Denim Patches Blue #002366 Grey Khaki $40 to $60
+Men Pants American Eagle 34 by 64 Straights & Baggy Denim Faded & Plains Blue #002366 Grey Khaki $40 to $60
  
-Men Pants American Eagle 34 by 64 Slims & Bootcuts Mix Patches Blue Black Grey Khaki $40 to $60
-Men Pants American Eagle 34 by 64 Slims & Bootcuts Mix Faded & Plains Blue Black Grey Khaki $40 to $60
+Men Pants American Eagle 34 by 64 Slims & Bootcuts Mix Patches Blue #002366 Grey Khaki $40 to $60
+Men Pants American Eagle 34 by 64 Slims & Bootcuts Mix Faded & Plains Blue #002366 Grey Khaki $40 to $60
  
-Men Pants American Eagle 54 by 84 Straights & Baggy Denim Patches Blue Black Grey Khaki $40 to $60
-Men Pants American Eagle 54 by 84 Straights & Baggy Denim Faded & Plains Blue Black Grey Khaki $40 to $60
+Men Pants American Eagle 54 by 84 Straights & Baggy Denim Patches Blue #002366 Grey Khaki $40 to $60
+Men Pants American Eagle 54 by 84 Straights & Baggy Denim Faded & Plains Blue #002366 Grey Khaki $40 to $60
  
-Men Pants American Eagle 54 by 84 Slims & Bootcuts Mix Patches Blue Black Grey Khaki $40 to $60
-Men Pants American Eagle 54 by 84 Slims & Bootcuts Mix Faded & Plains Blue Black Grey Khaki $40 to $60
+Men Pants American Eagle 54 by 84 Slims & Bootcuts Mix Patches Blue #002366 Grey Khaki $40 to $60
+Men Pants American Eagle 54 by 84 Slims & Bootcuts Mix Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Men Pants Gap 34 by 64 Straights & Baggy Denim Patches Blue Black Grey Khaki $40 to $60
-Men Pants Gap 34 by 64 Straights & Baggy Denim Faded & Plains Blue Black Grey Khaki $40 to $60
+Men Pants Gap 34 by 64 Straights & Baggy Denim Patches Blue #002366 Grey Khaki $40 to $60
+Men Pants Gap 34 by 64 Straights & Baggy Denim Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Men Pants Gap 34 by 64 Slims & Bootcuts Mix Patches Blue Black Grey Khaki $40 to $60 
-Men Pants Gap 34 by 64 Slims & Bootcuts Mix Faded & Plains Blue Black Grey Khaki $40 to $60
+Men Pants Gap 34 by 64 Slims & Bootcuts Mix Patches Blue #002366 Grey Khaki $40 to $60 
+Men Pants Gap 34 by 64 Slims & Bootcuts Mix Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Men Pants Gap 54 by 84 Straights & Baggy Denim Patches Blue Black Grey Khaki $40 to $60
-Men Pants Gap 54 by 84 Straights & Baggy Denim Faded & Plains Blue Black Grey Khaki $40 to $60
+Men Pants Gap 54 by 84 Straights & Baggy Denim Patches Blue #002366 Grey Khaki $40 to $60
+Men Pants Gap 54 by 84 Straights & Baggy Denim Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Men Pants Gap 54 by 84 Slims & Bootcuts Mix Patches Blue Black Grey Khaki $40 to $60
-Men Pants Gap 54 by 84 Slims & Bootcuts Mix Faded & Plains Blue Black Grey Khaki $40 to $60
+Men Pants Gap 54 by 84 Slims & Bootcuts Mix Patches Blue #002366 Grey Khaki $40 to $60
+Men Pants Gap 54 by 84 Slims & Bootcuts Mix Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Men Pants Old Navy 34 by 64 Straights & Baggy Denim Patches Blue Black Grey Khaki $40 to $60
-Men Pants Old Navy 34 by 64 Straights & Baggy Denim Faded & Plains Blue Black Grey Khaki $40 to $60
+Men Pants Old Navy 34 by 64 Straights & Baggy Denim Patches Blue #002366 Grey Khaki $40 to $60
+Men Pants Old Navy 34 by 64 Straights & Baggy Denim Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Men Pants Old Navy 34 by 64 Slims & Bootcuts Mix Patches Blue Black Grey Khaki $40 to $60
-Men Pants Old Navy 34 by 64 Slims & Bootcuts Mix Faded & Plains Blue Black Grey Khaki $40 to $60
+Men Pants Old Navy 34 by 64 Slims & Bootcuts Mix Patches Blue #002366 Grey Khaki $40 to $60
+Men Pants Old Navy 34 by 64 Slims & Bootcuts Mix Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Men Pants Old Navy 54 by 84 Straights & Baggy Denim Patches Blue Black Grey Khaki $40 to $60
-Men Pants Old Navy 54 by 84 Straights & Baggy Denim Faded & Plains Blue Black Grey Khaki $40 to $60
+Men Pants Old Navy 54 by 84 Straights & Baggy Denim Patches Blue #002366 Grey Khaki $40 to $60
+Men Pants Old Navy 54 by 84 Straights & Baggy Denim Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Men Pants Old Navy 54 by 84 Slims & Bootcuts Mix Patches Blue Black Grey Khaki $40 to $60
-Men Pants Old Navy 54 by 84 Slims & Bootcuts Mix Faded & Plains Blue Black Grey Khaki $40 to $60
+Men Pants Old Navy 54 by 84 Slims & Bootcuts Mix Patches Blue #002366 Grey Khaki $40 to $60
+Men Pants Old Navy 54 by 84 Slims & Bootcuts Mix Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Women Pants CK 14 by 46 Straights Denim Leather & Rexene Patches Blue Black Grey Khaki $40 to $60
-Women Pants CK 14 by 46 Straights Denim Leather & Rexene Faded & Plains Blue Black Grey Khaki
+Women Pants CK 14 by 46 Straights Denim Leather & Rexene Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants CK 14 by 46 Straights Denim Leather & Rexene Faded & Plains Blue #002366 Grey Khaki
 
-Women Pants CK 14 by 46 Straights Cotton & Mix Patches Blue Black Grey Khaki $40 to $60
-Women Pants CK 14 by 46 Straights Cotton & Mix Faded & Plains Blue Black Grey Khaki $40 to $60
+Women Pants CK 14 by 46 Straights Cotton & Mix Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants CK 14 by 46 Straights Cotton & Mix Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Women Pants CK 14 by 46 Bell-Bottom & Apple Bottoms Denim Leather & Rexene Patches Blue Black Grey Khaki $40 to $60
-Women Pants CK 14 by 46 Bell-Bottom & Apple Bottoms Denim Leather & Rexene Faded & Plains Blue Black Grey Khaki $40 to $60
+Women Pants CK 14 by 46 Bell-Bottom & Apple Bottoms Denim Leather & Rexene Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants CK 14 by 46 Bell-Bottom & Apple Bottoms Denim Leather & Rexene Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Women Pants CK 14 by 46 Bell-Bottom & Apple Bottoms Cotton & Mix Patches Blue Black Grey Khaki $40 to $60
-Women Pants CK 14 by 46 Bell-Bottom & Apple Bottoms Cotton & Mix Faded & Plains Blue Black Grey Khaki $40 to $60
+Women Pants CK 14 by 46 Bell-Bottom & Apple Bottoms Cotton & Mix Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants CK 14 by 46 Bell-Bottom & Apple Bottoms Cotton & Mix Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Women Pants CK 14 by 46 Slims Bootcuts Denim Leather & Rexene Patches Blue Black Grey Khaki $40 to $60
-Women Pants CK 14 by 46 Slims Bootcuts Denim Leather & Rexene Faded & Plains Blue Black Grey Khaki $40 to $60
+Women Pants CK 14 by 46 Slims Bootcuts Denim Leather & Rexene Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants CK 14 by 46 Slims Bootcuts Denim Leather & Rexene Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Women Pants CK 14 by 46 Slims Bootcuts Cotton & Mix Patches Blue Black Grey Khaki $40 to $60
-Women Pants CK 14 by 46 Slims Bootcuts Cotton & Mix Faded & Plains Blue Black Grey Khaki $40 to $60
-
-
-Women Pants Guess 14 by 46 Straights Denim Leather & Rexene Patches Blue Black Grey Khaki $40 to $60
-Women Pants Guess 14 by 46 Straights Denim Leather & Rexene Faded & Plains Blue Black Grey Khaki $40 to $60
-
-Women Pants Guess 14 by 46 Straights Cotton & Mix Patches Blue Black Grey Khaki $40 to $60
-Women Pants Guess 14 by 46 Straights Cotton & Mix Faded & Plains Blue Black Grey Khaki $40 to $60
+Women Pants CK 14 by 46 Slims Bootcuts Cotton & Mix Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants CK 14 by 46 Slims Bootcuts Cotton & Mix Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
 
-Women Pants Guess 14 by 46 Bell-Bottom & Apple Bottoms Denim Leather & Rexene Patches Blue Black Grey Khaki $40 to $60
-Women Pants Guess 14 by 46 Bell-Bottom & Apple Bottoms Denim Leather & Rexene Faded & Plains Blue Black Grey Khaki $40 to $60
+Women Pants Guess 14 by 46 Straights Denim Leather & Rexene Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants Guess 14 by 46 Straights Denim Leather & Rexene Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Women Pants Guess 14 by 46 Bell-Bottom & Apple Bottoms Cotton & Mix Patches Blue Black Grey Khaki $40 to $60
-Women Pants Guess 14 by 46 Bell-Bottom & Apple Bottoms Cotton & Mix Faded & Plains Blue Black Grey Khaki $40 to $60
+Women Pants Guess 14 by 46 Straights Cotton & Mix Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants Guess 14 by 46 Straights Cotton & Mix Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Women Pants Guess 14 by 46 Slims Bootcuts Denim Leather & Rexene Patches Blue Black Grey Khaki $40 to $60
-Women Pants Guess 14 by 46 Slims Bootcuts Denim Leather & Rexene Faded & Plains Blue Black Grey Khaki $40 to $60
 
-Women Pants Guess 14 by 46 Slims Bootcuts Cotton & Mix Patches Blue Black Grey Khaki $40 to $60
-Women Pants Guess 14 by 46 Slims Bootcuts Cotton & Mix Faded & Plains Blue Black Grey Khaki $40 to $60
+Women Pants Guess 14 by 46 Bell-Bottom & Apple Bottoms Denim Leather & Rexene Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants Guess 14 by 46 Bell-Bottom & Apple Bottoms Denim Leather & Rexene Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Women Pants Tommy 14 by 46 Straights Denim Leather & Rexene Patches Blue Black Grey Khaki $40 to $60
-Women Pants Tommy 14 by 46 Straights Denim Leather & Rexene Faded & Plains Blue Black Grey Khaki $40 to $60
+Women Pants Guess 14 by 46 Bell-Bottom & Apple Bottoms Cotton & Mix Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants Guess 14 by 46 Bell-Bottom & Apple Bottoms Cotton & Mix Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Women Pants Tommy 14 by 46 Straights Cotton & Mix Patches Blue Black Grey Khaki $40 to $60
-Women Pants Tommy 14 by 46 Straights Cotton & Mix Faded & Plains Blue Black Grey Khaki $40 to $60
+Women Pants Guess 14 by 46 Slims Bootcuts Denim Leather & Rexene Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants Guess 14 by 46 Slims Bootcuts Denim Leather & Rexene Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Women Pants Tommy 14 by 46 Bell-Bottom & Apple Bottoms Denim Leather & Rexene Patches Blue Black Grey Khaki $40 to $60
-Women Pants Tommy 14 by 46 Bell-Bottom & Apple Bottoms Denim Leather & Rexene Faded & Plains Blue Black Grey Khaki $40 to $60
+Women Pants Guess 14 by 46 Slims Bootcuts Cotton & Mix Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants Guess 14 by 46 Slims Bootcuts Cotton & Mix Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Women Pants Tommy 14 by 46 Bell-Bottom & Apple Bottoms Cotton & Mix Patches Blue Black Grey Khaki $40 to $60
-Women Pants Tommy 14 by 46 Bell-Bottom & Apple Bottoms Cotton & Mix Faded & Plains Blue Black Grey Khaki $40 to $60
+Women Pants Tommy 14 by 46 Straights Denim Leather & Rexene Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants Tommy 14 by 46 Straights Denim Leather & Rexene Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Women Pants Tommy 14 by 46 Slims Bootcuts Denim Leather & Rexene Patches Blue Black Grey Khaki $40 to $60
-Women Pants Tommy 14 by 46 Slims Bootcuts Denim Leather & Rexene Faded & Plains Blue Black Grey Khaki $40 to $60
+Women Pants Tommy 14 by 46 Straights Cotton & Mix Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants Tommy 14 by 46 Straights Cotton & Mix Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Women Pants Tommy 14 by 46 Slims Bootcuts Cotton & Mix Patches Blue Black Grey Khaki $40 to $60
-Women Pants Tommy 14 by 46 Slims Bootcuts Cotton & Mix Faded & Plains Blue Black Grey Khaki $40 to $60
+Women Pants Tommy 14 by 46 Bell-Bottom & Apple Bottoms Denim Leather & Rexene Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants Tommy 14 by 46 Bell-Bottom & Apple Bottoms Denim Leather & Rexene Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Women Pants American Eagle 14 by 46 Straights Denim Leather & Rexene Patches Blue Black Grey Khaki $40 to $60
-Women Pants American Eagle 14 by 46 Straights Denim Leather & Rexene Faded & Plains Blue Black Grey Khaki $40 to $60
+Women Pants Tommy 14 by 46 Bell-Bottom & Apple Bottoms Cotton & Mix Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants Tommy 14 by 46 Bell-Bottom & Apple Bottoms Cotton & Mix Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Women Pants American Eagle 14 by 46 Straights Cotton & Mix Patches Blue Black Grey Khaki $40 to $60
-Women Pants American Eagle 14 by 46 Straights Cotton & Mix Faded & Plains Blue Black Grey Khaki $40 to $60
+Women Pants Tommy 14 by 46 Slims Bootcuts Denim Leather & Rexene Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants Tommy 14 by 46 Slims Bootcuts Denim Leather & Rexene Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Women Pants American Eagle 14 by 46 Bell-Bottom & Apple Bottoms Denim Leather & Rexene Patches Blue Black Grey Khaki $40 to $60
-Women Pants American Eagle 14 by 46 Bell-Bottom & Apple Bottoms Denim Leather & Rexene Faded & Plains Blue Black Grey Khaki $40 to $60
+Women Pants Tommy 14 by 46 Slims Bootcuts Cotton & Mix Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants Tommy 14 by 46 Slims Bootcuts Cotton & Mix Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Women Pants American Eagle 14 by 46 Bell-Bottom & Apple Bottoms Cotton & Mix Patches Blue Black Grey Khaki $40 to $60
-Women Pants American Eagle 14 by 46 Bell-Bottom & Apple Bottoms Cotton & Mix Faded & Plains Blue Black Grey Khaki $40 to $60
+Women Pants American Eagle 14 by 46 Straights Denim Leather & Rexene Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants American Eagle 14 by 46 Straights Denim Leather & Rexene Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Women Pants American Eagle 14 by 46 Slims Bootcuts Denim Leather & Rexene Patches Blue Black Grey Khaki $40 to $60
-Women Pants American Eagle 14 by 46 Slims Bootcuts Denim Leather & Rexene Faded & Plains Blue Black Grey Khaki $40 to $60
+Women Pants American Eagle 14 by 46 Straights Cotton & Mix Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants American Eagle 14 by 46 Straights Cotton & Mix Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Women Pants American Eagle 14 by 46 Slims Bootcuts Cotton & Mix Patches Blue Black Grey Khaki $40 to $60
-Women Pants American Eagle 14 by 46 Slims Bootcuts Cotton & Mix Faded & Plains Blue Black Grey Khaki $40 to $60
+Women Pants American Eagle 14 by 46 Bell-Bottom & Apple Bottoms Denim Leather & Rexene Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants American Eagle 14 by 46 Bell-Bottom & Apple Bottoms Denim Leather & Rexene Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Women Pants Gap 14 by 46 Straights Denim Leather & Rexene Patches Blue Black Grey Khaki $40 to $60
-Women Pants Gap 14 by 46 Straights Denim Leather & Rexene Faded & Plains Blue Black Grey Khaki $40 to $60
+Women Pants American Eagle 14 by 46 Bell-Bottom & Apple Bottoms Cotton & Mix Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants American Eagle 14 by 46 Bell-Bottom & Apple Bottoms Cotton & Mix Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Women Pants Gap 14 by 46 Straights Cotton & Mix Patches Blue Black Grey Khaki $40 to $60
-Women Pants Gap 14 by 46 Straights Cotton & Mix Faded & Plains Blue Black Grey Khaki $40 to $60
+Women Pants American Eagle 14 by 46 Slims Bootcuts Denim Leather & Rexene Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants American Eagle 14 by 46 Slims Bootcuts Denim Leather & Rexene Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Women Pants Gap 14 by 46 Bell-Bottom & Apple Bottoms Denim Leather & Rexene Patches Blue Black Grey Khaki $40 to $60
-Women Pants Gap 14 by 46 Bell-Bottom & Apple Bottoms Denim Leather & Rexene Faded & Plains Blue Black Grey Khaki $40 to $60
+Women Pants American Eagle 14 by 46 Slims Bootcuts Cotton & Mix Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants American Eagle 14 by 46 Slims Bootcuts Cotton & Mix Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Women Pants Gap 14 by 46 Bell-Bottom & Apple Bottoms Cotton & Mix Patches Blue Black Grey Khaki $40 to $60
-Women Pants Gap 14 by 46 Bell-Bottom & Apple Bottoms Cotton & Mix Faded & Plains Blue Black Grey Khaki $40 to $60
+Women Pants Gap 14 by 46 Straights Denim Leather & Rexene Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants Gap 14 by 46 Straights Denim Leather & Rexene Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Women Pants Gap 14 by 46 Slims Bootcuts Denim Leather & Rexene Patches Blue Black Grey Khaki $40 to $60
-Women Pants Gap 14 by 46 Slims Bootcuts Denim Leather & Rexene Faded & Plains Blue Black Grey Khaki $40 to $60
+Women Pants Gap 14 by 46 Straights Cotton & Mix Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants Gap 14 by 46 Straights Cotton & Mix Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Women Pants Gap 14 by 46 Slims Bootcuts Cotton & Mix Patches Blue Black Grey Khaki $40 to $60
-Women Pants Gap 14 by 46 Slims Bootcuts Cotton & Mix Faded & Plains Blue Black Grey Khaki $40 to $60
+Women Pants Gap 14 by 46 Bell-Bottom & Apple Bottoms Denim Leather & Rexene Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants Gap 14 by 46 Bell-Bottom & Apple Bottoms Denim Leather & Rexene Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Women Pants Old Navy 14 by 46 Straights Denim Leather & Rexene Patches Blue Black Grey Khaki $40 to $60
-Women Pants Old Navy 14 by 46 Straights Denim Leather & Rexene Faded & Plains Blue Black Grey Khaki $40 to $60
+Women Pants Gap 14 by 46 Bell-Bottom & Apple Bottoms Cotton & Mix Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants Gap 14 by 46 Bell-Bottom & Apple Bottoms Cotton & Mix Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Women Pants Old Navy 14 by 46 Straights Cotton & Mix Patches Blue Black Grey Khaki $40 to $60
-Women Pants Old Navy 14 by 46 Straights Cotton & Mix Faded & Plains Blue Black Grey Khaki $40 to $60
+Women Pants Gap 14 by 46 Slims Bootcuts Denim Leather & Rexene Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants Gap 14 by 46 Slims Bootcuts Denim Leather & Rexene Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Women Pants Old Navy 14 by 46 Bell-Bottom & Apple Bottoms Denim Leather & Rexene Patches Blue Black Grey Khaki $40 to $60
-Women Pants Old Navy 14 by 46 Bell-Bottom & Apple Bottoms Denim Leather & Rexene Faded & Plains Blue Black Grey Khaki $40 to $60
+Women Pants Gap 14 by 46 Slims Bootcuts Cotton & Mix Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants Gap 14 by 46 Slims Bootcuts Cotton & Mix Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Women Pants Old Navy 14 by 46 Bell-Bottom & Apple Bottoms Cotton & Mix Patches Blue Black Grey Khaki $40 to $60
-Women Pants Old Navy 14 by 46 Bell-Bottom & Apple Bottoms Cotton & Mix Faded & Plains Blue Black Grey Khaki $40 to $60
+Women Pants Old Navy 14 by 46 Straights Denim Leather & Rexene Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants Old Navy 14 by 46 Straights Denim Leather & Rexene Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Women Pants Old Navy 14 by 46 Slims Bootcuts Denim Leather & Rexene Patches Blue Black Grey Khaki $40 to $60
-Women Pants Old Navy 14 by 46 Slims Bootcuts Denim Leather & Rexene Faded & Plains Blue Black Grey Khaki $40 to $60
+Women Pants Old Navy 14 by 46 Straights Cotton & Mix Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants Old Navy 14 by 46 Straights Cotton & Mix Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
-Women Pants Old Navy 14 by 46 Slims Bootcuts Cotton & Mix Patches Blue Black Grey Khaki $40 to $60
-Women Pants Old Navy 14 by 46 Slims Bootcuts Cotton & Mix Faded & Plains Blue Black Grey Khaki $40 to $60
+Women Pants Old Navy 14 by 46 Bell-Bottom & Apple Bottoms Denim Leather & Rexene Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants Old Navy 14 by 46 Bell-Bottom & Apple Bottoms Denim Leather & Rexene Faded & Plains Blue #002366 Grey Khaki $40 to $60
+
+Women Pants Old Navy 14 by 46 Bell-Bottom & Apple Bottoms Cotton & Mix Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants Old Navy 14 by 46 Bell-Bottom & Apple Bottoms Cotton & Mix Faded & Plains Blue #002366 Grey Khaki $40 to $60
+
+Women Pants Old Navy 14 by 46 Slims Bootcuts Denim Leather & Rexene Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants Old Navy 14 by 46 Slims Bootcuts Denim Leather & Rexene Faded & Plains Blue #002366 Grey Khaki $40 to $60
+
+Women Pants Old Navy 14 by 46 Slims Bootcuts Cotton & Mix Patches Blue #002366 Grey Khaki $40 to $60
+Women Pants Old Navy 14 by 46 Slims Bootcuts Cotton & Mix Faded & Plains Blue #002366 Grey Khaki $40 to $60
 
 
 */
@@ -513,7 +513,7 @@ function Render1()
 
 
     
-<h3 id ="textHeadingStyle" style={{fontWeight: "bold", fontFamily: 'Outfit'}}>RenderFilter-1</h3></div>
+<h3 id ="textStyle" style={{fontWeight: "bold", fontFamily: 'Outfit'}}>RenderFilter-1</h3></div>
 
 
 
@@ -583,7 +583,7 @@ return  <section>
 
 
     
-<h3 id ="textHeadingStyle" style={{fontWeight: "bold", fontFamily: 'Outfit'}}>RenderFilter-2</h3></div>
+<h3 id ="textStyle" style={{fontWeight: "bold", fontFamily: 'Outfit'}}>RenderFilter-2</h3></div>
 
 
 
@@ -641,7 +641,7 @@ function Render3 ()
  
  
      
- <h3 id ="textHeadingStyle" style={{fontWeight: "bold", fontFamily: 'Outfit'}}>RenderFilter-3</h3></div>
+ <h3 id ="textStyle" style={{fontWeight: "bold", fontFamily: 'Outfit'}}>RenderFilter-3</h3></div>
  
  
  
@@ -762,8 +762,8 @@ return <h6>mission successful</h6>
 {/* this is the div can be multiplied in 9 divs */}
 
 <div id= "squareDivClub">
-  <h6>Product</h6>
-<h6 id ="textHeadingStyle" style={{fontSize: "15px", fontFamily: 'Outfit'}}>
+  <h6 id = "textStyle" style={{fontWeight: "bold"}}>Product</h6>
+<h6 id ="textStyle" style={{fontSize: "15px", fontFamily: 'Outfit'}}>
 
 
 
@@ -798,8 +798,8 @@ Pants, Hats</h6>
 </div>
 <div id= "squareDivClub">
 
-  <h6>Brand</h6>
-<h6 id ="textHeadingStyle" style={{fontSize: "15px", fontFamily: 'Outfit'}}>CK, Guess, Tommy
+  <h6 id = "textStyle" style={{fontWeight: "bold"}}>Brand</h6>
+<h6 id ="textStyle" style={{fontSize: "15px", fontFamily: 'Outfit'}}>CK, Guess, Tommy
 <br></br>
 American Eagle
 <br></br> 
@@ -807,9 +807,9 @@ Gap, Old Navy</h6>
 </div>
 
 <div id= "squareDivClub">
-  <h6>Sizes</h6>
+  <h6 id = "textStyle" style={{fontWeight: "bold"}}>Sizes</h6>
   
-<h6 id ="textHeadingStyle" style={{fontSize: "15px", fontFamily: 'Outfit'}}>S, M, L, Xl
+<h6 id ="textStyle" style={{fontSize: "15px", fontFamily: 'Outfit'}}>S, M, L, Xl
 <br></br>
 <br></br>
 XXL,XXXL
@@ -817,8 +817,8 @@ XXL,XXXL
 </div>
 
 <div id= "squareDivClub">
-  <h6>Dimensions</h6>
-<h6 id ="textHeadingStyle" style={{fontSize: "15px", fontFamily: 'Outfit'}}>14 by 46
+  <h6 id = "textStyle" style={{fontWeight: "bold"}}>Dimensions</h6>
+<h6 id ="textStyle" style={{fontSize: "15px", fontFamily: 'Outfit'}}>14 by 46
 <br></br>
 34 by 64
 <br></br> 
@@ -827,8 +827,8 @@ XXL,XXXL
 </div>
 
 <div id= "squareDivClub">
-  <h6>Shape</h6>
-<h6 id ="textHeadingStyle" style={{fontSize: "15px", fontFamily: 'Outfit'}}>
+  <h6 id = "textStyle" style={{fontWeight: "bold"}}>Shape</h6>
+<h6 id ="textStyle" style={{fontSize: "15px", fontFamily: 'Outfit'}}>
 Straights, Baggy
 <br></br>
 Bell-bottom
@@ -840,8 +840,8 @@ Slims, Bootcuts
 </div>
 
 <div id= "squareDivClub">
-  <h6>Material</h6>
-<h6 id ="textHeadingStyle" style={{fontSize: "15px", fontFamily: 'Outfit'}}>Denim, Leather
+  <h6 id = "textStyle" style={{fontWeight: "bold"}}>Material</h6>
+<h6 id ="textStyle" style={{fontSize: "15px", fontFamily: 'Outfit'}}>Denim, Leather
 <br></br>
 Mix, Rexene
 <br></br> 
@@ -852,8 +852,8 @@ Cotton,Polyester</h6>
 
 
 
-  <h6>Print/pattern</h6>
-<h6 id ="textHeadingStyle" style={{fontSize: "15px", fontFamily: 'Outfit'}}>Check, Plains
+  <h6 id = "textStyle" style={{fontWeight: "bold"}}>Print/pattern</h6>
+<h6 id ="textStyle" style={{fontSize: "15px", fontFamily: 'Outfit'}}>Check, Plains
 <br></br>
 Patches, Dots
 <br></br> 
@@ -861,8 +861,8 @@ Lines, Faded</h6>
 </div>
 
 <div id= "squareDivClub">
-  <h6>Color</h6>
-<h6 id ="textHeadingStyle" style={{fontSize: "15px", fontFamily: 'Outfit'}}>Red,Blue
+  <h6 id = "textStyle" style={{fontWeight: "bold"}}>Color</h6>
+<h6 id ="textStyle" style={{fontSize: "15px", fontFamily: 'Outfit'}}>Red,Blue
 <br></br>
 Green,Purple 
 <br></br> 
@@ -870,8 +870,8 @@ Orange,Yellow</h6>
 </div>
 
 <div id= "squareDivClub">
-  <h6>Price</h6>
-<h6 id ="textHeadingStyle" style={{fontSize: "15px", fontFamily: 'Outfit'}}>10,20,30
+  <h6 id = "textStyle" style={{fontWeight: "bold"}}>Price</h6>
+<h6 id ="textStyle" style={{fontSize: "15px", fontFamily: 'Outfit'}}>10,20,30
 
 <br></br>
 40,50,60 
@@ -922,7 +922,7 @@ as soon somithing is clicked
   
   {/* HERE is you will put the for loop */}
   <div id= "squareDivClub">
-  <h6>This is default"</h6>
+
   </div>
    
   

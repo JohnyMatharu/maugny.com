@@ -12,8 +12,8 @@ Some fonts are not availablein scss file, leave it on jsx
 */
 
 //Following is for headings in header (nav bar) and footer only 
-$headingColor: #002366;
-$headingSize: 16px; 
+$headingColor: #220088;
+$headingSize: 18px; 
 
 #headingStyle {
   color: $headingColor;
@@ -21,7 +21,7 @@ $headingSize: 16px;
 }
 
 //following to be filled
-$textHeadingColor: #002366;
+$textHeadingColor: #220088;
 $textHeadingSize: 21px;
 
 //we will be using following id 
@@ -31,8 +31,8 @@ $textHeadingSize: 21px;
   font-size: $textHeadingSize;
 }
 
-$textColor: 0003a;
-$textSize: 14px;
+$textColor: #002366;
+$textSize: 15px;
 
 #textStyle {
  color: $textColor;
@@ -108,7 +108,7 @@ display: flex;
 
 @mixin scrollBarFlex{
 background-color: #ECEFF8;
-overflow-x: scroll;
+// overflow-x: scroll;
 white-space: nowrap;
 display: flex; 
 align-items: center;
@@ -244,3 +244,11 @@ width: 33.33%;
   
 }
 /* all CSS for footer ends here  */
+
+#logo
+{
+// width: 36%;
+// height: 27%;
+@include flex-align-center;
+padding-bottom: 12px; 
+}
