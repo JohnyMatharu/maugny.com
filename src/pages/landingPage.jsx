@@ -11,8 +11,7 @@ import pic4 from '../pictures/4.jpeg';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
-import scrollDivExtension1 from './scrollDivExtension1';
-import scrollDivExtension2 from './scrollDivExtension2';
+
 
 
 

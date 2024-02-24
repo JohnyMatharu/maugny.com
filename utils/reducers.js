@@ -1,5 +1,6 @@
 //Those actions are imported here, here those actions will update the state
 
+/*
 import { useReducer } from "react";
 import {
   UPDATE_AUCTIONS,
@@ -66,3 +67,6 @@ export const reducer = (state, action) => {
 export function useAuctionReducer(initialState) {
   return useReducer(reducer, initialState)
 }
+
+
+*/

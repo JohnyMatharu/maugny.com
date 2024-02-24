@@ -31,3 +31,6 @@ const useStoreContext = () => {
 };
 
 export { StoreProvider, useStoreContext };
+
+
+//this has been used to use reducer to update global state

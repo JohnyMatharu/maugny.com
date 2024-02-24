@@ -1,28 +1,28 @@
-//this section has to match with queries and mutationson client side, special attention to changes to 
-//product to auction and deletion of category/categories, models must match to anything here
+//this section has to match with queries and mutations client side, models must match to anything 
+// here this needs complete revision, go one by one, first inventory, then cart, then login then 
+// logged in cart and then order history
 
 const { gql } = require( 'apollo-server-express' );
 
 const typeDefs = gql`
 
-  type Order {
+  type orderHistory {
     _id: ID
     purchaseDate: String
-    auctions: [Auction]
+    Cart: [Cart]
   }
 
-  input AuctionInput {
+  input inventoryInput {
     title: String!
     description: String!
-    reserve: Int
-    endDate: String!
+    : Int
+   
 }
 
-input BidInput {
-    auctionId: ID!
-    maxBid: Int!
-    increment: Int!
-    incrementing: Boolean!
+input cartInput {
+    cartId: ID!
+ 
+   
 }
 
 type User {
@@ -43,63 +43,48 @@ type Auth {
     user: User
 }
 
-type Auction {
+type Inventory {
     _id: ID
-    ownerId: ID!
-    createdAt: String
     title: String!
     description: String!
-    reserve: Int
-    endDate: String!
-    paid: Boolean
-    bids: [Bid]
-    activeStatus: Boolean
-    auctionInfo: Result
-    auctionInfoStore: Result
-    currentBid: Int
+
 }
 
-type Result {
-    bidCount: Int,
-    reserve: Int,
-    reserveMet: Boolean,
-    currentBid: Int,
-    currentLeader: String,
-}
-
-type Bid {
+type Cart {
     _id: ID
-    auctionId: ID!
+    title: String!
+    description: String!
+}
+
+type Order {
+    _id: ID
+    cartId: ID!
     createdAt: String
     userId: ID!
-    maxBid: Int!
-    increment: Int!
-    incrementing: Boolean!
 }
+
 
 type Query {
     me: User
-    users: [User]
     user(username: String!): User
-    auctions: [Auction]
-    auction(id: ID!): Auction
-    auctionsByOwner: [Auction]
+    inventory: [Inventory]
+    cart(id: ID!): Cart
     order(_id: ID!): Order
-    checkout(auctions: [ID]!): Checkout
+    checkout(cart: [ID]!): Checkout
 }
 
 type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
     updatePassword(currentPassword: String!, newPassword: String!): Auth
-    addAuction(input: AuctionInput!): User
-    updateAuction(_id: ID!, input: AuctionInput!): Auction
-    deleteAuction(_id: ID!): User
-    addBid(input: BidInput!): Auction
-    updateBid(_id: ID!, maxBid: Int!, increment: Int!): Bid
-    deleteBid(_id: ID!): Auction
-    addOrder(auctions: [ID]!): Order
-    updatePaid(ids: [ID!]): [Auction]
+    addInventory(input: InventoryInput!): User
+    updateInventory(_id: ID!, input: InventoryInput!): Inventory
+    deleteInventory(_id: ID!): User
+    addCart(input: addInput!): Cart
+    updateCart(_id: ID!): Cart
+    deleteCart(_id: ID!): Cart
+    addOrder(Order: [ID]!): Order
+    updatePaid(ids: [ID!]): [Order]
 }
 `;
 

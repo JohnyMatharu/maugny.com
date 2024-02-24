@@ -1,0 +1,1 @@
+//this will create inventory filters using special queries, this can be more than one components

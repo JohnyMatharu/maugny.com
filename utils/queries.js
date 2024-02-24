@@ -1,11 +1,10 @@
-//this will need additions for cart
-//Need to create product list and item page 
-//also need respective models
-//need to fix app.js in end
+//this will be used for type def and resolvers too and modufy them according
+
 
 import { gql } from '@apollo/client';
 
-//this is main query for creating session id with stripe for front end, need all product ids to submit 
+//this is main query for creating session id with stripe for front end, need all product ids to 
+//submit 
 export const QUERY_CHECKOUT = gql`
   query getCheckout($auctions: [ID]!) {
     checkout(auctions: $auctions) {
@@ -24,145 +23,61 @@ export const QUERY_USER = gql`
   }
 `;
 
+
+//This will be Me details could be used for order history
 export const QUERY_ME = gql`
   {
     me {
       _id
       username
       email
-      auctions{
+      cart{
         _id
-        ownerId
         title
         description
-        reserve
+        quantity
+        price
         createdAt
-        endDate
         paid
-        activeStatus
-        auctionInfoStore {
-          bidCount
-          reserveMet
-          currentBid
-          currentLeader
-        }
-      }
-      bidsStore {
-        _id
-        ownerId
-        title
-        description
-        reserve
-        createdAt
-        endDate
-        paid
-        activeStatus
-        auctionInfo {
-          bidCount
-          reserveMet
-          currentBid
-          currentLeader
-        }
-      }
-      bids {
-        _id
-        createdAt
-        auctionId
-        maxBid
-        increment
-        incrementing
-      }
+      }  
     }
+`;
+
+//for inventory component (this could be more than one)
+export const QUERY_INVENTORY = gql`
+  query Inventory {
+      _id
+      title
+      description
+      price
+      quantity
+      image
   }
 `;
 
-export const QUERY_AUCTIONS = gql`
-  query auctions {
-    auctions{
+
+//for cart component
+export const QUERY_CART = gql`
+  query Cart {
       _id
-      ownerId
       title
       description
-      reserve
-      createdAt
-      endDate
-      activeStatus
-      paid
-      auctionInfo {
-        bidCount
-        reserveMet
-        currentBid
-        currentLeader
-      }
-      bids {
-        _id
-        userId
-        auctionId
-        maxBid
-        increment
-        incrementing
-      }
-    }
+      price
+      quantity
+      image
   }
 `;
 
-export const QUERY_AUCTION = gql`
-  query auction($id: ID!) {
-    auction(id: $id){
+//for filter component (may require this more than one)
+export const QUERY_FILTER = gql`
+  query Filter {
       _id
-      ownerId
       title
       description
-      reserve
-      endDate
-      activeStatus
-      paid
-      auctionInfo {
-        bidCount
-        reserveMet
-        currentBid
-        currentLeader
-      }
-      bids {
-        _id
-        userId
-        auctionId
-        maxBid
-        increment
-        incrementing
-      }
-      currentBid
-    }
+      price
+      quantity
+      image
   }
 `;
 
-export const QUERY_AUCTIONS_BY_OWNER = gql`
-  query auctionsByOwner {
-    auctionsByOwner{
-      _id
-      ownerId
-      title
-      description
-      reserve
-      createdAt
-      endDate
-      activeStatus
-      auctionInfo {
-        bidCount
-        reserveMet
-        currentBid
-        currentLeader
-      }
-      bids {
-        _id
-        userId
-        auctionId
-        maxBid
-        increment
-        incrementing
-      }
-      currentBid
-    }
-  }
-`;
 

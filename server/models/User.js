@@ -1,5 +1,3 @@
-/*
-
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
@@ -22,22 +20,16 @@ const userSchema = new Schema(
       required: true,
       minlength: 5
     },
-    auctions: [
+    cart: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'Auction'
+        ref: 'Cart'
       }
     ],
-    bids: [
+    orderHistory: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'Bid'
-      }
-    ],
-    orders: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: 'Order'
+        ref: 'OrderHistory'
       }
     ]
   },
@@ -67,5 +59,3 @@ const User = model('User', userSchema);
 
 module.exports = User;
 
-
-*/

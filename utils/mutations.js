@@ -12,7 +12,9 @@ export const LOGIN_USER = gql`
   }
 `;
 
-//this here needs to be checked for argument names 
+/*
+//this here needs to be checked for argument names
+//This to be checked before use   
 export const UPDATE_PAID = gql`
   mutation updatePaid($ids: [ID!]) {
     updatePaid(ids: $ids) {
@@ -23,6 +25,11 @@ export const UPDATE_PAID = gql`
     }
   }
 `;
+*/
+
+
+
+//The following is used for sign up
 
 export const ADD_USER = gql`
   mutation addUser($username: String!, $email: String!, $password: String!) {
@@ -36,25 +43,18 @@ export const ADD_USER = gql`
   }
 `;
 
-export const ADD_BID = gql`
-  mutation addBid($input: BidInput!) {
-    addBid(input: $input) {
-      _id
-    }
-  }
-`;
 
-export const ADD_AUCTION = gql`
-  mutation addAuction($input: AuctionInput!) {
-    addAuction(input: $input) {
+export const ADD_INVENTORY = gql`
+  mutation addInventory($input: inventoryInput!) {
+    addInventory(input: $input) {
       _id
-      auctions{
+      Inventory{
         _id
         title
         description
-        ownerId
-        reserve
-        endDate
+        price
+        quantity
+        image
       }
     }
   }
@@ -71,25 +71,17 @@ export const CHANGE_PASSWORD = gql`
   }
 `;
 
-export const UPDATE_AUCTION = gql`
-  mutation updateAuction($_id: ID!, $input: AuctionInput!) {
-    updateAuction(_id: $_id, input: $input) {
+export const UPDATE_CART = gql`
+  mutation updateCart($_id: ID!, $input: cartInput!) {
+    updateCart(_id: $_id, input: $input) {
       _id
-      ownerId
+      {
+      _id
       title
       description
-      reserve
-      endDate
-      activeStatus
-      bids{
-        _id
-      }
-      auctionInfo{
-        bidCount
-        reserveMet
-        reserve
-        currentBid
-        currentLeader
+      price
+      quantity
+      image
       }
     }
   }

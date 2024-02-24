@@ -5,8 +5,8 @@
 
 import './App.scss';
 import React, { Component, useState, useContext } from 'react';
-// import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
-// import { setContext } from '@apollo/client/link/context';
+import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import Navbar from './components/navbar';
 // import Test from './pages/test';
@@ -24,18 +24,39 @@ import { NavLink } from 'react-router-dom';
 import logo from './pictures/Logo.png';
 //import { withRouter } from "react-router-dom";
 // import the library
-
+//import Signup from './pages/Signup';
+// import { StoreProvider } from './utils/GlobalState;
+// import OrderHistory from './pages/OrderHistory';
+// import ChangePassword from './pages/ChangePassword';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import {faCartPlus} from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+//The StoreProvider has only been provided to updated Global state which is using Reducer in 
+//Global State under utils. SetContext not to be confused with global state, connected to
+//auth.js and stores login token, AppolloClient is connected to graphQl to send queries to back-end
+
+const httpLink = createHttpLink({
+  uri: '/graphql',
+});
 
 
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem('id_token');
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
 
 
-
-
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
 
 
 
@@ -46,7 +67,9 @@ const App = () => {
   return (
     
 <div className="App"> 
+<ApolloProvider client={client}>
 <Router>
+{/* <StoreProvider> */}
 
 {/* experiment start */}
 
@@ -282,8 +305,10 @@ fontSize: '18px',
 </footer>
       
 
-         
+{/* </StoreProvider> */}
       </Router>
+      </ApolloProvider>
+      
           
     </div>
   );

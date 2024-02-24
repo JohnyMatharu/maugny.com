@@ -1,3 +1,6 @@
+// this is filtered page, made later on, this will for now use special queries to filter info 
+
+
 import './clubPage.scss';
 import App from '../App'
 import React, { Component, useState, useEffect } from 'react';
