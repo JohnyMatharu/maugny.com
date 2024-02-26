@@ -25,12 +25,6 @@ const userSchema = new Schema(
         type: Schema.Types.ObjectId,
         ref: 'Cart'
       }
-    ],
-    orderHistory: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: 'OrderHistory'
-      }
     ]
   },
   {

@@ -5,22 +5,26 @@ import { gql } from '@apollo/client';
 
 //this is main query for creating session id with stripe for front end, need all product ids to 
 //submit 
-export const QUERY_CHECKOUT = gql`
-  query getCheckout($auctions: [ID]!) {
-    checkout(auctions: $auctions) {
-      session
-    }
-  }
-`;
+
+
 
 export const QUERY_USER = gql`
   query user($username: String!) {
     user(username: $username) {
-      _id
-      username
-      email
+        _id
+        username
+        email
+        cart{
+          _id
+          title
+          description
+          quantity
+          price
+          createdAt
+          paid
+        }  
+      }
     }
-  }
 `;
 
 
@@ -41,9 +45,11 @@ export const QUERY_ME = gql`
         paid
       }  
     }
+  }
 `;
 
-//for inventory component (this could be more than one)
+//for inventory component (this could be more than one), or like one GET request to display 
+//all inventory seed data, the query may not need the id parts
 export const QUERY_INVENTORY = gql`
   query Inventory {
       _id
@@ -55,8 +61,21 @@ export const QUERY_INVENTORY = gql`
   }
 `;
 
+//this is for PDP page one query of one product
 
-//for cart component
+export const QUERY_PRODUCT = gql`
+  query Product {
+      _id
+      title
+      description
+      price
+      quantity
+      image
+  }
+`;
+
+
+//for cart component, may not need the id part
 export const QUERY_CART = gql`
   query Cart {
       _id
@@ -68,10 +87,12 @@ export const QUERY_CART = gql`
   }
 `;
 
+
+
+/*
 //for filter component (may require this more than one)
 export const QUERY_FILTER = gql`
   query Filter {
-      _id
       title
       description
       price
@@ -79,5 +100,5 @@ export const QUERY_FILTER = gql`
       image
   }
 `;
-
+*/
 

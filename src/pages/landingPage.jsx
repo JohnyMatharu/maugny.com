@@ -1,5 +1,6 @@
 //NEXT STEP -  make divs for last sections, color backround rainbow and text colors, icons
 import './landingPage.scss';
+import Inventory from '../components/inventory';
 import App from '../App'
 import React, { Component, useState, useEffect } from 'react';
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";

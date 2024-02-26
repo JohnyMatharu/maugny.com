@@ -1,4 +1,5 @@
 import './productPage.scss';
+import Inventory from '../components/inventory';
 import React from 'react';
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import $ from 'jquery';
