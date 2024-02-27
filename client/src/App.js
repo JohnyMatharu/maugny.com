@@ -32,7 +32,26 @@ import { faHome } from '@fortawesome/free-solid-svg-icons';
 import {faCartPlus} from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  graphql,
+  GraphQLSchema,
+  GraphQLObjectType,
+  GraphQLString,
+} from 'graphql';
 
+var schema = new GraphQLSchema({
+  query: new GraphQLObjectType({
+    name: 'RootQueryType',
+    fields: {
+      hello: {
+        type: GraphQLString,
+        resolve() {
+          return 'world';
+        },
+      },
+    },
+  }),
+});
 //The StoreProvider has only been provided to updated Global state which is using Reducer in 
 //Global State under utils. SetContext not to be confused with global state, connected to
 //auth.js and stores login token, AppolloClient is connected to graphQl to send queries to
@@ -72,7 +91,7 @@ const App = () => {
 <Router>
 {/* <StoreProvider> */}
 
-{/* experiment start */}
+
 
 <nav>
 <div className="nav">

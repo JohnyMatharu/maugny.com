@@ -1,10 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/maugny.com', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/maugny', {
 });
 
 module.exports = mongoose.connection;

@@ -16,13 +16,24 @@ const server = new ApolloServer( {
   context: authMiddleware
 } );
 
-server.applyMiddleware( { app } );
+
+
+async function startServer() {
+  apolloServer = new ApolloServer({
+    typeDefs,
+    resolvers,
+  });
+  await apolloServer.start();
+  apolloServer.applyMiddleware({ app });
+}
+startServer();
+
 
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-// Serve up static assets
+
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }

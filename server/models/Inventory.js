@@ -1,5 +1,5 @@
 const { Schema, model } = require( 'mongoose' );
-const inventorySchema = require( './Inventory' )
+
 
 const inventorySchema = new Schema(
   {
@@ -14,10 +14,15 @@ const inventorySchema = new Schema(
       required: true,
       trim: true
     },
-    image: {
-      type: Image,
-      required: true
-    },
+    img:
+    {
+        data: Buffer,
+        contentType: {
+            type: String,
+            // default: 'image/png'
+        }
+      },
+        
     quantity: {
       type: Number,
       required: true
