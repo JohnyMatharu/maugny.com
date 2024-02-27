@@ -35,10 +35,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 //The StoreProvider has only been provided to updated Global state which is using Reducer in 
 //Global State under utils. SetContext not to be confused with global state, connected to
-//auth.js and stores login token, AppolloClient is connected to graphQl to send queries to back-end
+//auth.js and stores login token, AppolloClient is connected to graphQl to send queries to
 
 const httpLink = createHttpLink({
-  uri: '/graphql',
+ uri: 'http://localhost:3001/graphql'
+  // uri: '/graphql',
 });
 
 

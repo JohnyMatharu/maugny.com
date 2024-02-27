@@ -43,7 +43,7 @@ const resolvers = {
     inventory: async (parent) => {
       return inventory.find().sort({ createdAt: -1 });
     },
-//check and edit createdAt: -1 and take it off if necessary
+//check and edit createdAt: -1 and take it off if necessary, sort may not be needed 
 //check the use of sort() and take it off if necessary
 //this is to display inventory as seed files straight on landing page without need to log in
 
@@ -56,7 +56,7 @@ const resolvers = {
 cart: async (parent) => {
   return cart.find().sort({ createdAt: -1 });
 }
-//check and edit createdAt: -1 and take it off if necessary
+//check and edit createdAt: -1 and take it off if necessary, sort may not be needed 
 //check the use of sort() and take it off if necessary
 //this is to display cart items with need to log in, may have to include the context code above 
 
@@ -135,7 +135,7 @@ cart: async (parent) => {
                   { $push: { cart : product } },
             //      { new: true }
                 )
-                .populate('inventory');
+                .populate('cart');
                 ;
       
         console.log(user)
