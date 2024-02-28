@@ -1,10 +1,10 @@
 const { Schema, model } = require( 'mongoose' );
 
 
-const inventorySchema = new Schema(
+const productSchema = new Schema(
   {
     //id should be automatic, check if need to include cartId using graphQL
-    item: {
+    title: {
       type: String,
       required: true,
       trim: true
@@ -40,9 +40,9 @@ const inventorySchema = new Schema(
 );
 
 
-const Inventory = model( 'Inventory', inventorySchema );
+const Product = model( 'Product', productSchema );
 
-module.exports = Inventory;
+module.exports = Product;
 
 
 

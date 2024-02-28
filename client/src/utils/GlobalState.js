@@ -1,3 +1,4 @@
+/*
 //Global state is creating a context/global state that is importing reducer to update state and pass 
 //updated state to other components using provider using props
 //for library https://stripe.com/docs/stripe-js
@@ -34,3 +35,5 @@ export { StoreProvider, useStoreContext };
 
 
 //this has been used to use reducer to update global state
+
+*/

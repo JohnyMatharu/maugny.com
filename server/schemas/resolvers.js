@@ -2,7 +2,7 @@
 //This entire stucture needs to be 100% revised and major corrections are need. LoggedIn be revised
 //Need proper understanding for what resolvers is doing, this is just a hint. Context is logged in 
 
-const { User, Inventory} = require( '../models' )
+const { User, Product} = require( '../models' )
 
 const { AuthenticationError } = require( 'apollo-server-express' )
 const { signToken } = require( '../utils/auth' )
@@ -157,7 +157,7 @@ cart: async (parent) => {
            //      { new: true }
          )
   
-    .populate('inventory');
+    .populate('cart');
     ;
     
     //this part needs fixing

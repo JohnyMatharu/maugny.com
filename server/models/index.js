@@ -1,7 +1,7 @@
-const Inventory = require('./Inventory');
+const Product = require('./Product');
 const User = require('./User');
 
 
 module.exports = { 
     User, 
-    Inventory};
+    Product};
