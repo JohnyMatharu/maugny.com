@@ -1,104 +1,73 @@
-//this will be used for type def and resolvers too and modufy them according
-
-
 import { gql } from '@apollo/client';
 
-//this is main query for creating session id with stripe for front end, need all product ids to 
-//submit 
+export const QUERY_PRODUCTS = gql`
+  query getProducts($category: ID) {
+    products(category: $category) {
+      _id
+      name
+      description
+      price
+      quantity
+      image
+      category {
+        _id
+      }
+      displayNumber
+    }
+  }
+`;
 
+export const QUERY_CHECKOUT = gql`
+  query getCheckout($products: [ID]!) {
+    checkout(products: $products) {
+      session
+    }
+  }
+`;
 
+export const QUERY_ALL_PRODUCTS = gql`
+  {
+    products {
+      _id
+      name
+      description
+      price
+      quantity
+      category {
+        name
+      }
+      displayNumber
+    }
+  }
+`;
+
+export const QUERY_CATEGORIES = gql`
+  {
+    categories {
+      _id
+      name
+    }
+  }
+`;
 
 export const QUERY_USER = gql`
-  query user($username: String!) {
-    user(username: $username) {
+  {
+    user {
+      firstName
+      lastName
+      orders {
         _id
-        username
-        email
-        cart{
+        purchaseDate
+        products {
           _id
-          title
+          name
           description
-          quantity
           price
-          createdAt
-          paid
-        }  
+          quantity
+          image
+          displayNumber
+        }
       }
     }
-`;
-
-
-//This will be Me details could be used for order history
-export const QUERY_ME = gql`
-  {
-    me {
-      _id
-      username
-      email
-      cart{
-        _id
-        title
-        description
-        quantity
-        price
-        createdAt
-        paid
-      }  
-    }
   }
 `;
-
-//for inventory component (this could be more than one), or like one GET request to display 
-//all inventory seed data, the query may not need the id parts
-export const QUERY_INVENTORY = gql`
-  query Inventory {
-      _id
-      title
-      description
-      price
-      quantity
-      image
-  }
-`;
-
-//this is for PDP page one query of one product
-
-export const QUERY_PRODUCT = gql`
-  query Product {
-      _id
-      title
-      description
-      price
-      quantity
-      image
-  }
-`;
-
-
-//for cart component, may not need the id part
-export const QUERY_CART = gql`
-  query Cart {
-      _id
-      title
-      description
-      price
-      quantity
-      image
-  }
-`;
-
-
-
-/*
-//for filter component (may require this more than one)
-export const QUERY_FILTER = gql`
-  query Filter {
-      title
-      description
-      price
-      quantity
-      image
-  }
-`;
-*/
-

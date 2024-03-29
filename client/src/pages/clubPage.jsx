@@ -1,4 +1,10 @@
-// this is filtered page, made later on, this will for now use special queries to filter info 
+//You don't need to add a filter collection as you are already using the filter on front page
+//You need same technique to show the selection of products in filter page, you will not use 
+//the filter buttons on landing page, they can be used on filter page but you will have to be 
+//careful about this that they dont make changes on landing page, test it. If good you can also
+//use that with the filters already on the page React based, you will use the displayNumber
+//method to make groups of divs fitting info, already structured, this method is better advisable
+
 
 
 import './clubPage.scss';
@@ -10,14 +16,13 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import { render } from '@testing-library/react';
+import ProductList from "../components/ProductList";
+import CategoryMenu from "../components/CategoryMenu";
+
+
 
 /*
-//*** Make all renders and set them up in array format
-//*** For RenderAll we will render all components using map and For loop
-//*** For others we will do sam but selective rendering keep the values in For loop as short 
-//*** Try to finish this section 
-//*** Finish the login
-//*** Put fake pics and save
+
 
 
 Men Jewl 
@@ -982,9 +987,12 @@ as soon somithing is clicked
 
 </section>
 
+{/* This category menu is choosing the listing of product for each category and is altering 
+same thing on landing page, both needs to be independant, so create 2 seperate seeds
+and 2 seperate products and categories for those 2 seperate seeds */}
 
-
-
+<CategoryMenu />
+      <ProductList />
 
 
 
@@ -1001,3 +1009,7 @@ as soon somithing is clicked
 
     );
   }
+
+
+
+  

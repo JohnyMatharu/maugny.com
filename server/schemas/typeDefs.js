@@ -1,52 +1,66 @@
+// type Query is real query and in bracket is our argument, on right is result
+// if plural then [], the 'type' shows what type of data will be returned for
+// that query result which will be influenced by out model type 
 
 
-const { gql } = require( 'apollo-server-express' );
+const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
-
-
-type Product {
+  type Category {
     _id: ID
-    title: String!
-    description: String!
-    price: Int!
-    quantity: Int! 
-    image: String! 
-}
+    name: String
+  }
 
-type User {
+  type Product {
     _id: ID
-    username: String
+    name: String
+    description: String
+    image: String
+    quantity: Int
+    price: Float
+    category: Category
+    displayNumber: Int
+  }
+
+  type Order {
+    _id: ID
+    purchaseDate: String
+    products: [Product]
+  }
+
+  type User {
+    _id: ID
+    firstName: String
+    lastName: String
     email: String
-    cart: [Product]
-    priceCount: Int
-}
+    orders: [Order]
+  }
 
+  type Checkout {
+    session: ID
+  }
 
-type Auth {
-    token: ID!
+  type Auth {
+    token: ID
     user: User
-}
+  }
 
-
-type Query {
-    me: User
-    user(username: String!): User
-    inventory: [Product]
+  type Query {
+    categories: [Category]
+    products(category: ID, name: String): [Product]
     product(_id: ID!): Product
-    cart: [Product] 
-}
+    user: User
+    order(_id: ID!): Order
+    checkout(products: [ID]!): Checkout
+  }
 
-type Mutation {
+  type Mutation {
+    addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
+    addOrder(products: [ID]!): Order
+    updateUser(firstName: String, lastName: String, email: String, password: String): User
+    updateProduct(_id: ID!, quantity: Int!): Product
     login(email: String!, password: String!): Auth
-    addUser(username: String!, email: String!, password: String!): Auth
-    updatePassword(currentPassword: String!, newPassword: String!): Auth
-    addCart(_id: ID!, title: String!, description: String!, price: Int!, quantity: Int!, image: String!): User
-    removeCart(_id: ID!): User
-}
+  }
 `;
-
-
-
 
 module.exports = typeDefs;

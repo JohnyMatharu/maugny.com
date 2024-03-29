@@ -1,91 +1,110 @@
+//at SignUp (signUp.jsx:18:1)
+
+// sign up page
+
+import './signUp.scss';
+import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
-import { ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
+import { ADD_USER } from '../utils/mutations';
 
-const Signup = () => {
-  const [formState, setFormState] = useState({ username: '', email: '', password: '' });
-  const [passLengthState, setPassLengthState] = useState( false )
-  const [addUser, { error }] = useMutation(ADD_USER);
 
-  // update state based on form input changes
+// this page is not connected yet, check the diagrams to make sure
+
+export default function SignUp(props) {
+
+  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [addUser] = useMutation(ADD_USER);
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    const mutationResponse = await addUser({
+      variables: {
+        email: formState.email,
+        password: formState.password,
+        firstName: formState.firstName,
+        lastName: formState.lastName,
+      },
+    });
+    const token = mutationResponse.data.addUser.token;
+    Auth.login(token);
+  };
+
   const handleChange = (event) => {
     const { name, value } = event.target;
-
     setFormState({
       ...formState,
       [name]: value,
-    })
-
-    checkPWLen( name, value )
+    });
   };
 
-  const checkPWLen = ( name, value) => {
-      const password = value.split('').length
-      if( password >= 5 ){
-          setPassLengthState( true ) 
-      } else {
-          setPassLengthState( false ) 
-      }
+
+
+
+    return (
+        <section>
+      <MDBContainer id="size">
+         
+
+    <div id="height1"><h3 id ="textStyle" style={{fontWeight: "bold", fontFamily: 'Outfit'}}>This is Product Page</h3>
+
+    <div className="container my-1">
+      <Link to="/login">← Go to Login</Link>
+
+      <h2>Signup</h2>
+      <form onSubmit={handleFormSubmit}>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="firstName">First Name:</label>
+          <input
+            placeholder="First"
+            name="firstName"
+            type="firstName"
+            id="firstName"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="lastName">Last Name:</label>
+          <input
+            placeholder="Last"
+            name="lastName"
+            type="lastName"
+            id="lastName"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="email">Email:</label>
+          <input
+            placeholder="youremail@test.com"
+            name="email"
+            type="email"
+            id="email"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="pwd">Password:</label>
+          <input
+            placeholder="******"
+            name="password"
+            type="password"
+            id="pwd"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="flex-row flex-end">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+
+
+
+</div>
+    </MDBContainer >  
+    </section>    
+    )
 }
-
-  // submit form
-  const handleFormSubmit = async event => {
-    event.preventDefault();
-  
-    // use try/catch instead of promises to handle errors
-    try {
-      const { data } = await addUser({
-        variables: { ...formState }
-      });
-    
-      Auth.login(data.addUser.token);
-    } catch (e) {
-      console.error(e);
-    }
-  };
-
-  return (
-    <>
-      <h1>Sign Up</h1>
-      <div className="form-container input-field col s6 signup-form">
-          <form onSubmit={handleFormSubmit} autoComplete="off">
-            <input 
-              placeholder='Your username'
-              name='username'
-              type='text'
-              id='username'
-              value={formState.username}
-              onChange={handleChange}
-              
-            />
-            <input
-              placeholder='Your email'
-              name='email'
-              type='email'
-              id='email'
-              value={formState.email}
-              onChange={handleChange}
-            />
-            <input
-              placeholder='******'
-              name='password'
-              type='password'
-              id='password'
-              value={formState.password}
-              onChange={handleChange}
-            />
-            { !passLengthState ? <div>* Password must be 5 characters long</div> :
-              <button type='submit'className="btn waves-effect waves-light">
-              <i className ="material-icons center"> Submit</i>
-              </button>
-            }
-            {error && <div>* Sign up failed</div>}
-          </form>
-      </div>
-    </>
-
-  );
-};
-
-export default Signup;

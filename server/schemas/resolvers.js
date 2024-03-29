@@ -1,175 +1,151 @@
-//Here we are creating a backend system by importing the models accessed by queries and mutations
-//This entire stucture needs to be 100% revised and major corrections are need. LoggedIn be revised
-//Need proper understanding for what resolvers is doing, this is just a hint. Context is logged in 
+//HEre were are using model info and mongo method of find/findAll etc. used
+//along with model type to sund that from the collection based on that model, 
+//any thing saying select('--v,password') is to be immited on result of search
+//we use index.js to export all things at once instead of individually exporting 
+//each.  const token = signToken(user), line 142 is imported from auth.js
+//This file is writing the routes for crud operations using alread build methods like
+//find() etc. and use that with model names like Category.find. 
 
-const { User, Product} = require( '../models' )
-
-const { AuthenticationError } = require( 'apollo-server-express' )
-const { signToken } = require( '../utils/auth' )
-const { sendEmail } = require( '../utils/nodemailer' )
-const bcrypt = require('bcrypt');
-// const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc')
+const { AuthenticationError } = require('apollo-server-express');
+const { User, Product, Category, Order } = require('../models');
+const { signToken } = require('../utils/auth');
+const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
 const resolvers = {
-  Query:  {
-    
-  //The main way to order history in resolvers will be to to be similar to cart resolver and then
-  //the array of cart will be assigned to another array called Order after session ID is reported
-  //back from the payment provider after payment, provided cart is >0 qty using if statement 
-    
-    me: async (parent, args, context) => {
-        if (context.user) {
-          const userData = await User.findOne({ _id: context.user._id })
-            .select('-__v -password')  
-            .populate('cart');   
-           
-            //then we will also include the order history in it 
-            
-          return userData;
-        }
-        throw new AuthenticationError('Not logged in');
+  Query: {
+    categories: async () => {
+      return await Category.find();
     },
-    user: async (parent, { username }, context) => {
-      if (context.user) {
-        return User.findOne({ username })
-          .select('-__v -password')
-          .populate('cart')
- 
-            //then we will also include the order history in it 
-        }
-        throw new AuthenticationError('Not logged in');
-    },
+    products: async (parent, { category, name }) => {
+      const params = {};
 
-    inventory: async (parent) => {
-      return inventory.find().sort({ createdAt: -1 });
-    },
-//check and edit createdAt: -1 and take it off if necessary, sort may not be needed 
-//check the use of sort() and take it off if necessary
-//this is to display inventory as seed files straight on landing page without need to log in
+      if (category) {
+        params.category = category;
+      }
 
+      if (name) {
+        params.name = {
+          $regex: name
+        };
+      }
+
+      return await Product.find(params).populate('category');
+    },
     product: async (parent, { _id }) => {
-      return inventory.findOne({ _id });
+      return await Product.findById(_id).populate('category');
     },
+    user: async (parent, args, context) => {
+      if (context.user) {
+        const user = await User.findById(context.user._id).populate({
+          path: 'orders.products',
+          populate: 'category'
+        });
 
-//Add one for filter of certain category abd group of products
+        user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
 
-cart: async (parent) => {
-  return cart.find().sort({ createdAt: -1 });
-}
-//check and edit createdAt: -1 and take it off if necessary, sort may not be needed 
-//check the use of sort() and take it off if necessary
-//this is to display cart items with need to log in, may have to include the context code above 
+        return user;
+      }
 
+      throw new AuthenticationError('Not logged in');
+    },
+    order: async (parent, { _id }, context) => {
+      if (context.user) {
+        const user = await User.findById(context.user._id).populate({
+          path: 'orders.products',
+          populate: 'category'
+        });
 
+        return user.orders.id(_id);
+      }
 
+      throw new AuthenticationError('Not logged in');
+    },
+    checkout: async (parent, args, context) => {
+      const url = new URL(context.headers.referer).origin;
+      const order = new Order({ products: args.products });
+      const line_items = [];
 
+      const { products } = await order.populate('products').execPopulate();
+
+      for (let i = 0; i < products.length; i++) {
+        const product = await stripe.products.create({
+          name: products[i].name,
+          description: products[i].description,
+          images: [`${url}/images/${products[i].image}`]
+        });
+
+        const price = await stripe.prices.create({
+          product: product.id,
+          unit_amount: products[i].price * 100,
+          currency: 'usd',
+        });
+
+        line_items.push({
+          price: price.id,
+          quantity: 1
+        });
+      }
+
+      const session = await stripe.checkout.sessions.create({
+        payment_method_types: ['card'],
+        line_items,
+        mode: 'payment',
+        success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
+        cancel_url: `${url}/`
+      });
+
+      return { session: session.id };
+    }
   },
-
   Mutation: {
-    
-    login: async (parent, { email, password }) => {
-      const user = await User.findOne({ email });
-      
-      if (!user) {
-        throw new AuthenticationError('Incorrect credentials');
-      }
-      
-      const correctPw = await user.isCorrectPassword(password);
-    
-      if (!correctPw) {
-        throw new AuthenticationError('Incorrect credentials');
-      }
-    
-      const token = signToken(user);
-      return { token, user };
-    },
-
     addUser: async (parent, args) => {
       const user = await User.create(args);
       const token = signToken(user);
-        // send welcome email
-      const emailData = { username: args.username, email: args.email }
-      sendEmail( emailData, 'signup' )
-    
+
       return { token, user };
     },
+    addOrder: async (parent, { products }, context) => {
+      console.log(context);
+      if (context.user) {
+        const order = new Order({ products });
 
+        await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
 
-    updatePassword: async (parent, args, context) => {
-      if( context.user ){
-          // find user by context
-        const currentUser = await User.findOne( { _id: context.user._id } );
-          // see if password correct
-        const correctPw = await currentUser.isCorrectPassword(args.currentPassword);
-          // fail validation if not correct
-        if (!correctPw) {
-          throw new AuthenticationError('Incorrect credentials');
-        }
-          // hash new password
-        const newPass = await bcrypt.hash( args.newPassword, 10 )
-          // update user password
-        const user = await User.findOneAndUpdate( 
-          { _id: context.user._id },
-          { password: newPass },
-          { new: true, runValidators: true }
-          );
-
-          // send password change email
-        const emailData = { username: user.username, email: user.email }
-        sendEmail( emailData, 'password' )
-          // sign new token
-        const token = signToken(user);
-        return { token, user };
+        return order;
       }
-      throw new AuthenticationError('Incorrect credentials');
-    },
 
-    addCart: async (parent, { input }, context) => {
-      if( context.user ){
-          
-        const Product = await Product.create({ ...args, username: context.user.username });
-        console.log(Product)
-              const user =  await Product.findByIdAndUpdate(
-               
-                 context.user._id,
-                  { $push: { cart : product } },
-            //      { new: true }
-                )
-                .populate('cart');
-                ;
-      
-        console.log(user)
-                return user;
-              }
-      throw new AuthenticationError('Incorrect credentials');
+      throw new AuthenticationError('Not logged in');
     },
-    
-
-    removeCart: async (parent, { _id }, context) => {
-      if( context.user ){
-        const product = await Product.deleteOne({ ...args, username: context.user.username });
-        console.log(product)
-        const user =  await User.findByIdAndUpdate(
-           
-          context.user._id,
-           { $pull: { cart: _id } },
-  //check here if _id is working as supposed to and need not to change with cartId
-           //      { new: true }
-         )
-  
-    .populate('cart');
-    ;
-    
-    //this part needs fixing
-    console.log(user)
-    return user;   
-      
+    updateUser: async (parent, args, context) => {
+      if (context.user) {
+        return await User.findByIdAndUpdate(context.user._id, args, { new: true });
       }
-      throw new AuthenticationError('Incorrect credentials');
+
+      throw new AuthenticationError('Not logged in');
+    },
+    updateProduct: async (parent, { _id, quantity }) => {
+      const decrement = Math.abs(quantity) * -1;
+
+      return await Product.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
+    },
+    login: async (parent, { email, password }) => {
+      const user = await User.findOne({ email });
+
+      if (!user) {
+        throw new AuthenticationError('Incorrect credentials');
+      }
+
+      const correctPw = await user.isCorrectPassword(password);
+
+      if (!correctPw) {
+        throw new AuthenticationError('Incorrect credentials');
+      }
+
+      const token = signToken(user);
+
+      return { token, user };
     }
-  
-
   }
-}
+};
 
 module.exports = resolvers;

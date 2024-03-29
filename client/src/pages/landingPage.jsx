@@ -1,6 +1,48 @@
-//NEXT STEP -  make divs for last sections, color backround rainbow and text colors, icons
+//What is React state: its a function that has initial variable on left (initialized on the right
+//in the brackets), and on right of initial variable is a functions that will update the value
+//of initial value to give its next value. Everytime it will change the values it will be a unique
+//state, this is why called a state. React components has a built-in state object. The state object 
+//is where you store property values that belong to the component. When the state object changes, 
+//the component re-renders. setState() schedules an update to a component’s state object. When 
+//state changes, the component responds by re-rendering. State is a memory for that function. Snapshot
+//of its different states/stages
+
+
+//Add pics, some details and prices (check other landing, not from backend), back end info will
+//also be there for filter page including pics and for pdp page, for all landing page material
+//create links in components straight to pdp page (Product id). Later picture name funnels be created 
+//on front page that will take straight to a certan filter to see the varierty (after filter ready) 
+//Now: work on seed basic info, look what is at front and create more categories, for filter when back
+//Now: Compile the entire front langing page, all parts, think of party wear at front options decide
+
+//There is no need to save pics in folders. No need to create seperate filter components 
+//The invetory here is very small portion from main filter page. The only diff is this may have
+//diff pic than filter page. Filter page will have cumulative groups fit in flexible divs
+
+//The picture files will be stored on the to cloud and will be accessed through URL. The cloud
+//can be AWS, Google cloud, or any other like Mongo DB/Atlas, or Filezilla/database. Keep fewest 
+//items as possible in front, limit is 2 slides per arrow scrolls and 6 items each add middle space pics
+
+//You can create multiple components like this with display numbers showing different products
+//you can wither use the category clicks or attach these multiple conponents by display number
+//attached to the logic already created on display page, buttons have to fixed for backrounds
+
+//You don't need to add a filter collection as you are already using the filter on front page
+//You need same technique to show the selection of products in filter page, you will not use 
+//the filter buttons on landing page, they can be used on filter page but you will have to be 
+//careful about this that they dont make changes on landing page, test it. If good you can also
+//use that with the filters already on the page React based, you will use the displayNumber
+//method to make groups of divs fitting info, already structured, this method is better advisable
+
+
+
+
+
+
+
+
 import './landingPage.scss';
-import Inventory from '../components/inventory';
+// import Inventory from '../components/inventory';
 import App from '../App'
 import React, { Component, useState, useEffect } from 'react';
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
@@ -12,51 +54,8 @@ import pic4 from '../pictures/4.jpeg';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
-
-
-
-
-/*
-
-Inventory: (later try get separate page for this, and even later this will be linked with central
-  database which will be shared with PDP page and then checkout)
-
-Section 1. Jewelery
-
-
-1.1 Signet rings
-1.2 Y2K rings
-1.3 Butterfly rings
-1.4 initial rings
-1.5 Plastic bead rings 
-1.6 Butterfly rings 
-1.7 Sparkly Hoops and statement rings, snake earings
-
-
-2.1 Crawler Earings 
-2.2 Climber earrings
-2.3 Butterfly earrings
-2.4 Hearts Earrings 
-2.5 Cuffing Season
-2.6 Supersized Hoop Earrings
-2.7 Butterfly Necklace/Pendants, Hot Collars Chokers, Chain necklaces, snake necklaces
-
-
-3.1 “Charms bracelet”. 
-3.2 Gold charm bracelet” 
-3.3 Silver charm bracelet”  months.
-3.4 Y2K Bracelets and Necklace
-3.5 Beads Bracelets
-3.6 Butterfly Bracelets
-3.7 Mettalic Bengles/ Bone or Bark Cuffs/ Big Bangles, Chain Bracelets, snake bracelets
-
- 
-
-
-
-*/
-
-
+import ProductList from "../components/ProductList";
+import CategoryMenu from "../components/CategoryMenu";
 
 
 
@@ -85,30 +84,9 @@ console.log (newValue);
 
 
  const multipleRender = [
- 
-<div id= "divSpaceScroll">
-    <div id="heightDiv"> 
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
-   <div id="heightDiv"> 
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    </div>,
-
-<div><h1>render2</h1></div>,
-<div><h1>render3</h1></div>,
-<div><h1>render4</h1></div>,
-<div><h1>render5</h1></div>,
-<div><h1>render6</h1></div>,
-<div><h1>render7</h1></div>
+  // Add prices in bottom, in stock, and item name on top - check other designs  
+  <ProductList />,
+<div><h1>render2</h1></div>
 ];
 
 
@@ -120,8 +98,9 @@ if (newValue < 0)
   return multipleRender [newValue]; 
 }
 
-else if (newValue > 6)  {
-  const newValue = 6; 
+//this was 6 before for both and can be changed back to get 7 divs if needed 
+else if (newValue > 1)  {
+  const newValue = 1; 
   return multipleRender [newValue]; 
 }
 
@@ -162,24 +141,9 @@ console.log (newValue1);
     <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
     <div id="heightDiv">
     <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
-   <div id="heightDiv"> 
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
     </div>,
 
-<div><h1>render2</h1></div>,
-<div><h1>render3</h1></div>,
-<div><h1>render4</h1></div>,
-<div><h1>render5</h1></div>,
-<div><h1>render6</h1></div>,
-<div><h1>render7</h1></div>
+<div><h1>render2</h1></div>
 ];
 
 
@@ -191,8 +155,8 @@ if (newValue1 < 0)
   return multipleRender [newValue1]; 
 }
 
-else if (newValue1 > 6)  {
-  const newValue1 = 6; 
+else if (newValue1 > 1)  {
+  const newValue1 = 1; 
   return multipleRender [newValue1]; 
 }
 
@@ -237,24 +201,9 @@ console.log (newValue2);
     <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
     <div id="heightDiv">
     <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
-   <div id="heightDiv"> 
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
     </div>,
 
-<div><h1>render2</h1></div>,
-<div><h1>render3</h1></div>,
-<div><h1>render4</h1></div>,
-<div><h1>render5</h1></div>,
-<div><h1>render6</h1></div>,
-<div><h1>render7</h1></div>
+<div><h1>render2</h1></div>
 ];
 
 
@@ -266,8 +215,8 @@ if (newValue2 < 0)
   return multipleRender [newValue2]; 
 }
 
-else if (newValue2 > 6)  {
-  const newValue2 = 6; 
+else if (newValue2 > 1)  {
+  const newValue2 = 1; 
   return multipleRender [newValue2]; 
 }
 
@@ -309,24 +258,9 @@ console.log (newValue3);
     <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
     <div id="heightDiv">
     <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
-   <div id="heightDiv"> 
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
     </div>,
 
-<div><h1>render2</h1></div>,
-<div><h1>render3</h1></div>,
-<div><h1>render4</h1></div>,
-<div><h1>render5</h1></div>,
-<div><h1>render6</h1></div>,
-<div><h1>render7</h1></div>
+<div><h1>render2</h1></div>
 ];
 
 
@@ -338,8 +272,8 @@ if (newValue3 < 0)
   return multipleRender [newValue3]; 
 }
 
-else if (newValue3 > 6)  {
-  const newValue3 = 6; 
+else if (newValue3 > 1)  {
+  const newValue3 = 1; 
   return multipleRender [newValue3]; 
 }
 
@@ -380,24 +314,9 @@ console.log (newValue4);
     <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
     <div id="heightDiv">
     <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
-   <div id="heightDiv"> 
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
     </div>,
 
-<div><h1>render2</h1></div>,
-<div><h1>render3</h1></div>,
-<div><h1>render4</h1></div>,
-<div><h1>render5</h1></div>,
-<div><h1>render6</h1></div>,
-<div><h1>render7</h1></div>
+<div><h1>render2</h1></div>
 ];
 
 
@@ -409,8 +328,8 @@ if (newValue4 < 0)
   return multipleRender [newValue4]; 
 }
 
-else if (newValue4 > 6)  {
-  const newValue4 = 6; 
+else if (newValue4 > 1)  {
+  const newValue4 = 1; 
   return multipleRender [newValue4]; 
 }
 
@@ -452,24 +371,9 @@ console.log (newValue5);
     <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
     <div id="heightDiv">
     <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
-   <div id="heightDiv"> 
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic3" src={pic3}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
     </div>,
 
-<div><h1>render2</h1></div>,
-<div><h1>render3</h1></div>,
-<div><h1>render4</h1></div>,
-<div><h1>render5</h1></div>,
-<div><h1>render6</h1></div>,
-<div><h1>render7</h1></div>
+<div><h1>render2</h1></div>
 ];
 
 
@@ -481,8 +385,8 @@ if (newValue5 < 0)
   return multipleRender [newValue5]; 
 }
 
-else if (newValue5 > 6)  {
-  const newValue5 = 6; 
+else if (newValue5 > 1)  {
+  const newValue5 = 1; 
   return multipleRender [newValue5]; 
 }
 
@@ -636,7 +540,9 @@ class LandingPage extends React.Component
 addValue1() {
   this.setState(state => ({
 //    value: state.value + 1
-value: (Math.min(6, state.value + 1))
+//this was 6 before instead of 1, can change it back to get 7 divs, nothing yo do with any other
+//lines after or +1 on the right 
+value: (Math.min(1, state.value + 1))
   }));
 }
 addValue2() {
@@ -650,7 +556,7 @@ addValue2() {
 addValue3() {
   this.setState(state => ({
 //    value: state.value + 1
-value1: (Math.min(6, state.value1 + 1))
+value1: (Math.min(1, state.value1 + 1))
   }));
 }
 addValue4() {
@@ -665,7 +571,7 @@ addValue4() {
 addValue5() {
   this.setState(state => ({
 //    value: state.value + 1
-value2: (Math.min(6, state.value2 + 1))
+value2: (Math.min(1, state.value2 + 1))
   }));
 }
 addValue6() {
@@ -680,7 +586,7 @@ addValue6() {
 addValue7() {
   this.setState(state => ({
 //    value: state.value + 1
-value3: (Math.min(6, state.value3 + 1))
+value3: (Math.min(1, state.value3 + 1))
   }));
 }
 addValue8() {
@@ -697,7 +603,7 @@ addValue8() {
 addValue9() {
   this.setState(state => ({
 //    value: state.value + 1
-value4: (Math.min(6, state.value4 + 1))
+value4: (Math.min(1, state.value4 + 1))
   }));
 }
 addValue10() {
@@ -712,7 +618,7 @@ addValue10() {
 addValue11() {
   this.setState(state => ({
 //    value: state.value + 1
-value5: (Math.min(6, state.value5 + 1))
+value5: (Math.min(1, state.value5 + 1))
   }));
 }
 addValue12() {
@@ -1588,18 +1494,17 @@ addValue14() {
 </div>
    
   </section>
-
-
-
-
-
-
+  {/* <CategoryMenu /> */}
+    
 
 
 
     {/* </MDBContainer >   */}
     </section> 
-    
+
+
+
+
     )
 };
 

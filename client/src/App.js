@@ -1,7 +1,6 @@
-//Real Nav Bar Maugny.com
-
-// For media queries, somethings disappeared, two became one and distance in between objects became smaller
-//logo will stay there, unessential stuff will go away and they all become like a one line
+//AppolloProvider: ApolloProvider wraps your React app and places Apollo Client on the context, 
+//enabling you to access it from anywhere in your component tree. Store Provider is used to have 
+// the updated data available in all components. Appollo Client connects the graphql to front end Playground
 
 import './App.scss';
 import React, { Component, useState, useContext } from 'react';
@@ -11,56 +10,36 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import Navbar from './components/navbar';
 // import Test from './pages/test';
 import LandingPage from './pages/landingPage';
-import ClubPage from './pages/clubPage';
-import loginPage from './pages/loginPage';
-import checkoutPage from './pages/checkoutPage';
+// import ClubPage from './pages/clubPage';
+import LoginPage from './pages/loginPage';
+import CheckoutPage from './pages/checkoutPage';
 import careerPage from './pages/careerPage';
-import customerPage from './pages/customerPage';
+import OrderHistory from './pages/customerPage';
+import ProductPage from './pages/productPage';
 import privacyPage from './pages/privacyPage';
 import termPage from './pages/termPage';
-import Footer from './components/footer';
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import logo from './pictures/Logo.png';
 //import { withRouter } from "react-router-dom";
 // import the library
-//import Signup from './pages/Signup';
-// import { StoreProvider } from './utils/GlobalState;
-// import OrderHistory from './pages/OrderHistory';
+import SignUp from './pages/signUp';
+import { StoreProvider } from './utils/GlobalState';
+import NoMatch from './pages/noMatch';
+import Success from './pages/success';
+//the following page has to be put in later
 // import ChangePassword from './pages/ChangePassword';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import {faCartPlus} from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  graphql,
-  GraphQLSchema,
-  GraphQLObjectType,
-  GraphQLString,
-} from 'graphql';
 
-var schema = new GraphQLSchema({
-  query: new GraphQLObjectType({
-    name: 'RootQueryType',
-    fields: {
-      hello: {
-        type: GraphQLString,
-        resolve() {
-          return 'world';
-        },
-      },
-    },
-  }),
-});
-//The StoreProvider has only been provided to updated Global state which is using Reducer in 
-//Global State under utils. SetContext not to be confused with global state, connected to
-//auth.js and stores login token, AppolloClient is connected to graphQl to send queries to
+//setContext is here only connected to graphql giving info only if token is mentioned in a set
+//format on graphql under headers. Const httpLink is to create a link for graphql Playground
 
 const httpLink = createHttpLink({
- uri: 'http://localhost:3001/graphql'
-  // uri: '/graphql',
+  uri: 'http://localhost:3001/graphql',
 });
-
 
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem('id_token');
@@ -72,12 +51,10 @@ const authLink = setContext((_, { headers }) => {
   };
 });
 
-
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
-
 
 
 
@@ -89,7 +66,7 @@ const App = () => {
 <div className="App"> 
 <ApolloProvider client={client}>
 <Router>
-{/* <StoreProvider> */}
+<StoreProvider>
 
 
 
@@ -142,27 +119,34 @@ isActive
     </NavLink>
     </div>
   {/* this is end of Home icon */}
+
+
+  
   {/* this is beginning of club link 33% */}
   <div className="homeCenter">
-  <NavLink to="/clubPage" style={({ isActive }) =>
+  {/* <NavLink to="/clubPage" style={({ isActive }) => */}
+  <NavLink style={({ isActive }) =>
 isActive
 ? {
-    color: '#fde050',
+    color: 'white',
+    // color: '#fde050',
     fontFamily: 'Outfit',
     fontSize: '18px',
- //   fontWeight: "bold"
+
   }
 : { color: '#220088',
 fontFamily: 'Outfit',
 fontSize: '18px',
-//fontWeight: "bold"   
+  
 }
-}>
-      
+}>     
     Club
     </NavLink>  
     </div>
   {/* this is end of club link */}
+
+
+
   {/* this is beginning of login link 33% */}
   {/* 14 px is 10.5 point font and 16 px is 12 point font */}
   <div className="homeCenter">
@@ -191,6 +175,11 @@ fontSize: '18px',
 
 {/* this is end of home */}
   </div>                       
+
+{/* This cart section shows as absolute for some reason, can be fixed if needed and make sure
+the footer is correct height in all pages as it was before this became absolute, check
+media queries one time for all pages including arrows left and right */}
+
 
       {/*this is beginning of cart div */}
         <div className="cart">
@@ -238,19 +227,29 @@ fontSize: '18px',
           <Route path="landingPage" element={<LandingPage/>} />
           {/* <Route path="Test" element={<Test/>} /> */}
     
-          <Route path="clubPage" element={<ClubPage />} />
+          {/* <Route path="clubPage" element={<ClubPage />} /> */}
 
-          <Route path="loginPage" element={loginPage} />
+          <Route path="loginPage" element={<LoginPage />} />
 
-          <Route path="checkoutPage" element={checkoutPage} />
+          <Route path="checkoutPage" element={<CheckoutPage />} />
 
           <Route path="careerPage" element={careerPage} />
 
-          <Route path="customerPage" element={customerPage} />
+          <Route path="customerPage" element={<OrderHistory/>} />
 
           <Route path="privacyPage" element={privacyPage} />
         
           <Route path="termPage" element={termPage} />
+
+          <Route path="signUp" element={<SignUp/>} />
+
+          <Route path="products/:id" element={<ProductPage/>} />
+          {/* <Route path="productPage" element={<ProductPage/>} /> */}
+        
+          <Route path="noMatch" element={NoMatch} />
+
+          <Route path="success" element={Success} />
+          
      
           </Routes> 
 
@@ -325,7 +324,7 @@ fontSize: '18px',
 </footer>
       
 
-{/* </StoreProvider> */}
+</StoreProvider>
       </Router>
       </ApolloProvider>
       
@@ -335,4 +334,5 @@ fontSize: '18px',
 }
 
 export default App;
+
 

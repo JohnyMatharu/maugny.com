@@ -1,0 +1,19 @@
+//Do same for textHeadingColor and textHeadingSize as needed 
+
+@import "../App";
+$textColor: #002366;
+$textSize: 21px;
+
+
+
+#height1
+{
+    height: 706px;
+    
+}
+
+
+#text{
+color: $textColor;
+font-size: $textSize;
+}
