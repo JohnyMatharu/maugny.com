@@ -2,6 +2,11 @@
 //enabling you to access it from anywhere in your component tree. Store Provider is used to have 
 // the updated data available in all components. Appollo Client connects the graphql to front end Playground
 
+// Got graphql to work please follow this link
+//http://localhost:3001/graphql
+//...
+
+
 import './App.scss';
 import React, { Component, useState, useContext } from 'react';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';

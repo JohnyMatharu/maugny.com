@@ -55,6 +55,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import ProductList from "../components/ProductList";
+import ProductList1 from "../components/ProductList1";
 import CategoryMenu from "../components/CategoryMenu";
 
 
@@ -86,7 +87,7 @@ console.log (newValue);
  const multipleRender = [
   // Add prices in bottom, in stock, and item name on top - check other designs  
   <ProductList />,
-<div><h1>render2</h1></div>
+  <ProductList1 />
 ];
 
 
