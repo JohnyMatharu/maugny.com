@@ -520,9 +520,8 @@ category: categories[17]._id,
  {
  name:'Women Run Everywhere Tank', 
  category: categories[19]._id,
- description:
- 'General dropped armholes for full motion, cropped body length with shaped hem',
- image: 'https://underarmour.scene7.com/is/image/Underarmour/V5-1381844-001_FC?rp=standard-0pad%7CpdpMainDesktop&scl=1&fmt=jpg&qlt=85&resMode=sharp2&cache=on%2Con&bgc=F0F0F0&wid=566&hei=708&size=566%2C708t',
+ description:'General dropped armholes for full motion, cropped body length with shaped hem',
+ image: 'https://underarmour.scene7.com/is/image/Underarmour/V5-1381844-001_FC?rp=standard-0pad%7CpdpMainDesktop&scl=1&fmt=jpg&qlt=85&resMode=sharp2&cache=on%2Con&bgc=F0F0F0&wid=566&hei=708&size=566%2C708',
  price: 37.97,
  quantity: 70,
  displayNumber: 7

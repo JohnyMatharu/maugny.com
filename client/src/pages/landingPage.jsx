@@ -56,6 +56,16 @@ import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import ProductList from "../components/ProductList";
 import ProductList1 from "../components/ProductList1";
+import ProductList2 from "../components/ProductList2";
+import ProductList3 from "../components/ProductList3";
+import ProductList4 from "../components/ProductList4";
+import ProductList5 from "../components/ProductList5";
+import ProductList6 from "../components/ProductList6";
+import ProductList7 from "../components/ProductList7";
+import ProductList8 from "../components/ProductList8";
+import ProductList9 from "../components/ProductList9";
+import ProductList10 from "../components/ProductList10";
+import ProductList11 from "../components/ProductList11";
 import CategoryMenu from "../components/CategoryMenu";
 
 
@@ -87,7 +97,8 @@ console.log (newValue);
  const multipleRender = [
   // Add prices in bottom, in stock, and item name on top - check other designs  
   <ProductList />,
-  <ProductList1 />
+  <ProductList1 />,
+ 
 ];
 
 
@@ -137,14 +148,9 @@ console.log (newValue1);
 
  const multipleRender = [
  
-<div id= "divSpaceScroll">
-    <div id="heightDiv"> 
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
-    </div>,
+  <ProductList2 />,
+  <ProductList3 />
 
-<div><h1>render2</h1></div>
 ];
 
 
@@ -197,14 +203,9 @@ console.log (newValue2);
 
  const multipleRender = [
  
-<div id= "divSpaceScroll">
-    <div id="heightDiv"> 
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
-    </div>,
-
-<div><h1>render2</h1></div>
+  <ProductList4 />,
+  <ProductList5 />
+ 
 ];
 
 
@@ -254,14 +255,9 @@ console.log (newValue3);
 
  const multipleRender = [
  
-<div id= "divSpaceScroll">
-    <div id="heightDiv"> 
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
-    </div>,
+  <ProductList6 />,
+  <ProductList7 />
 
-<div><h1>render2</h1></div>
 ];
 
 
@@ -310,14 +306,9 @@ console.log (newValue4);
 
  const multipleRender = [
  
-<div id= "divSpaceScroll">
-    <div id="heightDiv"> 
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
-    </div>,
+  <ProductList8 />,
+  <ProductList9 />
 
-<div><h1>render2</h1></div>
 ];
 
 
@@ -367,14 +358,8 @@ console.log (newValue5);
 
  const multipleRender = [
  
-<div id= "divSpaceScroll">
-    <div id="heightDiv"> 
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic1" src={pic1}></img></a></div>
-    <div id="heightDiv">
-    <a href='https://mybid-live.herokuapp.com/'><img id ="pic2" src={pic2}></img></a></div>
-    </div>,
-
-<div><h1>render2</h1></div>
+  <ProductList10 />,
+  <ProductList11 />
 ];
 
 
