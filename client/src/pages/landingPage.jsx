@@ -66,6 +66,12 @@ import ProductList8 from "../components/ProductList8";
 import ProductList9 from "../components/ProductList9";
 import ProductList10 from "../components/ProductList10";
 import ProductList11 from "../components/ProductList11";
+import ProductList12 from "../components/ProductList12";
+import ProductList13 from "../components/ProductList13";
+import ProductList14 from "../components/ProductList14";
+import ProductList15 from "../components/ProductList15";
+import ProductList16 from "../components/ProductList16";
+import ProductList17 from "../components/ProductList17";
 import CategoryMenu from "../components/CategoryMenu";
 
 
@@ -97,7 +103,7 @@ console.log (newValue);
  const multipleRender = [
   // Add prices in bottom, in stock, and item name on top - check other designs  
   <ProductList />,
-  <ProductList1 />,
+  <ProductList1 />
  
 ];
 
@@ -1097,6 +1103,10 @@ addValue14() {
 {/* this is scroll div which is be another flex for pic divs */}
 <div id= "scrollDiv2">
 
+{/* This is the section that possibly needs to be brought in */}
+
+
+
 {/* left empty div */}
 <div id ="whiteSpaceScroll">
   </div>
@@ -1104,16 +1114,13 @@ addValue14() {
 {/* middle div with scroll bar*/}
 <div id= "divSpaceScroll2">
 
+{/* This is the section that needs to be brought in */}
 
-<div id= "squareDiv"></div>
-  
-<div id= "squareDiv"></div>
-
-   
-<div id= "squareDiv"></div>
+<ProductList12/>
 
 
 
+<ProductList13/>
 
 
   </div>
@@ -1146,20 +1153,16 @@ addValue14() {
 <div id= "divSpaceScroll2">
 
 
-<div id= "squareDiv"></div>
-<br></br>
-    <br></br>
-   
-    <br></br>
-<div id= "squareDiv"></div>
-<br></br>
-    <br></br>
-   
-    <br></br>
-<div id= "squareDiv"></div>
+{/* This is the section that needs to be brought in */}
+
+<ProductList14/>
 
 
-   </div>
+
+<ProductList15/>
+
+
+  </div>
       
     {/* right empty div */}
     <div id ="whiteSpaceScroll">
@@ -1184,22 +1187,19 @@ addValue14() {
   </div>
 
 {/* middle div with scroll bar*/}
+
 <div id= "divSpaceScroll2">
 
+{/* This is the section that needs to be brought in */}
 
-<div id= "squareDiv"></div>
-<br></br>
-    <br></br>
-   
-    <br></br>
-<div id= "squareDiv"></div>
-<br></br>
-    <br></br>
-   
-    <br></br>
-<div id= "squareDiv"></div>
+<ProductList16/>
 
-    </div>
+
+
+<ProductList17/>
+
+
+  </div>
       
     {/* right empty div */}
     <div id ="whiteSpaceScroll">

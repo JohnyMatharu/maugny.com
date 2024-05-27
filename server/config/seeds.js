@@ -68,22 +68,25 @@ db.once('open', async () => {
 { name: 'Hockey Warm Up and Varsity Jackets' },
 { name: 'Infrared and Insulated Jackets' },
 
+
+
+
+
+
+
+{ name: 'Snake Earrings and Sparkley Hoops'}, 
+{ name: 'Butterfly Necklace/Hot Collars Chokers/Chain and Snake Necklace'}, 
+{ name: 'Mettalic and Bone or Bark Cuff Bengles/Snake Bracelets'},
+{ name: 'Women Play Up Shorts'},
+{ name: 'Motion/Breathelux Ankle Leggings'},
+
+{ name: 'Men Hats'},
+{ name: 'Forged Carbon iPhone 15 Phone cases'},
+{ name: 'Drinkware 18oz Beyond Water Bottle'},
+{ name: 'Undeniable Sackpack Bags'},
+{ name: 'Varnish Energy Emboss Women Crop Tops'},
+{ name: 'Women Bubble Push Up Legging'}
  
-
-
-
-
- // this here is to be put in special deals 
-
-
- { name: 'Sparkly Hoops, Statement Rings/ Earings, Snake Earrings' },
- { name: 'Butterfly Necklace, Hot Collars Chokers, Chain & Snake Necklaces' },
- { name: 'Mettalic Bengles/ Bone or Bark Cuffs, Chain or Snake Bracelets' },
-{ name: 'Women Play Up Shorts/Heat Gear Ankle Leggings, Motion and Breathelux Ankle Leggings' },
- { name: 'Train Cold Weather Leggings, Qualifier Cold Tights, Meridian and Fleece Joggers and Leggings' }
-
-
-// last part is special party dresses think about it 
 
 
 
@@ -838,14 +841,212 @@ category: categories[34]._id,
  quantity: 247,
  displayNumber: 12
 
+},
+
+
+
+
+
+
+
+
+{ name: 'Sparkly Hoops', 
+category: categories[36]._id,
+ description:'Gold hardware and baguette hoop style',
+ image:'https://www.sheike.com.au/cdn/shop/files/1006511_SPARKLE_HOOP_EARRINGS_GOLD.jpg?v=1709266791&width=1280',
+ price: 39.50,
+ quantity: 89,
+ displayNumber: 13
+},
+
+
+
+
+ 
+ { name: 'Snake Earings', 
+category: categories[36]._id,
+ description:'Yellow brass hoop, oxidized color, antique gold plating',
+ image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqV36dVu68EYYvmd4Ai0TqeSemu5VwgtO4SQ0VUx2K0hXimEYBod50oU7E&s=10',
+ price: 11.95 ,
+ quantity: 24  ,
+ displayNumber: 13
+},
+
+
+ { name: 'Butterfly Necklace', 
+category: categories[37]._id,
+ description:'Blue of white beaded shell',
+ image:'https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/a/b/ab444e0NL051275_1.jpg?rnd=20200526195200&tr=w-900',
+ price: 12.95 ,
+ quantity: 27 ,
+ displayNumber: 13
+ },
+
+{ name: 'Hot Collars Chokers', 
+category: categories[37]._id,
+ description:'Leather Chokers Fashion Trendy, black white suede band',
+ image: 'https://s.alicdn.com/@sc04/kf/HTB1IqRLNVXXXXa5XVXXq6xXFXXXq.jpg_720x720q50.jpg',
+ price: 1.50 ,
+ quantity: 300 ,
+ displayNumber: 14
+ },
+
+ { name: 'Chain Necklace', 
+ category: categories[37]._id,
+  description:' Joker and witch, Lianne chain link, gold layered necklace',
+  image: 'https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/j/w/jwj963_1_e136de75.jpg?rnd=20200526195200&tr=w-900',
+  price: 11.50 ,
+  quantity: 36 ,
+  displayNumber: 14
+  },
+
+
+{ name: 'Snake Necklaces', 
+category: categories[37]._id,
+ description:
+ ' Multi-styling bendable choker necklace, adjustable twist and turn',
+ image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT86mMsF_clTM1onKx_TBg9Wv3IhrXbWt2VsoLHmu5_rg&s',
+ price: 63,
+ quantity: 126,
+ displayNumber: 14
+
+ },
+
+ { name: 'Mettalic Bengles',
+category: categories[38]._id,
+ description:
+ ' Pipa Bella, set of 3 gold classic bangles',
+ image: 'https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/a/8/a8ec5c5DPIPAB00007884_1.jpg?rnd=20200526195200&tr=w-1536',
+ price: 33.50,
+ quantity: 68  ,
+ displayNumber: 15
+ },
+
+
+ { name: 'Bone or Bark Cuffs',
+ category: categories[38]._id,
+  description:
+  ' Matt gold hammered bangle, gold plated and hand made cuff',
+  image: 'https://i.etsystatic.com/37794166/r/il/7b6f69/5733119410/il_794xN.5733119410_s0kh.jpg',
+  price: 12.32,
+  quantity: 32 ,
+  displayNumber: 15
+  },
+
+
+ 
+
+{ name: 'Snake Bracelets',
+category: categories[38]._id,
+ description:'Waterproof, non fading, anti tarnishing',
+ image: 'https://www.jewelleryhat.com/cdn/shop/files/SnakeBracelet_2_ea4103fc-0879-4b05-91d0-ee337635fe0d.jpg?v=1714218592&width=1445',
+ price: 53,
+ quantity:  127,
+ displayNumber: 15
+ }, 
+
+{ name: 'Women Play Up Shorts', 
+category: categories[39]._id,
+ description:' Lightweight, anti-pill, soft elastic and waistband',
+ image: 'https://underarmour.scene7.com/is/image/Underarmour/V5-1362517-001_FC?rp=standard-0pad%7CpdpMainDesktop&scl=1&fmt=jpg&qlt=85&resMode=sharp2&cache=on%2Con&bgc=F0F0F0&wid=566&hei=708&size=566%2C708',
+ price: 25.97,
+ quantity: 56 ,
+ displayNumber: 16
+
+},
+
+
+
+//HERE
+
+
+
+
+ { name: 'Women Motion Ankle Leggings',  
+category: categories[40]._id,
+ description:'Ultrasoft fabric, double knit, flat waistband',
+ image:'https://underarmour.scene7.com/is/image/Underarmour/V5-1369488-001_FC?rp=standard-0pad%7CpdpMainDesktop&scl=1&fmt=jpg&qlt=85&resMode=sharp2&cache=on%2Con&bgc=F0F0F0&wid=566&hei=708&size=566%2C708',
+ price: 65 ,
+ quantity: 143 ,
+ displayNumber: 16
+
+ },
+ { name: 'Women Breathelux Ankle Leggings', 
+category: categories[40]._id,
+ description:'Silky, smooth, high-rise waist and waistband pocket',
+ image: 'https://underarmour.scene7.com/is/image/Underarmour/V5-1362387-446_FC?rp=standard-0pad%7CpdpMainDesktop&scl=1&fmt=jpg&qlt=85&resMode=sharp2&cache=on%2Con&bgc=F0F0F0&wid=566&hei=708&size=566%2C708',
+ price: 56.19,
+ quantity: 123 ,
+ displayNumber: 16
+
+ },
+
+
+
+
+
+
+
+
+
+
+{ name: 'Men Hats',
+category: categories[41]._id,
+ description: 'Breatheable, starch band, embroidered',
+ image: 'https://underarmour.scene7.com/is/image/Underarmour/1376700-273_SLF_SL?rp=standard-0pad%7CpdpMainDesktop&scl=1&fmt=jpg&qlt=85&resMode=sharp2&cache=on%2Con&bgc=F0F0F0&wid=566&hei=708&size=566%2C708',
+ price: 35,
+ quantity: 76,
+ displayNumber: 17
+},
+
+{ name: 'Forged Carbon iPhone 15 Phone cases',
+category: categories[42]._id,
+description:'Pro max case, rugged design, carbon fibre, built in magnet module',
+image: 'https://images.ctfassets.net/9hslf09drsil/uSHe5KFqpvafP1YSZ9Hyf/002c8cbd13d6668352aa979efd2f3c3a/UAG_HS_APPLE_IPHONE-15-PRO-MAX-B-2023-SUPERMAN_MONARCH-PRO-MAGSAFE_FORGED-CARBON_STD_01_MS.png?w=1920&q=70&fm=webp',
+price: 149.95,
+quantity: 345 ,
+displayNumber: 17
+},
+
+{ name: 'Drinkware 18oz Beyond Water Bottle',
+category: categories[43]._id,
+ description:'Pop up lid, vacuum insulated, stainless steel interior, lockable lid and nonslip bottom',
+ image: 'https://underarmour.scene7.com/is/image/Underarmour/1364829-900_SLF_SL?rp=standard-0pad%7CpdpMainDesktop&scl=1&fmt=jpg&qlt=85&resMode=sharp2&cache=on%2Con&bgc=F0F0F0&wid=566&hei=708&size=566%2C708',
+ price: 30,
+ quantity: 78 ,
+ displayNumber: 17
+
+},
+
+{ name: 'Undeniable Sackpack Bags',
+category: categories[44]._id,
+ description:'Insulated bottle sleeve and highly water repellent, and adjustable cording straps',
+ image: 'https://underarmour.scene7.com/is/image/Underarmour/1369220-400_SLF_SL?rp=standard-0pad%7CpdpMainDesktop&scl=1&fmt=jpg&qlt=85&resMode=sharp2&cache=on%2Con&bgc=F0F0F0&wid=566&hei=708&size=566%2C708',
+ price: 25,
+ quantity: 50,
+ displayNumber: 18
+},
+
+ 
+{ name: 'Varnish Energy Emboss Women Crop Tops',
+category: categories[45]._id,
+ description:'Perfect fit and keeps dry, cropped body length and odour protection',
+ image: 'https://underarmour.scene7.com/is/image/Underarmour/V5-1383640-561_FC?rp=standard-0pad%7CpdpMainDesktop&scl=1&fmt=jpg&qlt=85&resMode=sharp2&cache=on%2Con&bgc=F0F0F0&wid=566&hei=708&size=566%2C708',
+ price: 40 ,
+ quantity: 90 ,
+ displayNumber: 18
+},
+
+{ name: 'Women Bubble Push Up Legging',
+category: categories[46]._id,
+ description:'Thermoactive fabric, flat seams, stretchy and soft',
+ image: 'https://ocs-pl.oktawave.com/v1/AUTH_630f86eaa3774cda8593b8a9710b1aa4/lte/carpatree/2020/0508/20200508101317_zSyKx65RnMUw1NsZ_800x960.webp',
+ price: 32.99,
+ quantity: 68,
+ displayNumber: 18
 }
 
-
-
-
-
-
-
+//7 items from bottom need to be adjusted
 
  ]);
 

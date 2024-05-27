@@ -2,7 +2,36 @@
 @import "../App";
 
 
+#scrollDiv
+{
+@include common-flex; 
+height: 28.53%
+}
 
+
+
+#squareDiv
+
+{
+height: 100%;
+width: 30%;
+// padding-left: 15px;
+// padding-right: 15px;
+background-color: #ECEFF8;
+}
+
+
+
+#divSpaceScroll2
+{
+width: 80%;
+white-space: nowrap;
+display: flex; 
+align-items: center;
+background-color: white;
+justify-content: space-between;
+
+}
 
 #divSpaceScroll
 {
@@ -31,7 +60,18 @@ padding-right: 3px;
   height: 165px; 
   object-fit: cover;
   object-position: 36% 36%;
+  
   // padding-left: 1px;
+// padding-right: 1px; 
+}
+
+#picSp1
+{
+  width: 165px; 
+  height: 165px; 
+  object-fit: cover;
+  object-position: 36% 36%;
+  // padding-left: 10px;
 // padding-right: 1px; 
 }
 
