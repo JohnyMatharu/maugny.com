@@ -85,9 +85,14 @@ db.once('open', async () => {
 { name: 'Drinkware 18oz Beyond Water Bottle'},
 { name: 'Undeniable Sackpack Bags'},
 { name: 'Varnish Energy Emboss Women Crop Tops'},
-{ name: 'Women Bubble Push Up Legging'}
- 
+{ name: 'Women Bubble Push Up Legging'},
 
+{ name: 'Sports Day Theme Party Clothing'},
+{ name: 'Cheerleaders Sportsday Gear'},
+{ name: 'Sports Day Face and Body Paint with Special Looks'},
+{ name: 'Sports Day Flags'},
+{ name: 'Sports Day Horns'},
+{ name: 'Sports Day Big Banners with Special Messages'}
 
 
  ]);
@@ -1019,7 +1024,7 @@ category: categories[43]._id,
 },
 
 { name: 'Undeniable Sackpack Bags',
-category: categories[44]._id,
+ category: categories[44]._id,
  description:'Insulated bottle sleeve and highly water repellent, and adjustable cording straps',
  image: 'https://underarmour.scene7.com/is/image/Underarmour/1369220-400_SLF_SL?rp=standard-0pad%7CpdpMainDesktop&scl=1&fmt=jpg&qlt=85&resMode=sharp2&cache=on%2Con&bgc=F0F0F0&wid=566&hei=708&size=566%2C708',
  price: 25,
@@ -1044,7 +1049,67 @@ category: categories[46]._id,
  price: 32.99,
  quantity: 68,
  displayNumber: 18
+},
+
+{ 
+ name: 'Sports Day Theme Party Clothing',
+ category: categories[47]._id,
+ description:'Badminton-themed party, wearing badminton attire',
+ image: 'https://blog.garmentprinting.com.au/wp-content/uploads/2022/01/Badminton-Themed-Party-Outfit.jpg',
+ price: 162.14,
+ quantity: 345,
+ displayNumber: 19
+},
+
+{ name: 'Cheerleaders Sportsday Gear',
+category: categories[48]._id,
+description:'Sporty Cheerleader Outfit For Girls, Letter Tank Top + Short Skirt + Pom Pom For Sports Halloween Party Performance',
+image: 'https://img.kwcdn.com/product/Fancyalgo/VirtualModelMatting/4a0c19643e1ed74d2bb66fbf0a6c88ae.jpg?imageView2/2/w/800/q/70/format/webp',
+price: 25.14,
+quantity: 57,
+displayNumber: 20
+
+},
+{ name: 'Sports Day Face and Body Glitter Gel',
+category: categories[49]._id,
+description:'12 Color Body Glitter Gel, Singer Concerts Music Festival Rave Accessories, Mermaid Face Glitter Gel, Sequins Glitter Face Paint, Chunky Glitter For Eye Lip Hair, Sparkling Holographic Gel For Women YABAOLIAN (y107)',
+image: 'https://img.kwcdn.com/product/fancy/256354fa-7403-4229-ad59-d79c20575603.jpg?imageView2/2/w/800/q/70/format/webp',
+price: 2.54,
+quantity: 50,
+displayNumber: 21
+
+},
+{ name: 'Sports Day Flags',
+category: categories[50]._id,
+description:'10pcs, American pleated fan bunting for sports day',
+image: 'https://img.kwcdn.com/product/1e13cb94884/4d914fcd-a932-4006-9f95-da1a09441a9c_2000x2000.jpeg?imageView2/2/w/800/q/70/format/webp',
+price: 25.86,
+quantity: 500,
+displayNumber: 22
+
+},
+{ name: 'Sports Day Horns',
+category: categories[51]._id,
+description:'Pudgy Pedro 26-Inch Plastic Vuvuzela Stadium Horn, Collapses to 14-Inch Megaphones',
+image: 'https://m.media-amazon.com/images/I/71zd8dSpviL._AC_SL1000_.jpg',
+price: 13.43,
+quantity: 260,
+displayNumber: 23
+
+},
+{ name: 'Sports Day Big Banners with Special Messages',
+category: categories[52]._id,
+description: 'Perfect for all types of sports events, football, basketball, soccer, swimming tournaments', 
+image: 'https://cdn.bannerbuzz.ca/media/catalog/product/resize/650/s/p/sports-banners-2.jpg',
+price: 6.99,
+quantity: 130,
+displayNumber: 24
+
 }
+
+
+
+
 
 //7 items from bottom need to be adjusted
 

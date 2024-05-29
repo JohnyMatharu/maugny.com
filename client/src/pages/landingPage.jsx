@@ -72,6 +72,12 @@ import ProductList14 from "../components/ProductList14";
 import ProductList15 from "../components/ProductList15";
 import ProductList16 from "../components/ProductList16";
 import ProductList17 from "../components/ProductList17";
+import ProductList18 from "../components/ProductList18";
+import ProductList19 from "../components/ProductList19";
+import ProductList20 from "../components/ProductList20";
+import ProductList21 from "../components/ProductList21";
+import ProductList22 from "../components/ProductList22";
+import ProductList23 from "../components/ProductList23";
 import CategoryMenu from "../components/CategoryMenu";
 
 
