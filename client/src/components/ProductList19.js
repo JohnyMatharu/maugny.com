@@ -118,7 +118,7 @@ return (
               
           <Link to={`/products/${product._id}`}>  
              
-      <img id ="picSp" src={product.image}>
+      <img id ="picSp2" src={product.image}>
          </img> 
          
       </Link>   

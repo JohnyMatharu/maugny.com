@@ -75,6 +75,40 @@ padding-right: 3px;
 // padding-right: 1px; 
 }
 
+#picSp1
+{
+  width: 165px; 
+  height: 165px; 
+  object-fit: cover;
+  object-position: 36% 36%;
+  // padding-left: 10px;
+// padding-right: 1px; 
+}
+
+#picSp2
+{
+  width: 268px; 
+  height: 292px;
+
+  object-fit: cover;
+  object-position: 35% 56%;
+
+
+  // height: 100%;
+// width: 24.5%;
+padding-top: 2px;
+padding-right: 7px;
+// object-fit: cover;
+// object-position: 36% 36%;
+// background-color: #ECEFF8;
+}
+
+
+
+
+
+
+
 .cart {
   position: fixed;
   top: 0;

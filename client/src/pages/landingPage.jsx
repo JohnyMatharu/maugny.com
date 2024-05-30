@@ -1260,15 +1260,24 @@ addValue14() {
 <div id= "divSpaceScroll2">
 
 
-<div id= "squareDiv2"></div>
+<div id= "squareDiv2">
+<ProductList18/>
+</div>
 
    
   
-<div id= "squareDiv2"></div>
+<div id= "squareDiv2">
+<ProductList19/>
+
+</div>
 
    
    
-<div id= "squareDiv2"></div>
+<div id= "squareDiv2">
+
+<ProductList20/>
+
+</div>
 
 
 
@@ -1303,15 +1312,25 @@ addValue14() {
 {/* middle div with scroll bar*/}
 <div id= "divSpaceScroll2">
 
-<div id= "squareDiv2"></div>
+<div id= "squareDiv2">
+<ProductList21/>
+
+</div>
 
    
   
-<div id= "squareDiv2"></div>
+<div id= "squareDiv2">
+<ProductList22/>
+
+</div>
 
    
    
-<div id= "squareDiv2"></div>
+<div id= "squareDiv2">
+<ProductList23/>
+
+
+</div>
    </div>
       
     {/* right empty div */}
