@@ -283,9 +283,20 @@ background-color: #ECEFF8;
 
 }
 
+@media screen and (max-width: 768px) {
+  #squareDiv2 {
+  
+    height: 100%;
+    width: 44.5%;
+    padding-left: 7px;
+    padding-right: 7ppx;
+    background-color: #ECEFF8;
+    
 
-//Create a media query for above 
 
+  }
+
+}
 
 
 
