@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   padding-top: 1.2px;
-  
+
   /* insert here flex and mobile view*/
 }
 
@@ -126,6 +126,18 @@ align-items: center;
 width: 33.33%;
 }
 
+
+@media only screen and (max-width: 850px){
+  .homeCenter
+    {
+       width: 33.33%; 
+      
+    }
+  }
+
+
+
+
 #sectionOne{
   width:33.3%; 
   @include  flex-align-center;
@@ -137,7 +149,7 @@ width: 33.33%;
 @media only screen and (max-width: 850px){
   #sectionOne
     {
-       width: 7%;  
+       width: 33.33%;  
       
     }
   }
@@ -145,14 +157,14 @@ width: 33.33%;
 /* same as above for media queries */
 #sectionTwo
 {
-  width: 66.6%;    
+  width: 66.66%;    
   @include  common-flex;
 }
 
 @media only screen and (max-width: 850px){
   #sectionTwo
     {  
-       width: 93%;   
+       width: 66.66%;   
        @include  common-flex;
     }
   }
@@ -169,7 +181,7 @@ width: 33.33%;
 @media only screen and (max-width: 850px){
   .home
     {  
-       width: 90%;   
+       width: 50%;   
        
     }
   }
@@ -189,7 +201,7 @@ width: 33.33%;
   .cart
     {  
     
-  width: 10%;
+  width: 50%;
     }
   }
 

@@ -33,6 +33,18 @@ justify-content: space-between;
 
 }
 
+@media only screen and (max-width: 850px){
+
+  #divSpaceScroll2 {
+      width: 100%;
+      white-space: nowrap;
+      display: flex;    align-items: center;
+      background-color: white;
+      justify-content: space-between;
+  }
+    
+  }
+
 #divSpaceScroll
 {
 width: 80%;
@@ -42,6 +54,22 @@ padding-right: 29.5px;
  @include scrollBarFlex;
 
 }
+
+@media only screen and (max-width: 850px){
+  
+  #divSpaceScroll
+       {
+     padding-left: 24px;
+      width: 80%;
+   background-color: white;
+      white-space: nowrap;
+      display: flex;    
+      align-items: center;
+      overflow: scroll;
+      }
+  
+  }
+
 
 
 #heightDiv
@@ -75,15 +103,7 @@ padding-right: 3px;
 // padding-right: 1px; 
 }
 
-#picSp1
-{
-  width: 165px; 
-  height: 165px; 
-  object-fit: cover;
-  object-position: 36% 36%;
-  // padding-left: 10px;
-// padding-right: 1px; 
-}
+
 
 #picSp2
 {
@@ -104,6 +124,40 @@ padding-right: 7px;
 }
 
 
+
+    
+
+@media only screen and (max-width: 850px){
+  
+  #picSp{    
+    width: 59px;    
+    height: 59px;    
+    object-fit: cover;    
+    object-position: 36% 36%;
+  }
+  
+  
+  }
+  
+  
+  
+  
+  
+  @media only screen and (max-width: 850px){
+  
+  
+  #picSp2{
+      width: 116px;
+      height: 142px;
+      object-fit: cover;
+      object-position: 35% 56%;
+      padding-top: 2px;
+      padding-right: 7px;
+  }
+  
+    
+  }
+  
 
 
 

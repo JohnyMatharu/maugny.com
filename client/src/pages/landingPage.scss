@@ -23,6 +23,28 @@
       position: sticky;
       top: 0;
   }
+
+
+  
+  @media only screen and (max-width: 850px){
+  
+    #flex {
+      width: 200%;
+    height: 217px;
+    @include common-flex; 
+        position: sticky;
+        top: 0;
+    }
+
+
+    }
+
+
+
+
+
+
+
   
   #flex1 
   {
@@ -225,15 +247,6 @@ height: 44%;
 
 
 
-#divSpaceScroll
-{
-width: 80%;
-// padding-left: 20px;
-@include scrollBarFlex;
-
-}
-
-
 
 /*
 #divSpaceScroll2
@@ -286,7 +299,7 @@ background-color: #ECEFF8;
 @media screen and (max-width: 768px) {
   #squareDiv2 {
   
-    height: 100%;
+    height: 52%;
     width: 44.5%;
     padding-left: 7px;
     padding-right: 7ppx;
