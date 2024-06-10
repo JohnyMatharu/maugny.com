@@ -1102,7 +1102,7 @@ addValue14() {
 
    
    
-<h3 id ="textHeadingStyle" style={{fontWeight: "bold", fontFamily: 'Outfit'}}>Today's Special Deal</h3></div>
+<h3 id ="textHeadingStyle" style={{fontWeight: "bold", fontFamily: 'Outfit', paddingLeft: '36px'}}>Today's Special Deal</h3></div>
 
 
 
@@ -1245,7 +1245,7 @@ addValue14() {
 
 
     
-<h3 id ="textHeadingStyle" style={{fontWeight: "bold", fontFamily: 'Outfit'}}>Just Arrived</h3></div>
+<h3 id ="textHeadingStyle" style={{fontWeight: "bold", fontFamily: 'Outfit', paddingLeft: '36px'}}>Just Arrived</h3></div>
 
 
 
@@ -1374,7 +1374,7 @@ addValue14() {
 
 
     
-<h1 id ="textHeadingStyle" style={{fontWeight: "bold", fontFamily: 'Outfit'}}>The Maugny's Club</h1></div>
+<h1 id ="textHeadingStyle" style={{fontWeight: "bold", fontFamily: 'Outfit', paddingLeft: '36px'}}>The Maugny's Club</h1></div>
 
 
 
